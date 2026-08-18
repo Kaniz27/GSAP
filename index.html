@@ -398,92 +398,132 @@
    <main id="primary" class="site-main">
 
       <!-- start: Hero Section -->
-      <section class="tj-hero-section relative flex min-h-[800px] w-full items-center overflow-hidden;">
-      
-         <!-- Background Image -->
-         <img src="images/hero.png" alt="D&A Business" class="absolute inset-0 z-0 h-full w-full object-cover">
-      
-         <!-- Overlay -->
-         <div class="absolute inset-0 z-[1] bg-black/55"></div>
-      
-         <div class="container relative z-[2]">
-            <div class="row align-items-center g-5">
-      
-               <!-- LEFT: Text -->
-               <div class="col-lg-6">
-                  <div class="hero-content">
-      
-                     <h1 class="hero-title text-anim">
-                        Unlocking Your Business
-                        <span class="active-color">Potential</span>
-                     </h1>
-      
-                     <div class="desc wow fadeInUp" data-wow-delay="0.1s">
-                        <p>
-                           Trusted business consulting services tailored to your needs —
-                           delivered by our team of seasoned experts.
-                        </p>
-                     </div>
-      
-                     <div class="wow fadeInUp" data-wow-delay="0.3s">
-                        <a href="contact.html" class="tj-primary-btn hero-button">
-                           <div class="btn_inner">
-      
-                              <div class="btn_icon">
-                                 <span>
-                                    <i class="tji-arrow-right"></i>
-                                    <i class="tji-arrow-right"></i>
-                                 </span>
-                              </div>
-      
-                              <div class="btn_text">
-                                 <span>Book an Appointment</span>
-                              </div>
-      
+   <section class="tj-hero-section relative w-full overflow-hidden py-16 md:py-20 lg:min-h-[800px] lg:py-0">
+   
+      <!-- Background Image -->
+      <img src="images/hero.png" alt="D&A Business" class="absolute inset-0 z-0 h-full w-full object-cover">
+   
+      <!-- Overlay -->
+      <div class="absolute inset-0 z-[1] bg-black/55"></div>
+   
+   
+      <!-- Content -->
+      <div class="container relative z-[2]">
+   
+         <div class="row align-items-center g-5">
+   
+   
+            <!-- =========================
+                 LEFT: TEXT
+            ========================== -->
+            <div class="col-lg-6">
+   
+               <div class="hero-content">
+   
+                  <!-- Title -->
+                  <h1 class="hero-title text-anim">
+                     Unlocking Your Business
+                     <span class="active-color">
+                        Potential
+                     </span>
+                  </h1>
+   
+   
+                  <!-- Description -->
+                  <div class="desc wow fadeInUp" data-wow-delay="0.1s">
+                     <p>
+                        Trusted business consulting services tailored to your needs —
+                        delivered by our team of seasoned experts.
+                     </p>
+                  </div>
+   
+   
+                  <!-- Button -->
+                  <div class="wow fadeInUp" data-wow-delay="0.3s">
+                     <a href="contact.html" class="tj-primary-btn hero-button">
+   
+                        <div class="btn_inner">
+   
+                           <div class="btn_icon">
+                              <span>
+                                 <i class="tji-arrow-right"></i>
+                                 <i class="tji-arrow-right"></i>
+                              </span>
                            </div>
-                        </a>
-                     </div>
-      
+   
+                           <div class="btn_text">
+                              <span>
+                                 Book an Appointment
+                              </span>
+                           </div>
+   
+                        </div>
+   
+                     </a>
                   </div>
+   
                </div>
-      
-      
-               <!-- RIGHT: Video -->
-               
-               <div class="col-lg-6">
-                  <div class="position-relative overflow-hidden rounded-4 bg-white p-2" style="
-                        border: 2px solid #0075FF;
-                        box-shadow: 0 20px 55px rgba(0, 117, 255, 0.20);
-                     ">
-               
-                     <div class="overflow-hidden rounded-3">
-                        <video class="w-100 d-block" autoplay muted loop playsinline poster="images/dataa.jpg" style="
-                              height: 420px;
-                              object-fit: contain;
-                              background: #f8fbff;
-                           ">
-                           <source src="images/dabusinessvideo.mp4" type="video/mp4">
-                        </video>
-                     </div>
-               
-                  </div>
-               </div>
-      
+   
             </div>
+   
+   
+            <!-- =========================
+                 RIGHT: VIDEO
+            ========================== -->
+            <div class="col-lg-6">
+   
+               <div class="hero-video-wrapper relative w-full overflow-hidden rounded-4 bg-white p-2
+                         border-2 border-[#0075FF]
+                         shadow-[0_20px_55px_rgba(0,117,255,0.20)]
+                         transition-all duration-500
+                         hover:-translate-y-1
+                         hover:shadow-[0_25px_65px_rgba(0,117,255,0.28)]">
+   
+                  <div class="overflow-hidden rounded-3">
+   
+                     <video class="hero-video block w-full
+                               h-[220px]
+                               sm:h-[260px]
+                               md:h-[320px]
+                               lg:h-[420px]
+                               object-contain
+                               bg-[#f8fbff]" autoplay muted loop playsinline preload="metadata" poster="images/dataa.jpg">
+   
+                        <source src="images/dabusinessvideo.mp4" type="video/mp4">
+   
+                        Your browser does not support the video tag.
+   
+                     </video>
+   
+                  </div>
+   
+               </div>
+   
+            </div>
+   
          </div>
-      
-      
-         <!-- Scroll -->
-         <div class="hero_scroll d-none d-lg-block relative z-[2]">
-            <a class="down" href="#scroll-hero">
-               <span>
-                  <i class="tji-arrow-bown"></i>
-               </span>
-               Scroll
-            </a>
-         </div>
-      
-      </section>
+   
+      </div>
+   
+   
+      <!-- =========================
+           SCROLL
+      ========================== -->
+      <div class="hero_scroll relative z-[2] mt-10 hidden lg:block">
+   
+         <a class="down" href="#scroll-hero">
+   
+            <span>
+               <i class="tji-arrow-bown"></i>
+            </span>
+   
+            Scroll
+   
+         </a>
+   
+      </div>
+   
+   </section>
       <!-- end: Hero Section -->
 
       <!-- start: Feature Section -->
@@ -518,7 +558,7 @@
 
          <!-- ================= CARD 1 ================= -->
          <div
-            class="group flex min-h-[430px] flex-col rounded-[24px] border border-[#0075FF]/25 bg-white p-7 transition-all duration-500 ease-out hover:-translate-y-3 hover:border-[#0075FF] hover:shadow-lg">
+            class="group flex min-h-[430px] flex-col rounded-[24px] border border-[#0075FF]/25 bg-white p-7 transition-all duration-500 ease-out hover:-translate-y-3 hover:border-[#0075FF] hover:shadow-lg hover:bg-[#E1E8F0]">
 
             <!-- Icon -->
             <div
