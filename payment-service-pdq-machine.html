@@ -1,17 +1,21 @@
-<!DOCTYPE html><html class="no-js" lang="en"><head>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description" content="">
+   <meta name="description"
+      content="Payment services, PDQ machines, EPOS systems and secure card payment solutions for UK businesses.">
 
-   <!-- Site Title -->
    <title>Payment Service and PDQ Machine - D&A Business</title>
 
-   <!-- Place favicon.ico in the root directory -->
    <link rel="apple-touch-icon" href="images/fav.png">
    <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
 
-   <!-- CSS here -->
+   <!-- =====================================================
+        CSS
+   ====================================================== -->
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="css/font-awesome-pro.min.css">
    <link rel="stylesheet" href="css/animate.css">
@@ -22,911 +26,3014 @@
    <link rel="stylesheet" href="css/venobox.min.css">
    <link rel="stylesheet" href="css/meanmenu.css">
    <link rel="stylesheet" href="css/main.css">
+
+   <!-- =====================================================
+        FAQ CUSTOM CSS
+   ====================================================== -->
+   <style>
+      /* =====================================================
+         PAYMENT FAQ SECTION
+      ====================================================== */
+
+      .payment-faq-section {
+         width: 100%;
+         padding: 100px 0;
+         background: #f6f8fb;
+      }
+
+      .payment-faq-heading {
+         max-width: 750px;
+         margin: 0 auto 55px;
+         text-align: center;
+      }
+
+      .payment-faq-subtitle {
+         display: inline-block;
+         margin-bottom: 12px;
+         color: #0d6efd;
+         font-size: 14px;
+         font-weight: 700;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+      }
+
+      .payment-faq-heading h2 {
+         margin: 0;
+         color: #111827;
+         font-size: 48px;
+         line-height: 1.2;
+         font-weight: 700;
+      }
+
+      .payment-faq-heading h2 span {
+         color: #0d6efd;
+      }
+
+      .payment-faq-heading p {
+         max-width: 700px;
+         margin: 20px auto 0;
+         color: #6b7280;
+         font-size: 16px;
+         line-height: 1.8;
+      }
+
+      /* =====================================================
+         FAQ GRID
+      ====================================================== */
+
+      .payment-faq-grid {
+         display: grid;
+         grid-template-columns: 0.85fr 1.15fr;
+         gap: 45px;
+         align-items: stretch;
+      }
+
+      /* =====================================================
+         QUESTION BOX
+      ====================================================== */
+
+      .payment-faq-question-box {
+         width: 100%;
+         padding: 14px;
+         background: #ffffff;
+         border: 1px solid #e5e7eb;
+         border-radius: 18px;
+         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      }
+
+      .payment-faq-question {
+         width: 100%;
+         min-height: 70px;
+
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         gap: 20px;
+         padding: 18px 20px;
+
+         border: 0;
+         border-radius: 12px;
+
+         background: transparent;
+         color: #111827;
+
+         font-size: 15px;
+         font-weight: 600;
+
+         text-align: left;
+         cursor: pointer;
+
+         transition: all 0.3s ease;
+      }
+
+      .payment-faq-question+.payment-faq-question {
+         margin-top: 5px;
+      }
+
+      .payment-faq-question:hover {
+         background: #f1f5f9;
+      }
+
+      .payment-faq-question.active {
+         background: #111827;
+         color: #ffffff;
+      }
+
+      .payment-faq-question-text {
+         flex: 1;
+         line-height: 1.5;
+      }
+
+      .payment-faq-icon {
+         width: 38px;
+         height: 38px;
+         min-width: 38px;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         border-radius: 50%;
+
+         background: #f1f5f9;
+         color: #111827;
+
+         transition: all 0.3s ease;
+      }
+
+      .payment-faq-question.active .payment-faq-icon {
+         background: rgba(255, 255, 255, 0.1);
+         color: #ffffff;
+      }
+
+      .payment-faq-question.active .payment-faq-icon i {
+         transform: rotate(90deg);
+      }
+
+      .payment-faq-icon i {
+         transition: transform 0.3s ease;
+      }
+
+      /* =====================================================
+         ANSWER BOX
+      ====================================================== */
+
+      .payment-faq-answer-box {
+         width: 100%;
+         min-height: 100%;
+
+         display: flex;
+         align-items: center;
+
+         padding: 55px;
+
+         background: #111827;
+         border-radius: 18px;
+
+         box-shadow: 0 15px 40px rgba(17, 24, 39, 0.12);
+      }
+
+      .payment-faq-answer {
+         display: none;
+         width: 100%;
+
+         animation: faqFadeIn 0.35s ease;
+      }
+
+      .payment-faq-answer.active {
+         display: block;
+      }
+
+      @keyframes faqFadeIn {
+         from {
+            opacity: 0;
+            transform: translateY(10px);
+         }
+
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+
+      .payment-faq-number {
+         width: 52px;
+         height: 52px;
+
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+
+         margin-bottom: 25px;
+
+         border-radius: 50%;
+
+         background: #0d6efd;
+         color: #ffffff;
+
+         font-size: 16px;
+         font-weight: 700;
+      }
+
+      .payment-faq-answer h3 {
+         margin: 0 0 22px;
+
+         color: #ffffff;
+
+         font-size: 32px;
+         line-height: 1.25;
+         font-weight: 700;
+      }
+
+      .payment-faq-answer p {
+         margin: 0;
+
+         color: #aeb6c2;
+
+         font-size: 16px;
+         line-height: 1.8;
+      }
+
+      .payment-faq-answer p+p {
+         margin-top: 18px;
+      }
+
+      /* =====================================================
+         FAQ BUTTON
+      ====================================================== */
+
+      .payment-faq-button {
+         display: inline-flex;
+         align-items: center;
+         gap: 12px;
+
+         margin-top: 28px;
+         padding: 13px 22px;
+
+         background: #ffffff;
+         color: #111827;
+
+         border-radius: 6px;
+
+         font-size: 14px;
+         font-weight: 600;
+
+         text-decoration: none;
+
+         transition: all 0.3s ease;
+      }
+
+      .payment-faq-button:hover {
+         background: #0d6efd;
+         color: #ffffff;
+      }
+
+      .payment-faq-button i {
+         transition: transform 0.3s ease;
+      }
+
+      .payment-faq-button:hover i {
+         transform: translateX(4px);
+      }
+
+      /* =====================================================
+         CTA SECTION
+      ====================================================== */
+
+      .payment-cta-section {
+         position: relative;
+         width: 100%;
+         margin: 100px 0;
+         padding: 60px 0;
+
+         overflow: hidden;
+
+         background-image: url("images/cta-bg.jpg");
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+      }
+
+      .payment-cta-overlay {
+         position: absolute;
+         inset: 0;
+         background: rgba(0, 0, 0, 0.25);
+      }
+
+      .payment-cta-content {
+         position: relative;
+         z-index: 2;
+
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         gap: 30px;
+      }
+
+      .payment-cta-content h2 {
+         margin: 0;
+         color: #ffffff;
+
+         font-size: 42px;
+         line-height: 1.2;
+         font-weight: 600;
+      }
+
+      .payment-cta-button {
+         flex-shrink: 0;
+      }
+
+      /* =====================================================
+         RESPONSIVE
+      ====================================================== */
+
+      @media (max-width: 991px) {
+
+         .payment-faq-section {
+            padding: 80px 0;
+         }
+
+         .payment-faq-heading {
+            margin-bottom: 40px;
+         }
+
+         .payment-faq-heading h2 {
+            font-size: 40px;
+         }
+
+         .payment-faq-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+         }
+
+         .payment-faq-answer-box {
+            min-height: 400px;
+            padding: 45px;
+         }
+
+         .payment-cta-section {
+            margin: 80px 0;
+         }
+
+         .payment-cta-content {
+            flex-direction: column;
+            text-align: center;
+         }
+
+         .payment-cta-content h2 {
+            font-size: 36px;
+         }
+      }
+
+      @media (max-width: 767px) {
+
+         .payment-faq-section {
+            padding: 65px 0;
+         }
+
+         .payment-faq-heading {
+            margin-bottom: 30px;
+         }
+
+         .payment-faq-subtitle {
+            font-size: 12px;
+         }
+
+         .payment-faq-heading h2 {
+            font-size: 32px;
+         }
+
+         .payment-faq-heading p {
+            font-size: 14px;
+            line-height: 1.7;
+         }
+
+         .payment-faq-question-box {
+            padding: 8px;
+            border-radius: 14px;
+         }
+
+         .payment-faq-question {
+            min-height: 65px;
+            padding: 16px 14px;
+            font-size: 14px;
+         }
+
+         .payment-faq-icon {
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
+         }
+
+         .payment-faq-answer-box {
+            min-height: 400px;
+            padding: 35px 25px;
+            border-radius: 14px;
+         }
+
+         .payment-faq-answer h3 {
+            font-size: 25px;
+         }
+
+         .payment-faq-answer p {
+            font-size: 14px;
+            line-height: 1.75;
+         }
+
+         .payment-cta-section {
+            margin: 65px 0;
+            padding: 50px 0;
+         }
+
+         .payment-cta-content h2 {
+            font-size: 30px;
+         }
+      }
+
+      @media (max-width: 480px) {
+
+         .payment-faq-heading h2 {
+            font-size: 28px;
+         }
+
+         .payment-faq-question {
+            gap: 10px;
+            padding: 14px 12px;
+         }
+
+         .payment-faq-question-text {
+            font-size: 13px;
+         }
+
+         .payment-faq-answer-box {
+            padding: 30px 20px;
+         }
+
+         .payment-faq-answer h3 {
+            font-size: 22px;
+         }
+
+         .payment-cta-content h2 {
+            font-size: 26px;
+         }
+      }
+   </style>
 </head>
+
 
 <body>
 
+   <!-- =====================================================
+        MOUSE CURSOR
+   ====================================================== -->
+
    <div class="mouseCursor cursor-outer"></div>
-   <div class="mouseCursor cursor-inner"><span>Drag</span></div>
 
-   <!-- Preloader Start -->
-   
-   <!-- Preloader End -->
-
-   <!-- start: Search Popup -->
-   <div class="search_popup">
-      <div class="search_close">
-         <button type="button" class="search_close_btn">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-               <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-         </button>
-      </div>
-      <div class="container">
-         <div class="row">
-            <div class="col-xxl-12">
-               <div class="tj_search_wrapper">
-                  <div class="search_form">
-                     <form action="#">
-                        <div class="search_input">
-                           <h4 class="title">Business Services</h4>
-                           
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+   <div class="mouseCursor cursor-inner">
+      <span>Drag</span>
    </div>
-   <div class="search-popup-overlay"></div>
-   <!-- end: Search Popup -->
 
-   <!-- start: Hamburger Menu -->
+
+   <!-- =====================================================
+        SEARCH POPUP
+   ====================================================== -->
+
+   <div class="search_popup">
+
+      <div class="search_close">
+
+         <button type="button" class="search_close_btn">
+
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+               <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+               </path>
+
+               <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+               </path>
+
+            </svg>
+
+         </button>
+
+      </div>
+
+
+      <div class="container">
+
+         <div class="row">
+
+            <div class="col-xxl-12">
+
+               <div class="tj_search_wrapper">
+
+                  <div class="search_form">
+
+                     <form action="#">
+
+                        <div class="search_input">
+
+                           <h4 class="title">
+                              Business Services
+                           </h4>
+
+                        </div>
+
+                     </form>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+
+   <div class="search-popup-overlay"></div>
+
+
+   <!-- =====================================================
+        HAMBURGER MENU
+   ====================================================== -->
+
    <div class="body-overlay"></div>
+
+
    <div class="hamburger-area" data-lenis-prevent="">
+
       <div class="hamburger_bg"></div>
+
       <div class="hamburger_wrapper">
+
          <div class="hamburger_top d-flex align-items-center justify-content-between">
+
             <div class="hamburger_logo">
+
                <a href="index.html" class="mobile_logo">
-                  <img src="images/primary-logo.png" alt="Logo">
+
+                  <img src="images/primary-logo.png" alt="D&A Business Logo">
+
                </a>
+
             </div>
+
+
             <div class="hamburger_close">
-               <button class="hamburger_close_btn hamburgerCloseBtn"><i class="fa-thin fa-times"></i></button>
+
+               <button class="hamburger_close_btn hamburgerCloseBtn">
+
+                  <i class="fa-thin fa-times"></i>
+
+               </button>
+
             </div>
+
          </div>
+
+
          <div class="hamburger_search">
+
             <form method="get" action="#0">
-               <button type="submit"><i class="fal fa-search"></i></button>
+
+               <button type="submit">
+                  <i class="fal fa-search"></i>
+               </button>
+
                <input type="search" autocomplete="off" name="s" value="" placeholder="Search here">
+
             </form>
+
          </div>
+
 
          <div class="hamburger_menu">
+
             <div class="mobile_menu"></div>
+
          </div>
+
 
          <div class="hamburger-infos">
-            <h4 class="hamburger-title">Contact info</h4>
-            <div class="contact-info">
-               <div class="contact_item">
-                  <span class="subtitle">Email</span>
-                  <div class="text"><a class="link" href="mailto:info@dabusinesssolutions.com">info@dabusinesssolutions.com</a></div>
-				  <span class="subtitle">Email</span>
-                  <div class="text"><a class="link" href="mailto:contact@dabusinesssolutions.com">contact@dabusinesssolutions.com</a></div>
-               </div>
-               <div class="contact_item">
-                  <span class="subtitle">Phone</span>
-                  <div class="text"><a class="link" href="tel:+447359112364">+44 7359 112 364</a></div>
-               </div>
-			   <div class="contact_item">
-                  <span class="subtitle">Phone</span>
-                  <div class="text"><a class="link" href="tel:+447900065669">+44 7900 065 669</a></div>
-               </div>
-               <div class="contact_item">
-                  <span class="subtitle">Location</span>
-                  <div class="text">Unit-16, 37 Victoria Rd, Romford RM1 2LH, London, United Kingdom</div>
-               </div>
-            </div>
-         </div>
-         <div class="hamburger-socials">
-            <h4 class="hamburger-title">Follow us</h4>
-            <ul>
-               <li>
-                  <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-               </li>
-               <li>
-                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-               </li>
-               <li>
-                  <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-               </li>
-               
-            </ul>
-         </div>
-      </div>
-   </div>
-   <!-- end: Hamburger Menu -->
 
-   <!-- start: Header Area -->
-  <header class="tj-header-area header-3 header-absolute">
+            <h4 class="hamburger-title">
+               Contact info
+            </h4>
+
+
+            <div class="contact-info">
+
+               <div class="contact_item">
+
+                  <span class="subtitle">
+                     Email
+                  </span>
+
+                  <div class="text">
+
+                     <a class="link" href="mailto:info@dabusinesssolutions.com">
+                        info@dabusinesssolutions.com
+                     </a>
+
+                  </div>
+
+
+                  <span class="subtitle">
+                     Email
+                  </span>
+
+                  <div class="text">
+
+                     <a class="link" href="mailto:contact@dabusinesssolutions.com">
+                        contact@dabusinesssolutions.com
+                     </a>
+
+                  </div>
+
+               </div>
+
+
+               <div class="contact_item">
+
+                  <span class="subtitle">
+                     Phone
+                  </span>
+
+                  <div class="text">
+
+                     <a class="link" href="tel:+447359112364">
+                        +44 7359 112 364
+                     </a>
+
+                  </div>
+
+               </div>
+
+
+               <div class="contact_item">
+
+                  <span class="subtitle">
+                     Phone
+                  </span>
+
+                  <div class="text">
+
+                     <a class="link" href="tel:+447900065669">
+                        +44 7900 065 669
+                     </a>
+
+                  </div>
+
+               </div>
+
+
+               <div class="contact_item">
+
+                  <span class="subtitle">
+                     Location
+                  </span>
+
+                  <div class="text">
+
+                     Unit-16, 37 Victoria Rd,
+                     Romford RM1 2LH,
+                     London, United Kingdom
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+
+         <div class="hamburger-socials">
+
+            <h4 class="hamburger-title">
+               Follow us
+            </h4>
+
+            <ul>
+
+               <li>
+                  <a href="https://www.facebook.com/dabusiness2019" target="_blank" rel="noopener">
+                     <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+               </li>
+
+               <li>
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                     <i class="fa-brands fa-instagram"></i>
+                  </a>
+               </li>
+
+               <li>
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                     <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+               </li>
+
+            </ul>
+
+         </div>
+
+      </div>
+
+   </div>
+
+
+   <!-- =====================================================
+        HEADER
+   ====================================================== -->
+
+   <header class="tj-header-area header-3 header-absolute">
+
       <div class="header-bottom">
+
          <div class="container-fluid">
+
             <div class="row">
+
                <div class="col-12">
+
                   <div class="header-wrapper">
-                     <!-- logo -->
+
                      <div class="site-logo">
+
                         <a class="logo" href="index.html">
-                           <img src="images/secondary-logo.png" alt="logo">
+
+                           <img src="images/secondary-logo.png" alt="D&A Business">
+
                         </a>
+
                      </div>
-                     <!-- main navigation -->
+
+
+                     <!-- MAIN MENU -->
+
                      <div class="mainmenu menu-3 d-lg-block d-none" id="main-menu">
+
                         <ul>
+
                            <li>
-                              <a href="index.html">Home</a>
-                              
+                              <a href="index.html">
+                                 Home
+                              </a>
                            </li>
-						   
-						   <li>
-                              <a href="about.html">About Us</a>
-                              
+
+                           <li>
+                              <a href="about.html">
+                                 About Us
+                              </a>
                            </li>
-						   
+
+
                            <li class="has-dropdown">
-                              <a href="#">Services</a>
-                              <ul class="sub-menu  mega-menu-service">
-                                 <li> <a class="mega-menu-service-single" href="business-utilities.html"> <span class="mega-menu-service-icon">
+
+                              <a href="#">
+                                 Services
+                              </a>
+
+                              <ul class="sub-menu mega-menu-service">
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-utilities.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-optimization"></i>
-                                       </span> <span class="mega-menu-service-title">Business Utilities
-                                          </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-                                 <li> <a class="mega-menu-service-single" href="payment-service-pdq-machine.html"> <span class="mega-menu-service-icon">
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Utilities
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="payment-service-pdq-machine.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-strategic"></i>
-                                       </span> <span class="mega-menu-service-title">Payment Service &
-                                         PDQ Machine</span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-										 
-                                 <li> <a class="mega-menu-service-single" href="business-telephone-and-broadband.html"> <span class="mega-menu-service-icon">
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Payment Service & PDQ Machine
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-telephone-and-broadband.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-leadership"></i>
-                                       </span> <span class="mega-menu-service-title">Business Telephone & Broaband
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-                                 <li> <a class="mega-menu-service-single" href="business-water.html"> <span class="mega-menu-service-icon">
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Telephone & Broadband
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-water.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-business"></i>
-                                       </span> <span class="mega-menu-service-title">Business Water
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
- 
- <li> <a class="mega-menu-service-single" href="web-development.html"> <span class="mega-menu-service-icon">
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Water
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="web-development.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-business"></i>
-                                       </span> <span class="mega-menu-service-title">Web Development
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
- 
- 
-										   
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Web Development
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
                               </ul>
+
                            </li>
-                           
-						  
-                           
-                           <li><a href="switch-renew.html">Switch/Renew</a></li>
-						   
-						   <li><a href="careers.html">Careers</a></li>
-						   
-                           <li><a href="contact.html">Contact Us</a></li>
+
+
+                           <li>
+                              <a href="switch-renew.html">
+                                 Switch/Renew
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="careers.html">
+                                 Careers
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="contact.html">
+                                 Contact Us
+                              </a>
+                           </li>
+
                         </ul>
+
                      </div>
+
 
                      <div class="header_right_info d-none d-lg-inline-flex">
 
-                        <!-- search btn -->
-                      
-
-                        <!-- menu bar -->
                         <button class="menu_btn d-none d-xl-inline-flex">
+
                            Menu
+
                            <span class="cubes">
                               <span></span>
                               <span></span>
                               <span></span>
                               <span></span>
                            </span>
+
                         </button>
-                        <!-- header btn -->
+
+
                         <a href="contact.html" class="tj-primary-btn">
+
                            <div class="btn_inner">
+
                               <div class="btn_icon">
+
                                  <span>
                                     <i class="tji-arrow-right"></i>
                                     <i class="tji-arrow-right"></i>
                                  </span>
+
                               </div>
+
                               <div class="btn_text">
-                                 <span>Get a quote</span>
+
+                                 <span>
+                                    Get a quote
+                                 </span>
+
                               </div>
+
                            </div>
+
                         </a>
+
                      </div>
 
-                     <!-- menu bar -->
+
                      <button class="menu_btn d-lg-none hamburgerBtn">
+
                         Menu
+
                         <span class="cubes">
                            <span></span>
                            <span></span>
                            <span></span>
                            <span></span>
                         </span>
+
                      </button>
+
                   </div>
+
                </div>
+
             </div>
+
          </div>
+
       </div>
+
    </header>
+
+
+   <!-- =====================================================
+        STICKY HEADER
+   ====================================================== -->
 
    <header class="tj-header-area header-3 header-duplicate header-sticky">
+
       <div class="header-bottom">
+
          <div class="container-fluid">
+
             <div class="row">
+
                <div class="col-12">
+
                   <div class="header-wrapper">
 
-                     <!-- logo -->
                      <div class="site-logo">
+
                         <a class="logo" href="index.html">
-                           <img src="images/primary-logo.png" alt="logo">
+
+                           <img src="images/primary-logo.png" alt="D&A Business">
+
                         </a>
+
                      </div>
 
-                     <!-- main navigation -->
+
                      <div class="mainmenu d-lg-block d-none">
+
                         <ul>
+
                            <li>
-                              <a href="index.html">Home</a>
-                             
+                              <a href="index.html">
+                                 Home
+                              </a>
                            </li>
-						   
-						   <li>
-                              <a href="about.html">About Us</a>
-                             
+
+                           <li>
+                              <a href="about.html">
+                                 About Us
+                              </a>
                            </li>
-						   
+
+
                            <li class="has-dropdown">
-                              <a href="#">Services</a>
-                              <ul class="sub-menu  mega-menu-service">
-                                 <li> <a class="mega-menu-service-single" href="business-utilities.html"> <span class="mega-menu-service-icon">
+
+                              <a href="#">
+                                 Services
+                              </a>
+
+                              <ul class="sub-menu mega-menu-service">
+
+                                 <li>
+                                    <a class="mega-menu-service-single" href="business-utilities.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-optimization"></i>
-                                       </span> <span class="mega-menu-service-title">Business Utilities
-                                          optimization</span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-                                 <li> <a class="mega-menu-service-single" href="payment-service-pdq-machine.html"> <span class="mega-menu-service-icon">
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Utilities
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+                                 </li>
+
+
+                                 <li>
+                                    <a class="mega-menu-service-single" href="payment-service-pdq-machine.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-strategic"></i>
-                                       </span> <span class="mega-menu-service-title">Payment Service & PDQ Machine</span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-									   
-                                 <li> <a class="mega-menu-service-single" href="business-telephone-and-broadband.html"> <span class="mega-menu-service-icon">
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Payment Service & PDQ Machine
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+                                 </li>
+
+
+                                 <li>
+                                    <a class="mega-menu-service-single" href="business-telephone-and-broadband.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-leadership"></i>
-                                       </span> <span class="mega-menu-service-title">Business Telephone & Broadband
-                                         </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-										 
-                                 <li> <a class="mega-menu-service-single" href="business-water.html"> <span class="mega-menu-service-icon">
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Telephone & Broadband
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+                                 </li>
+
+
+                                 <li>
+                                    <a class="mega-menu-service-single" href="business-water.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-business"></i>
-                                       </span> <span class="mega-menu-service-title">Business Water
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
- 
- <li> <a class="mega-menu-service-single" href="web-development.html"> <span class="mega-menu-service-icon">
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Water
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+                                 </li>
+
+
+                                 <li>
+                                    <a class="mega-menu-service-single" href="web-development.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-business"></i>
-                                       </span> <span class="mega-menu-service-title">Web Development
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
- 
- 
-										  
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Web Development
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+                                 </li>
+
                               </ul>
+
                            </li>
-                          
-                            <li><a href="switch-renew.html">Switch/Renew</a></li>
-							
-							 <li><a href="careers.html">Careers</a></li>
-                          
-						   
-                           <li><a href="contact.html">Contact Us</a></li>
+
+
+                           <li>
+                              <a href="switch-renew.html">
+                                 Switch/Renew
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="careers.html">
+                                 Careers
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="contact.html">
+                                 Contact Us
+                              </a>
+                           </li>
+
                         </ul>
+
                      </div>
+
 
                      <div class="header_right_info d-none d-lg-inline-flex">
-                        <!-- search btn -->
-                        
 
-                        <!-- menu bar -->
                         <button class="menu_btn d-none d-xl-inline-flex">
+
                            Menu
+
                            <span class="cubes">
                               <span></span>
                               <span></span>
                               <span></span>
                               <span></span>
                            </span>
+
                         </button>
-                        <!-- header btn -->
+
+
                         <a href="contact.html" class="tj-primary-btn white-btn">
+
                            <div class="btn_inner">
+
                               <div class="btn_icon">
+
                                  <span>
                                     <i class="tji-arrow-right"></i>
                                     <i class="tji-arrow-right"></i>
                                  </span>
+
                               </div>
+
                               <div class="btn_text">
-                                 <span>Get a quote</span>
+
+                                 <span>
+                                    Get a quote
+                                 </span>
+
                               </div>
+
                            </div>
+
                         </a>
+
                      </div>
 
-                     <!-- menu bar -->
+
                      <button class="menu_btn d-lg-none hamburgerBtn">
+
                         Menu
+
                         <span class="cubes">
                            <span></span>
                            <span></span>
                            <span></span>
                            <span></span>
                         </span>
+
                      </button>
+
                   </div>
+
                </div>
+
             </div>
+
          </div>
+
       </div>
+
    </header>
-   <!-- end: Header Area -->
+
+
+   <!-- =====================================================
+        MAIN
+   ====================================================== -->
 
    <main id="primary" class="site-main">
-      <!-- start: Breadcrumb Section -->
-     <section class="tj-hero-section-four">
-         <div class="container">
-            <div class="row">
-               <div class="hero-wrapper-four">
-                  <div class="hero-content-four">
-                     <span class="hero-subtitle"><span>D</span>&<span>A</span> Business</span>
-                     <h1 class="hero-title text-anim">Card payment<span>solutions for</span> UK businesses </h1>
-                     <div class="desc wow fadeInUp" data-wow-delay="0.1s">
-                        <p>Accept payments easily with DA Business secure,
-simple, and designed for business growth.</p>
 
-<b><li>Low Transaction Fees​</li></b>
-<br>
-<b><li>Same-Day Settlement​</li></b>
-<br>
-<b><li>24/7 Customer Support</li></b>
-                   </div>
+
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
+
+      <section class="tj-hero-section-four">
+
+         <div class="container">
+
+            <div class="row">
+
+               <div class="hero-wrapper-four">
+
+                  <div class="hero-content-four">
+
+                     <span class="hero-subtitle">
+
+                        <span>D</span>&<span>A</span> Business
+
+                     </span>
+
+
+                     <h1 class="hero-title text-anim">
+
+                        Card payment
+
+                        <span>
+                           solutions for
+                        </span>
+
+                        UK businesses
+
+                     </h1>
+
+
+                     <div class="desc wow fadeInUp" data-wow-delay="0.1s">
+
+                        <p>
+                           Accept payments easily with DA Business —
+                           secure, simple, and designed for business growth.
+                        </p>
+
+
+                        <ul>
+
+                           <li>
+                              <b>
+                                 Low Transaction Fees
+                              </b>
+                           </li>
+
+                           <li>
+                              <b>
+                                 Same-Day Settlement
+                              </b>
+                           </li>
+
+                           <li>
+                              <b>
+                                 24/7 Customer Support
+                              </b>
+                           </li>
+
+                        </ul>
+
+                     </div>
+
+
                      <div class="wow fadeInUp" data-wow-delay="0.3s">
+
                         <a href="contact.html" class="tj-primary-btn">
+
                            <div class="btn_inner">
+
                               <div class="btn_icon">
+
                                  <span>
                                     <i class="tji-arrow-right"></i>
                                     <i class="tji-arrow-right"></i>
                                  </span>
-                              </div>
-                              <div class="btn_text">
-                                 <span>Get consultation</span>
-                              </div>
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-                  <div class="hero-images-box-four">
-                     <div class="hero-images wow fadeInUp" data-wow-delay="0.5s">
-                        <img src="images/pdqq.png" alt="Images">
-                     </div>
-                     <div class="client-experience move-anim">
-                        <ul class="images-thumb">
-                           <li><img src="images/thumb-1.png" alt="Images"></li>
-                           <li><img src="images/thumb-2.png" alt="Images"></li>
-                           <li><img src="images/thumb-3.png" alt="Images"></li>
-                           <li class="plus"><i class="fa-sharp fa-solid fa-plus"></i></li>
-                        </ul>
-                        <span class="sub-title"><span>39K+</span> Happy clients all over UK.</span>
-                     </div>
-                     <div class="hero-video-btn move-anim">
-                        <a class="video-btn video-popup" data-autoplay="true" data-vbtype="video" data-maxwidth="1200px" href="dabusinessvideo.mp4">
-                           <span class="play-btn"><i class="tji-play"></i></span>
-                           <span class="video-text">View more</span>
-                        </a>
-                     </div>
-                  </div>
-                  <div class="hero-shapes-1 wow fadeInDown" data-wow-delay="0.6s">
-                     <img src="images/h5-hero-shape-1.png" alt="Shapes">
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="hero-shapes-2 wow fadeInLeft" data-wow-delay="1s">
-            <img src="images/h5-hero-shape-2.png" alt="Shapes">
-         </div>
-      </section>
-      <!-- end: Breadcrumb Section -->
-      <!-- start: Service Section -->
-	  
-	  
-      <section class="tj-service-area section-space">
-         <div class="container">
-            <div class="row rg-50">
-               <div class="col-lg-8">
-                  <div class="tj-post-wrapper">
-                     <div class="tj-post-single-post mb-0">
-                        
-                        <h3 class="tj-post-title text-anim">
-                         It’s a common alternative name for a card machine.
-                        </h3>
-                        <div class="tj-entry-content">
-                           <p class="wow fadeInUp" data-wow-delay="0.1s">
-                              There are lots of different names for them, but they all allow you to take card payments. With a PDQ machine, you’ll be able to offer your customers an alternative way to pay, plus reduce cash handling within your business. You’ll also benefit from driving in customer footfall and more impulse purchases.
 
-Merchant account is a business bank account which is used to acquire payments from your clients’ debit and credit cards. The charges are taken from your client’s account and sent directly to your merchant account, where the funds are held until they are settled into your nominated bank account. Merchant accounts will:
-                           </p>
-                          <li>Support you and your customers with the best security & data protection</li>
-						  <li>Guarantee debit and credit card transactions are processed safely and securely</li>
-						  <li>Protect you against chargebacks</li>
-						  <li>Pre-check customer’s accounts for sufficient funds before payment authorisation</li>
-						  
-						  <p class="wow fadeInUp" data-wow-delay="0.1s">At Total Processing we can provision an online merchant account, sometimes referred to as a MiD or merchant id, for your business. D&A Business have built up strong partnerships with a number of merchant ISO’s and service providers, and can help to find the best merchant account and service for your needs.</p>
-						  
-                           <div class="tj-check-list">
-                              <h4 class="text-anim">How do they Work?</h4>
-                              <li>An EPOS is a modern day till system, making it easy to process transactions and collect data on each payment.</li>
-							  
-							  <li>It gives you complete visibility and control of your business, your inventory and your staff.</li>
-							  
-							  <li>And you can log into this remotely, so you’ll always be able to see how your business is performing, wherever in the world you are.</li>
-								 
-								 
-                                 
-                              </ul>
-                           </div>
-						   
-						   <div class="tj-check-list">
-                              <h4 class="text-anim">What is an EPOS system?</h4>
-                              <li>This called an electronic point of sale system (EPOS), it makes it easier to take payments and manage your business day-to-day, including sales reporting, stock control, accounting and staff management.</li>
-							  
-							  <li>The system uses up-to-the-minute technology and can be customised to your business’ needs. It can work independently, or be integrated with your current devices.</li>
-							  
-							  <li>Their reliability and efficiency makes them a popular choice with businesses all over the world.</li>
-								 
-								 
-                                 
-                              </ul>
-                           </div>
-						   
-						   <div class="tj-check-list">
-                              <h4 class="text-anim">Choose the best way to accept
-payments for your business.</h4>
-                              
-                           </div>
-                           <div class="service-check-list mt-4 wow fadeInUp" data-wow-delay="0.3s">
-                              <ul>
-                                 <li><i class="tji-double-check"></i><span>Card Machines</span></li>
-                                 <li><i class="tji-double-check"></i><span>Online Payments</span></li>
-                                 <li><i class="tji-double-check"></i><span>Epos System</span></li>
-                                 <li><i class="tji-double-check"></i><span>Secured Payments</span></li>
-                              </ul>
-                           </div>
-						   
-                           <div class="service-images-wrap">
-                              <div class="row">
-                                 <div class="col-sm-6">
-                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.5s">
-                                       <img src="images/pdq1.jpg" alt="service-image">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.7s">
-                                       <img src="images/pdq2.jpg" alt="service-image">
-                                    </div>
-                                 </div>
                               </div>
+
+                              <div class="btn_text">
+
+                                 <span>
+                                    Get consultation
+                                 </span>
+
+                              </div>
+
                            </div>
-                           
+
+                        </a>
+
+                     </div>
+
+                  </div>
+
+
+                  <div class="hero-images-box-four">
+
+                     <div class="hero-images wow fadeInUp" data-wow-delay="0.5s">
+
+                        <img src="images/pdqq.png" alt="PDQ Payment Machine">
+
+                     </div>
+
+
+                     <div class="client-experience move-anim">
+
+                        <ul class="images-thumb">
+
+                           <li>
+                              <img src="images/thumb-1.png" alt="Happy client">
+                           </li>
+
+                           <li>
+                              <img src="images/thumb-2.png" alt="Happy client">
+                           </li>
+
+                           <li>
+                              <img src="images/thumb-3.png" alt="Happy client">
+                           </li>
+
+                           <li class="plus">
+                              <i class="fa-sharp fa-solid fa-plus"></i>
+                           </li>
+
+                        </ul>
+
+
+                        <span class="sub-title">
+
+                           <span>
+                              39K+
+                           </span>
+
+                           Happy clients all over UK.
+
+                        </span>
+
+                     </div>
+
+
+                     <div class="hero-video-btn move-anim">
+
+                        <a class="video-btn video-popup" data-autoplay="true" data-vbtype="video" data-maxwidth="1200px"
+                           href="dabusinessvideo.mp4">
+
+                           <span class="play-btn">
+                              <i class="tji-play"></i>
+                           </span>
+
+                           <span class="video-text">
+                              View more
+                           </span>
+
+                        </a>
+
+                     </div>
+
+                  </div>
+
+
+                  <div class="hero-shapes-1 wow fadeInDown" data-wow-delay="0.6s">
+
+                     <img src="images/h5-hero-shape-1.png" alt="Decorative shapes">
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+
+         <div class="hero-shapes-2 wow fadeInLeft" data-wow-delay="1s">
+
+            <img src="images/h5-hero-shape-2.png" alt="Decorative shapes">
+
+         </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           SERVICE CONTENT
+      ====================================================== -->
+
+      <section class="tj-service-area section-space">
+
+         <div class="container">
+
+            <div class="row rg-50">
+
+
+               <!-- MAIN CONTENT -->
+
+               <div class="col-lg-8">
+
+                  <div class="tj-post-wrapper">
+
+                     <div class="tj-post-single-post mb-0">
+
+                        <h3 class="tj-post-title text-anim">
+
+                           It’s a common alternative name for a card machine.
+
+                        </h3>
+
+
+                        <div class="tj-entry-content">
+
+
+                           <p class="wow fadeInUp" data-wow-delay="0.1s">
+
+                              There are lots of different names for them,
+                              but they all allow you to take card payments.
+                              With a PDQ machine, you’ll be able to offer
+                              your customers an alternative way to pay,
+                              plus reduce cash handling within your business.
+                              You’ll also benefit from driving in customer
+                              footfall and more impulse purchases.
+
+                           </p>
+
+
+                           <p class="wow fadeInUp" data-wow-delay="0.1s">
+
+                              A merchant account is a business bank account
+                              which is used to acquire payments from your
+                              clients’ debit and credit cards. The charges
+                              are taken from your client’s account and sent
+                              directly to your merchant account, where the
+                              funds are held until they are settled into
+                              your nominated bank account.
+
+                           </p>
+
+
+                           <p>
+                              Merchant accounts will:
+                           </p>
+
+
+                           <ul>
+
+                              <li>
+                                 Support you and your customers with the
+                                 best security & data protection.
+                              </li>
+
+                              <li>
+                                 Guarantee debit and credit card transactions
+                                 are processed safely and securely.
+                              </li>
+
+                              <li>
+                                 Protect you against chargebacks.
+                              </li>
+
+                              <li>
+                                 Pre-check customer’s accounts for sufficient
+                                 funds before payment authorisation.
+                              </li>
+
+                           </ul>
+
+
+                           <p class="wow fadeInUp" data-wow-delay="0.1s">
+
+                              At Total Processing we can provision an online
+                              merchant account, sometimes referred to as a
+                              MiD or merchant ID, for your business.
+                              D&A Business have built up strong partnerships
+                              with a number of merchant ISOs and service
+                              providers, and can help to find the best
+                              merchant account and service for your needs.
+
+                           </p>
+
+
+                           <!-- HOW DO THEY WORK -->
+
+                           <div class="tj-check-list">
+
+                              <h4 class="text-anim">
+                                 How do they Work?
+                              </h4>
+
+                              <ul>
+
+                                 <li>
+                                    An EPOS is a modern day till system,
+                                    making it easy to process transactions
+                                    and collect data on each payment.
+                                 </li>
+
+                                 <li>
+                                    It gives you complete visibility and
+                                    control of your business, your inventory
+                                    and your staff.
+                                 </li>
+
+                                 <li>
+                                    You can log into this remotely, so
+                                    you’ll always be able to see how your
+                                    business is performing, wherever in
+                                    the world you are.
+                                 </li>
+
+                              </ul>
+
+                           </div>
+
+
+                           <!-- EPOS -->
+
+                           <div class="tj-check-list">
+
+                              <h4 class="text-anim">
+                                 What is an EPOS system?
+                              </h4>
+
+                              <ul>
+
+                                 <li>
+                                    This is called an electronic point of
+                                    sale system (EPOS). It makes it easier
+                                    to take payments and manage your business
+                                    day-to-day, including sales reporting,
+                                    stock control, accounting and staff
+                                    management.
+                                 </li>
+
+                                 <li>
+                                    The system uses up-to-the-minute
+                                    technology and can be customised to
+                                    your business’ needs. It can work
+                                    independently, or be integrated with
+                                    your current devices.
+                                 </li>
+
+                                 <li>
+                                    Their reliability and efficiency makes
+                                    them a popular choice with businesses
+                                    all over the world.
+                                 </li>
+
+                              </ul>
+
+                           </div>
+
+
+                           <!-- PAYMENT OPTIONS -->
+
+                           <div class="tj-check-list">
+
+                              <h4 class="text-anim">
+                                 Choose the best way to accept payments
+                                 for your business.
+                              </h4>
+
+                           </div>
+
+
+                           <div class="service-check-list mt-4 wow fadeInUp" data-wow-delay="0.3s">
+
+                              <ul>
+
+                                 <li>
+                                    <i class="tji-double-check"></i>
+                                    <span>
+                                       Card Machines
+                                    </span>
+                                 </li>
+
+                                 <li>
+                                    <i class="tji-double-check"></i>
+                                    <span>
+                                       Online Payments
+                                    </span>
+                                 </li>
+
+                                 <li>
+                                    <i class="tji-double-check"></i>
+                                    <span>
+                                       EPOS System
+                                    </span>
+                                 </li>
+
+                                 <li>
+                                    <i class="tji-double-check"></i>
+                                    <span>
+                                       Secured Payments
+                                    </span>
+                                 </li>
+
+                              </ul>
+
+                           </div>
+
+
+                           <!-- IMAGES -->
+
+                           <div class="service-images-wrap">
+
+                              <div class="row">
+
+                                 <div class="col-sm-6">
+
+                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.5s">
+
+                                       <img src="images/pdq1.jpg" alt="PDQ Machine">
+
+                                    </div>
+
+                                 </div>
+
+
+                                 <div class="col-sm-6">
+
+                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.7s">
+
+                                       <img src="images/pdq2.jpg" alt="Payment Service">
+
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+
+                           <!-- FEATURES -->
+
                            <div class="row rg-30 justify-content-center">
+
+
                               <div class="col-md-4 col-sm-6">
+
                                  <div class="tj-feature wow fadeInUp" data-wow-delay="0.5s">
+
                                     <div class="tj-feature-icon">
                                        <i class="tji-quick"></i>
                                     </div>
-                                    <h5 class="tj-feature-title">Quick solutions</h5>
+
+                                    <h5 class="tj-feature-title">
+                                       Quick solutions
+                                    </h5>
+
                                     <div class="desc">
-                                       <p>Provide hands-on guidance and support during the execution strategic</p>
+
+                                       <p>
+                                          Provide hands-on guidance and
+                                          support during the execution
+                                          of your payment strategy.
+                                       </p>
+
                                     </div>
+
                                  </div>
+
                               </div>
+
+
                               <div class="col-md-4 col-sm-6">
+
                                  <div class="tj-feature wow fadeInUp" data-wow-delay="0.7s">
+
                                     <div class="tj-feature-icon">
                                        <i class="tji-results"></i>
                                     </div>
-                                    <h5 class="tj-feature-title">Proven Results</h5>
+
+                                    <h5 class="tj-feature-title">
+                                       Proven Results
+                                    </h5>
+
                                     <div class="desc">
-                                       <p>Benefit from the expertise of seasoned consultants who offer strategic</p>
+
+                                       <p>
+                                          Benefit from the expertise of
+                                          experienced payment consultants
+                                          and service providers.
+                                       </p>
+
                                     </div>
+
                                  </div>
+
                               </div>
+
+
                               <div class="col-md-4 col-sm-6">
+
                                  <div class="tj-feature wow fadeInUp" data-wow-delay="0.9s">
+
                                     <div class="tj-feature-icon">
                                        <i class="tji-personalization"></i>
                                     </div>
-                                    <h5 class="tj-feature-title">Personalization</h5>
+
+                                    <h5 class="tj-feature-title">
+                                       Personalization
+                                    </h5>
+
                                     <div class="desc">
-                                       <p>Ensure that strategies are effectively implemented and objectives</p>
+
+                                       <p>
+                                          Choose payment solutions that
+                                          are tailored to your business
+                                          needs.
+                                       </p>
+
                                     </div>
+
                                  </div>
+
                               </div>
+
                            </div>
 
-                           
-                           
-                          
-						   
-						   
                         </div>
+
                      </div>
+
                   </div>
+
                </div>
-			   
-			   
-			   
-			   
+
+
+               <!-- SIDEBAR -->
+
                <div class="col-lg-4">
+
                   <aside class="tj-service-sidebar">
-                     <!-- Service List -->
+
+
+                     <!-- RELATED SERVICES -->
+
                      <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="tj-sidebar-widget-title">Related service</h5>
+
+                        <h5 class="tj-sidebar-widget-title">
+                           Related service
+                        </h5>
+
+
                         <div class="service-category">
+
                            <ul>
-                              <li><a  href="business-utilities.html">Business Utilities<i class="tji-angle-right"></i></a></li>
-                              <li><a class="active" href="payment-service-pdq-machine.html">Payment Service & PDQ Machine<i class="tji-angle-right"></i></a>
+
+                              <li>
+                                 <a href="business-utilities.html">
+                                    Business Utilities
+                                    <i class="tji-angle-right"></i>
+                                 </a>
                               </li>
-                              <li><a href="business-telephone-and-broadband.html">Business Telephone & Broadband<i class="tji-angle-right"></i></a>
+
+                              <li>
+                                 <a class="active" href="payment-service-pdq-machine.html">
+                                    Payment Service & PDQ Machine
+                                    <i class="tji-angle-right"></i>
+                                 </a>
                               </li>
-                              <li><a href="business-water.html">Business Water<i class="tji-angle-right"></i></a>
+
+                              <li>
+                                 <a href="business-telephone-and-broadband.html">
+                                    Business Telephone & Broadband
+                                    <i class="tji-angle-right"></i>
+                                 </a>
                               </li>
-                              <li><a href="web-development.html">Web Development<i class="tji-angle-right"></i></a></li>
+
+                              <li>
+                                 <a href="business-water.html">
+                                    Business Water
+                                    <i class="tji-angle-right"></i>
+                                 </a>
+                              </li>
+
+                              <li>
+                                 <a href="web-development.html">
+                                    Web Development
+                                    <i class="tji-angle-right"></i>
+                                 </a>
+                              </li>
+
                            </ul>
+
                         </div>
+
                      </div>
-                     <!-- cta -->
+
+
+                     <!-- SIDEBAR CTA -->
+
                      <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="tj-sidebar-cta" data-bg-image="assets/images/blog/widget-cta.webp">
+
+                        <div class="tj-sidebar-cta">
+
                            <div class="content">
+
                               <div class="icon">
-                                 <img src="images/widget-cta-icon.png" alt="image">
+
+                                 <img src="images/widget-cta-icon.png" alt="Contact">
+
                               </div>
-                              <h3>Need help? <br> Feel free contact us</h3>
+
+
+                              <h3>
+
+                                 Need help?
+
+                                 <br>
+
+                                 Feel free contact us
+
+                              </h3>
+
+
                               <p>
-                                 Our mission is to empowers businesses off all size in an businesses.
+
+                                 Our mission is to empower businesses of
+                                 all sizes with reliable business solutions.
+
                               </p>
+
                            </div>
+
+
                            <div class="cta-btn">
+
                               <a href="contact.html" class="tj-primary-btn white-btn">
+
                                  <div class="btn_inner">
+
                                     <div class="btn_icon">
+
                                        <span>
                                           <i class="tji-arrow-right"></i>
                                           <i class="tji-arrow-right"></i>
                                        </span>
+
                                     </div>
-                                    <div class="btn_text"><span>Get in touch</span></div>
+
+                                    <div class="btn_text">
+
+                                       <span>
+                                          Get in touch
+                                       </span>
+
+                                    </div>
+
                                  </div>
+
                               </a>
-                              <img class="shapes move-anim-2" src="images/carrow.png" alt="shape">
+
+
+                              <img class="shapes move-anim-2" src="images/carrow.png" alt="Arrow">
+
                            </div>
+
                         </div>
+
                      </div>
+
                   </aside>
+
                </div>
+
             </div>
-         </div>
-      </section>
-	  
-	    <h3 class="text-anim">Why Choose our Services</h3>
-                           <div class="tj-faq mt-30">
-                              <div class="accordion tj-faq-style" id="accordionExample">
-                                 <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
-                                    <h2 class="accordion-header active">
-                                       <!-- button -->
-                                       <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne-1" aria-expanded="false">
-                                          Next Day Settlement
-                                       </button>
-                                    </h2>
-                                    <!-- content -->
-                                    <div id="collapseOne-1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                       <div class="accordion-body">
-                                          <p>Receive your funds the next day, 7 days a week, to keep your cash flow steady and your business running smoothly.
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
-                                    <h2 class="accordion-header ">
-                                       <!-- button -->
-                                       <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne-2" aria-expanded="false">
-                                          Lowest Transaction Fees
-                                       </button>
-                                    </h2>
-                                    <!-- content -->
-                                    <div id="collapseOne-2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                       <div class="accordion-body">
-                                          <p>Save more on every transaction with our market-leading low rates and transparent, no-hidden-fee pricing.
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
-                                    <h2 class="accordion-header ">
-                                       <!-- button -->
-                                       <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne-3" aria-expanded="false">
-                                          24/7 Customer Support
-                                       </button>
-                                    </h2>
-                                    <!-- content -->
-                                    <div id="collapseOne-3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                       <div class="accordion-body">
-                                          <p>Get real-time support from our dedicated UK-based team whenever you need it, ensuring peace of mind and quick issue resolution.
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="accordion-item wow fadeInUp" data-wow-delay="0.7s">
-                                    <h2 class="accordion-header ">
-                                       <!-- button -->
-                                       <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne-4" aria-expanded="false">
-                                          Easy Setup for 3 Days
-                                       </button>
-                                    </h2>
-                                    <!-- content -->
-                                    <div id="collapseOne-4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                       <div class="accordion-body">
-                                          <p>Get up and running in as little as 3 days with a seamless setup process, so you can start taking payments without delay.
-                                          </p>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 
-								 
-								 
-                              </div>
-                           </div>
-						   
-						   
-      <!-- end: Service Section -->
-      <!-- start: Cta Section -->
-      <section class="tj-cta-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="cta-wrapper">
-                     <div class="cta-title">
-                        <h2 class="title text-anim">Get consultant now!</h2>
-                     </div>
-                     <div class="cta-button wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="contact.html" class="tj-primary-btn white-btn">
-                           <div class="btn_inner">
-                              <div class="btn_icon">
-                                 <span>
-                                    <i class="tji-arrow-right"></i>
-                                    <i class="tji-arrow-right"></i>
-                                 </span>
-                              </div>
-                              <div class="btn_text">
-                                 <span>Lets talk now</span>
-                              </div>
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-            </div>
+
          </div>
 
-         <img class="cta-shape-1" src="images/cta-shapes-1.png" alt="Shapes">
-         <img class="cta-shape-2" src="images/cta-shapes-2.png" alt="Shapes">
       </section>
-      <!-- end: Cta Section -->
+
+
+      <!-- =====================================================
+           FAQ SECTION
+      ====================================================== -->
+
+      <section class="payment-faq-section">
+
+         <div class="container">
+
+
+            <!-- FAQ HEADING -->
+
+            <div class="payment-faq-heading">
+
+               <span class="payment-faq-subtitle">
+                  Payment Services
+               </span>
+
+
+               <h2>
+
+                  Everything you need
+
+                  <span>
+                     to know
+                  </span>
+
+               </h2>
+
+
+               <p>
+
+                  Find answers to common questions about our payment
+                  services, PDQ machines and business payment solutions.
+
+               </p>
+
+            </div>
+
+
+            <!-- FAQ GRID -->
+
+            <div class="payment-faq-grid">
+
+
+               <!-- =================================================
+                    QUESTIONS
+               ================================================== -->
+
+               <div class="payment-faq-questions">
+
+                  <div class="payment-faq-question-box">
+
+
+                     <!-- QUESTION 01 -->
+
+                     <button type="button" class="payment-faq-question active" data-faq="1" aria-expanded="true">
+
+                        <span class="payment-faq-question-text">
+                           What payment services do you provide?
+                        </span>
+
+                        <span class="payment-faq-icon">
+
+                           <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                     </button>
+
+
+                     <!-- QUESTION 02 -->
+
+                     <button type="button" class="payment-faq-question" data-faq="2" aria-expanded="false">
+
+                        <span class="payment-faq-question-text">
+                           What is a PDQ machine?
+                        </span>
+
+                        <span class="payment-faq-icon">
+
+                           <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                     </button>
+
+
+                     <!-- QUESTION 03 -->
+
+                     <button type="button" class="payment-faq-question" data-faq="3" aria-expanded="false">
+
+                        <span class="payment-faq-question-text">
+                           Can you help reduce my payment processing costs?
+                        </span>
+
+                        <span class="payment-faq-icon">
+
+                           <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                     </button>
+
+
+                     <!-- QUESTION 04 -->
+
+                     <button type="button" class="payment-faq-question" data-faq="4" aria-expanded="false">
+
+                        <span class="payment-faq-question-text">
+                           Are PDQ machines suitable for small businesses?
+                        </span>
+
+                        <span class="payment-faq-icon">
+
+                           <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                     </button>
+
+
+                     <!-- QUESTION 05 -->
+
+                     <button type="button" class="payment-faq-question" data-faq="5" aria-expanded="false">
+
+                        <span class="payment-faq-question-text">
+                           Can I accept contactless and mobile payments?
+                        </span>
+
+                        <span class="payment-faq-icon">
+
+                           <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                     </button>
+
+
+                     <!-- QUESTION 06 -->
+
+                     <button type="button" class="payment-faq-question" data-faq="6" aria-expanded="false">
+
+                        <span class="payment-faq-question-text">
+                           How can I get a payment service quote?
+                        </span>
+
+                        <span class="payment-faq-icon">
+
+                           <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                     </button>
+
+                  </div>
+
+               </div>
+
+
+               <!-- =================================================
+                    ANSWERS
+               ================================================== -->
+
+               <div class="payment-faq-answers">
+
+                  <div class="payment-faq-answer-box">
+
+
+                     <!-- ANSWER 01 -->
+
+                     <div class="payment-faq-answer active" data-answer="1">
+
+                        <span class="payment-faq-number">
+                           01
+                        </span>
+
+
+                        <h3>
+                           What payment services do you provide?
+                        </h3>
+
+
+                        <p>
+
+                           We provide a range of payment solutions
+                           including card machines, online payments,
+                           EPOS systems and secure payment services
+                           designed for UK businesses.
+
+                        </p>
+
+
+                        <p>
+
+                           Our team can help you find a payment solution
+                           that matches your business type, transaction
+                           volume and customer requirements.
+
+                        </p>
+
+                     </div>
+
+
+                     <!-- ANSWER 02 -->
+
+                     <div class="payment-faq-answer" data-answer="2">
+
+                        <span class="payment-faq-number">
+                           02
+                        </span>
+
+
+                        <h3>
+                           What is a PDQ machine?
+                        </h3>
+
+
+                        <p>
+
+                           A PDQ machine is a card payment terminal
+                           that allows your customers to pay using
+                           debit cards, credit cards and supported
+                           contactless payment methods.
+
+                        </p>
+
+
+                        <p>
+
+                           Modern card machines make it easier for
+                           businesses to accept payments quickly,
+                           securely and conveniently.
+
+                        </p>
+
+                     </div>
+
+
+                     <!-- ANSWER 03 -->
+
+                     <div class="payment-faq-answer" data-answer="3">
+
+                        <span class="payment-faq-number">
+                           03
+                        </span>
+
+
+                        <h3>
+                           Can you help reduce my payment processing costs?
+                        </h3>
+
+
+                        <p>
+
+                           Yes. We can review your current requirements
+                           and help identify suitable payment solutions
+                           and competitive processing options for your
+                           business.
+
+                        </p>
+
+
+                        <p>
+
+                           Our goal is to help you choose a payment
+                           solution that provides value while meeting
+                           your business needs.
+
+                        </p>
+
+                     </div>
+
+
+                     <!-- ANSWER 04 -->
+
+                     <div class="payment-faq-answer" data-answer="4">
+
+                        <span class="payment-faq-number">
+                           04
+                        </span>
+
+
+                        <h3>
+                           Are PDQ machines suitable for small businesses?
+                        </h3>
+
+
+                        <p>
+
+                           Absolutely. Payment solutions can be selected
+                           based on the size, type and individual
+                           requirements of your business.
+
+                        </p>
+
+
+                        <p>
+
+                           Whether you operate a small shop, restaurant,
+                           office or service business, we can help you
+                           explore suitable options.
+
+                        </p>
+
+                     </div>
+
+
+                     <!-- ANSWER 05 -->
+
+                     <div class="payment-faq-answer" data-answer="5">
+
+                        <span class="payment-faq-number">
+                           05
+                        </span>
+
+
+                        <h3>
+                           Can I accept contactless and mobile payments?
+                        </h3>
+
+
+                        <p>
+
+                           Many modern payment terminals support
+                           contactless and mobile payment methods,
+                           helping businesses provide customers with
+                           convenient ways to pay.
+
+                        </p>
+
+
+                        <p>
+
+                           Available payment methods can vary depending
+                           on the selected terminal and payment provider.
+
+                        </p>
+
+                     </div>
+
+
+                     <!-- ANSWER 06 -->
+
+                     <div class="payment-faq-answer" data-answer="6">
+
+                        <span class="payment-faq-number">
+                           06
+                        </span>
+
+
+                        <h3>
+                           How can I get a payment service quote?
+                        </h3>
+
+
+                        <p>
+
+                           Simply contact our team and tell us about
+                           your business requirements. We will help you
+                           explore suitable payment options.
+
+                        </p>
+
+
+                        <a href="contact.html" class="payment-faq-button">
+
+                           Get A Quote
+
+                           <i class="tji-arrow-right"></i>
+
+                        </a>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           CTA SECTION
+      ====================================================== -->
+
+   
    </main>
 
-   <!-- start: Footer Area -->
+
+   <!-- =====================================================
+        FOOTER
+   ====================================================== -->
+
    <footer class="tj-footer-area footer-2 fix">
+
       <div class="footer-top-area">
+
          <div class="container">
+
             <div class="row line rg-50">
+
+
+               <!-- FOOTER ABOUT -->
+
                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+
                   <div class="footer-widget footer2-col-1 footer-info">
+
+
                      <div class="footer-logo">
+
                         <a href="index.html">
+
                            <img src="images/primary-logo.png" alt="D&A Business">
+
                         </a>
+
                      </div>
+
+
                      <p class="desc">
-                        We are a consulting firm specializing in B2B marketing and business management solutions for small to medium-sized businesses across the UK. Over the years, D&A Business has grown to become a leading provider of B2B solutions, serving hundreds of companies across a wide range of industries and services throughout the UK.
+
+                        We are a consulting firm specializing in B2B
+                        marketing and business management solutions for
+                        small to medium-sized businesses across the UK.
+
+                        Over the years, D&A Business has grown to become
+                        a leading provider of B2B solutions, serving
+                        hundreds of companies across a wide range of
+                        industries and services throughout the UK.
+
                      </p>
+
+
                      <div class="footer-social">
-                        <h5 class="title">Follow Us:</h5>
+
+                        <h5 class="title">
+                           Follow Us:
+                        </h5>
+
+
                         <ul>
-                           <li><a href="https://www.facebook.com/dabusiness2019"><i class="fa-brands fa-facebook-f"></i></a></li>
-                           <li><a href="https://www.instagram.com/?next=%2F"><i class="fa-brands fa-instagram"></i></a></li>
-                           <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+
+                           <li>
+
+                              <a href="https://www.facebook.com/dabusiness2019" target="_blank" rel="noopener">
+
+                                 <i class="fa-brands fa-facebook-f"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+
+                                 <i class="fa-brands fa-instagram"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+
+                                 <i class="fa-brands fa-linkedin-in"></i>
+
+                              </a>
+
+                           </li>
+
                         </ul>
+
                      </div>
+
                   </div>
+
                </div>
+
+
+               <!-- OFFICES -->
+
                <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
+
                   <div class="footer-widget footer2-col-2 footer-contact-infos">
+
                      <div class="footer-title">
-                        <h4 class="title">Our offices</h4>
+
+                        <h4 class="title">
+                           Our offices
+                        </h4>
+
                      </div>
+
+
                      <div class="infos-item">
 
-						<h6 class="title">Registered Office</h6>
-						
-						<p>1st Floor, Dover House, 764 Barking Road, London, England - E13 9PJ</p>
-						
-						<h6 class="title">Trading Address</h6>
-						
-                        <p>Unit-16, 37 Victoria Rd, Romford RM1 2LH, London, United Kingdom</p>
-						
-                        <a href="tel:+447359112364">+44 7359 112 364</a>
-						<br>
-						<a href="tel:+447900065669">+44 7900 065 669</a>
-						
-						<h6 class="title">Landline</h6>
-						
-						<a href="tel:+442037268725"> +44 2037 268 725</a>
-						
-						
-							
+                        <h6 class="title">
+                           Registered Office
+                        </h6>
+
+
+                        <p>
+
+                           1st Floor, Dover House,
+                           764 Barking Road,
+                           London, England - E13 9PJ
+
+                        </p>
+
+
+                        <h6 class="title">
+                           Trading Address
+                        </h6>
+
+
+                        <p>
+
+                           Unit-16, 37 Victoria Rd,
+                           Romford RM1 2LH,
+                           London, United Kingdom
+
+                        </p>
+
+
+                        <a href="tel:+447359112364">
+                           +44 7359 112 364
+                        </a>
+
+                        <br>
+
+                        <a href="tel:+447900065669">
+                           +44 7900 065 669
+                        </a>
+
+
+                        <h6 class="title">
+                           Landline
+                        </h6>
+
+
+                        <a href="tel:+442037268725">
+                           +44 2037 268 725
+                        </a>
+
                      </div>
-                     
+
                   </div>
+
                </div>
-			   
-			   
-									
+
+
+               <!-- QUICK LINKS -->
 
                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+
                   <div class="footer-widget footer2-col-3 widget_nav_menu">
+
                      <div class="footer-title">
-                        <h4 class="title">Quick Links</h4>
+
+                        <h4 class="title">
+                           Quick Links
+                        </h4>
+
                      </div>
+
+
                      <div class="widget-menu">
+
                         <ul>
-                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about.html">About Us</a></li>
-                           <li><a href="business-utilities.html">Services</a></li>
-                           <li><a href="switch-renew.html">Switch/Renew </a></li>
-                           <li><a href="careers.html">Careers</a></li>
-                           <li><a href="contact.html">Contact Us</a></li>
-                           
+
+                           <li>
+                              <a href="index.html">
+                                 Home
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="about.html">
+                                 About Us
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="business-utilities.html">
+                                 Services
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="switch-renew.html">
+                                 Switch/Renew
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="careers.html">
+                                 Careers
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="contact.html">
+                                 Contact Us
+                              </a>
+                           </li>
+
                         </ul>
+
                      </div>
+
                   </div>
+
                </div>
+
+
+               <!-- SERVICES -->
+
                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+
                   <div class="footer-widget footer2-col-4 widget_nav_menu">
+
                      <div class="footer-title">
-                        <h4 class="title">Our Services</h4>
+
+                        <h4 class="title">
+                           Our Services
+                        </h4>
+
                      </div>
+
+
                      <div class="widget-menu">
+
                         <ul>
-                           <li><a href="business-utilities.html">Business Utilities</a></li>
-                           <li><a href="payment-service-pdq-machine.html">Payment Service & PDQ Machine</a></li>
-                           <li><a href="business-telephone-and-broadband.html">Business Telephone & Broadband</a></li>
-                           <li><a href="business-water.html">Business Water</a></li>
-						    <li><a href="web-development.html">Web Development</a></li>
-                           
+
+                           <li>
+                              <a href="business-utilities.html">
+                                 Business Utilities
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="payment-service-pdq-machine.html">
+                                 Payment Service & PDQ Machine
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="business-telephone-and-broadband.html">
+                                 Business Telephone & Broadband
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="business-water.html">
+                                 Business Water
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="web-development.html">
+                                 Web Development
+                              </a>
+                           </li>
+
                         </ul>
+
                      </div>
+
                   </div>
+
                </div>
+
             </div>
+
          </div>
+
       </div>
-	  
-	  
-					 
-					
+
+
+      <!-- =====================================================
+           COPYRIGHT
+      ====================================================== -->
+
       <div class="footer-copyright-area-2">
+
          <div class="container">
+
             <div class="row line">
+
                <div class="col-xl-4"></div>
+
+
                <div class="col-xl-8">
+
                   <div class="copyright-2">
+
                      <div class="copyright-content-area">
+
+
                         <div class="copyright-text">
-                         
-                           
-                          <p>@ 2025 <a href="#" target="_blank"> D&A Business </a> All right reserved.</p>
-                          
-                            <p><a href="#" target="_blank"> Disclaimer </a> </p>
-                            
-                           <p>D&A Business is a trading name of D&A Business Solutions Ltd a company registered in England & Wales (CoN-11920067) VAT Registration No: 353841492 . We are  registered under Energy broker Alternative Dispute Resolution (ADR) scheme Reg No- C35DABU01 and Information Commissioner's Office (ICO.  Reference:ZA867666). Our Registered Office Address: 1st Floor, Dover House, 764 Barking Road, London, England, E13 9PJ & Trading Address: Unit-16 Metloc Business Centre, 37 Victoria Road​, Romford, Essex​, London RM1 2LH, GB.</p>
+
+                           <p>
+
+                              © 2025
+
+                              <a href="index.html">
+                                 D&A Business
+                              </a>
+
+                              All rights reserved.
+
+                           </p>
+
+
+                           <p>
+
+                              <a href="#">
+                                 Disclaimer
+                              </a>
+
+                           </p>
+
+
+                           <p>
+
+                              D&A Business is a trading name of
+                              D&A Business Solutions Ltd, a company
+                              registered in England & Wales
+                              (CoN-11920067).
+
+                              VAT Registration No:
+                              353841492.
+
+                              We are registered under Energy Broker
+                              Alternative Dispute Resolution (ADR)
+                              scheme Reg No-C35DABU01 and Information
+                              Commissioner's Office (ICO)
+                              Reference: ZA867666.
+
+                           </p>
+
+
+                           <p>
+
+                              <strong>
+                                 Registered Office:
+                              </strong>
+
+                              1st Floor, Dover House,
+                              764 Barking Road,
+                              London, England, E13 9PJ.
+
+                           </p>
+
+
+                           <p>
+
+                              <strong>
+                                 Trading Address:
+                              </strong>
+
+                              Unit-16 Metloc Business Centre,
+                              37 Victoria Road,
+                              Romford,
+                              Essex,
+                              London RM1 2LH,
+                              GB.
+
+                           </p>
+
+
+                           <!-- DISCLAIMER IMAGES -->
+
                            <div class="service-images-wrap">
+
                               <div class="row">
+
                                  <div class="col-sm-6">
+
                                     <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.5s">
-                                       <img src="images/dis1.jpg" alt="service-image">
+
+                                       <img src="images/dis1.jpg" alt="Disclaimer">
+
                                     </div>
+
                                  </div>
+
+
                                  <div class="col-sm-6">
+
                                     <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.7s">
-                                       <img src="images/dis2.jpg" alt="service-image">
+
+                                       <img src="images/dis2.jpg" alt="Disclaimer">
+
                                     </div>
+
                                  </div>
+
                               </div>
+
                            </div>
-						   
+
                         </div>
+
+
                         <div class="copyright-menu">
+
                            <ul>
-                              <li><a href="#">Policy & privacy</a></li>
-                              <li><a href="#">Terms & conditions</a></li>
+
+                              <li>
+                                 <a href="#">
+                                    Policy & Privacy
+                                 </a>
+                              </li>
+
+                              <li>
+                                 <a href="#">
+                                    Terms & Conditions
+                                 </a>
+                              </li>
+
                            </ul>
+
                         </div>
+
                      </div>
+
                   </div>
+
                </div>
+
             </div>
+
          </div>
+
       </div>
 
-      <!-- start: back to top -->
+
+      <!-- =====================================================
+           BACK TO TOP
+      ====================================================== -->
+
       <div class="back-to-top-wrapper">
+
          <button id="back_to_top" type="button" class="back-to-top-btn style-2">
+
             <i class="tji-arrow-up"></i>
-            <span>GOTOP</span>
+
+            <span>
+               GOTOP
+            </span>
+
          </button>
+
       </div>
-      <!-- end: back to top -->
-      <a href="https://ttdsevaonline.net" style="display:none;">Tirumala Angapradakshinam VIP Break SRIVANI 300rs Vaikunta Ekadasi Special Entry Darshan Tickets Online</a>
-<a href="https://epfindia.org" style="display:none;">EPF Withdrawal PF Balance Check Online | UAN Activation Online Status</a>
-<a href="https://apmeebhoomi.com" style="display:none;">AP Meebhoomi Land Records EC Encumbrance ROR 1B Adangal Certified copy CC Search</a>
-<a href="https://arunachalam.org" style="display:none;">Arunachalam Giri Pradakshina Rooms Special Darshan Tickets Online Booking</a>
-<a href="https://jnvstnavodayaresults.com" style="display:none;">JNVST Navodaya Selection List Result 2026 Class 6 Class 9 | JNVST Navodaya Hall Ticket Admit Card download</a>
-<a href="https://navodaya.co.in" style="display:none;">Navodaya Class 6 Selection List District Wise | Navodaya Class 9 Result 2026</a>
-<a href="https://sabarimalaq.co.in" style="display:none;">Sabarimala Virtual Q Darshan Tickets Rooms Book Online Check Availability</a>
-<a href="https://ttdevasthanams.co.in" style="display:none;">Tirumala Angapradakshinam VIP Break SRIVANI Darshan Tickets Online</a>
-<a href="https://ayushman.info" style="display:none;">Ayushman Card Download Apply Online</a>
+
    </footer>
-   <!-- end: Footer Area -->
-   
+
+
+   <!-- =====================================================
+        WHATSAPP BUTTON
+   ====================================================== -->
+
    <script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "+44 7350320196", // WhatsApp number
-            call_to_action: "Call Us", // Call to action
-            button_color: "#FF6550", // Color of button
-            position: "left", // Position may be 'right' or 'left'
-        };
-        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
+
+      (function () {
+
+         var options = {
+
+            whatsapp: "+447350320196",
+
+            call_to_action: "Call Us",
+
+            button_color: "#FF6550",
+
+            position: "left"
+
+         };
 
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68d650e1043cac19512f5955/1j62insf6';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-   <!-- JS here -->
+         var proto = "https:";
+
+         var host = "getbutton.io";
+
+         var url = proto + "//static." + host;
+
+
+         var s = document.createElement("script");
+
+         s.type = "text/javascript";
+
+         s.async = true;
+
+         s.src = url + "/widget-send-button/js/init.js";
+
+
+         s.onload = function () {
+
+            if (typeof WhWidgetSendButton !== "undefined") {
+
+               WhWidgetSendButton.init(
+                  host,
+                  proto,
+                  options
+               );
+
+            }
+
+         };
+
+
+         var x = document.getElementsByTagName("script")[0];
+
+         x.parentNode.insertBefore(s, x);
+
+      })();
+
+   </script>
+
+
+   <!-- =====================================================
+        TAWK.TO
+   ====================================================== -->
+
+   <script type="text/javascript">
+
+      var Tawk_API = Tawk_API || {};
+
+      var Tawk_LoadStart = new Date();
+
+
+      (function () {
+
+         var s1 = document.createElement("script");
+
+         var s0 = document.getElementsByTagName("script")[0];
+
+
+         s1.async = true;
+
+         s1.src =
+            "https://embed.tawk.to/68d650e1043cac19512f5955/1j62insf6";
+
+         s1.charset = "UTF-8";
+
+         s1.setAttribute("crossorigin", "*");
+
+
+         s0.parentNode.insertBefore(s1, s0);
+
+      })();
+
+   </script>
+
+
+   <!-- =====================================================
+        JAVASCRIPT
+   ====================================================== -->
+
    <script src="js/jquery.min.js"></script>
+
    <script src="js/bootstrap.bundle.min.js"></script>
 
    <script src="js/gsap.min.js"></script>
+
    <script src="js/gsap-scroll-to-plugin.min.js"></script>
+
    <script src="js/gsap-scroll-trigger.min.js"></script>
+
    <script src="js/gsap-split-text.min.js"></script>
+
    <script src="js/smooth-scroll.min.js"></script>
 
    <script src="js/appear.min.js"></script>
+
    <script src="js/wow.min.js"></script>
+
    <script src="js/odometer.min.js"></script>
+
    <script src="js/jquery-knob.js"></script>
+
    <script src="js/swiper.min.js"></script>
+
    <script src="js/nice-select.js"></script>
+
    <script src="js/venobox.min.js"></script>
+
    <script src="js/meanmenu.js"></script>
+
    <script src="js/main.js"></script>
 
 
-</body></html>
+   <!-- =====================================================
+        FAQ JAVASCRIPT
+   ====================================================== -->
+
+   <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+
+         const questions =
+            document.querySelectorAll(
+               ".payment-faq-question"
+            );
+
+
+         const answers =
+            document.querySelectorAll(
+               ".payment-faq-answer"
+            );
+
+
+         questions.forEach(function (question) {
+
+            question.addEventListener("click", function () {
+
+               const faqNumber =
+                  this.getAttribute("data-faq");
+
+
+               /* Remove active state */
+
+               questions.forEach(function (item) {
+
+                  item.classList.remove("active");
+
+                  item.setAttribute(
+                     "aria-expanded",
+                     "false"
+                  );
+
+               });
+
+
+               /* Hide answers */
+
+               answers.forEach(function (answer) {
+
+                  answer.classList.remove("active");
+
+               });
+
+
+               /* Activate clicked question */
+
+               this.classList.add("active");
+
+               this.setAttribute(
+                  "aria-expanded",
+                  "true"
+               );
+
+
+               /* Find selected answer */
+
+               const selectedAnswer =
+                  document.querySelector(
+                     '.payment-faq-answer[data-answer="' +
+                     faqNumber +
+                     '"]'
+                  );
+
+
+               /* Show selected answer */
+
+               if (selectedAnswer) {
+
+                  selectedAnswer.classList.add("active");
+
+               }
+
+            });
+
+         });
+
+      });
+
+   </script>
+
+
+</body>
+
+</html>

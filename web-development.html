@@ -1,17 +1,21 @@
-<!DOCTYPE html><html class="no-js" lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description" content="">
 
-   <!-- Site Title -->
-   <title>Web Design & Development - D&A Business</title>
+   <meta name="description"
+      content="D&A Business provides reliable and cost-effective business telephone and broadband solutions for UK businesses, with flexible connectivity options and dedicated support.">
 
-   <!-- Place favicon.ico in the root directory -->
+   <meta name="robots" content="index, follow">
+
+   <title>Business Telephone & Broadband - D&A Business</title>
+
    <link rel="apple-touch-icon" href="images/fav.png">
    <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
 
-   <!-- CSS here -->
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="css/font-awesome-pro.min.css">
    <link rel="stylesheet" href="css/animate.css">
@@ -22,738 +26,2794 @@
    <link rel="stylesheet" href="css/venobox.min.css">
    <link rel="stylesheet" href="css/meanmenu.css">
    <link rel="stylesheet" href="css/main.css">
+
+   <style>
+      /* =========================================
+         HERO FEATURES
+      ========================================= */
+
+      .hero-features {
+         list-style: none;
+         padding: 0;
+         margin: 25px 0;
+      }
+
+      .hero-features li {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         margin-bottom: 12px;
+         font-weight: 600;
+      }
+
+      .hero-features li i {
+         color: #0075ff;
+      }
+
+      /* =========================================
+         FAQ SECTION
+      ========================================= */
+
+      .business-faq-section {
+         background: #e1e8f0;
+         padding: 80px 0;
+      }
+
+      .business-faq-wrapper {
+         display: flex;
+         gap: 60px;
+         align-items: flex-start;
+      }
+
+      .business-faq-left,
+      .business-faq-right {
+         width: 50%;
+      }
+
+      .faq-label {
+         display: inline-block;
+         padding: 8px 16px;
+         border-radius: 50px;
+         background: rgba(0, 117, 255, 0.1);
+         color: #0075ff;
+         font-size: 12px;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      .faq-heading {
+         margin-top: 20px;
+         font-size: 48px;
+         line-height: 1.15;
+         font-weight: 700;
+         color: #111827;
+      }
+
+      .faq-heading span {
+         display: block;
+         color: #0075ff;
+      }
+
+      .faq-description {
+         max-width: 520px;
+         margin-top: 20px;
+         color: #606a78;
+         line-height: 1.8;
+      }
+
+      .faq-button {
+         display: inline-flex;
+         align-items: center;
+         gap: 12px;
+         margin-top: 25px;
+         padding: 14px 24px;
+         border-radius: 50px;
+         background: #0075ff;
+         color: #fff;
+         text-decoration: none;
+         font-weight: 600;
+         transition: all 0.3s ease;
+      }
+
+      .faq-button:hover {
+         color: #fff;
+         background: #0069e8;
+         transform: translateY(-2px);
+      }
+
+      .faq-button span {
+         width: 28px;
+         height: 28px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         background: rgba(255, 255, 255, 0.2);
+      }
+
+      .faq-item {
+         margin-bottom: 15px;
+         background: #fff;
+         border-radius: 16px;
+         overflow: hidden;
+      }
+
+      .faq-item summary {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 20px;
+         padding: 20px 24px;
+         cursor: pointer;
+         list-style: none;
+         font-weight: 600;
+         color: #111827;
+      }
+
+      .faq-item summary::-webkit-details-marker {
+         display: none;
+      }
+
+      .faq-icon {
+         width: 36px;
+         height: 36px;
+         min-width: 36px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         background: rgba(0, 117, 255, 0.1);
+         color: #0075ff;
+         transition: transform 0.3s ease;
+      }
+
+      .faq-item[open] .faq-icon {
+         transform: rotate(45deg);
+      }
+
+      .faq-answer {
+         padding: 0 24px 22px;
+      }
+
+      .faq-answer p {
+         margin: 0;
+         padding-top: 16px;
+         border-top: 1px solid #e1e8f0;
+         color: #606a78;
+         line-height: 1.8;
+      }
+
+      .faq-bottom-cta {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-top: 30px;
+         padding: 25px 30px;
+         border-radius: 16px;
+         background: #0075ff;
+      }
+
+      .faq-bottom-cta p {
+         margin: 0;
+         color: #fff;
+      }
+
+      .faq-bottom-cta .small-text {
+         font-size: 12px;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         opacity: 0.7;
+      }
+
+      .faq-bottom-cta .main-text {
+         margin-top: 5px;
+         font-weight: 700;
+      }
+
+      .faq-bottom-cta a {
+         padding: 12px 22px;
+         border-radius: 50px;
+         background: #fff;
+         color: #0075ff;
+         text-decoration: none;
+         font-weight: 600;
+      }
+
+      /* =========================================
+         RESPONSIVE
+      ========================================= */
+
+      @media (max-width: 991px) {
+
+         .business-faq-wrapper {
+            flex-direction: column;
+            gap: 40px;
+         }
+
+         .business-faq-left,
+         .business-faq-right {
+            width: 100%;
+         }
+
+         .faq-heading {
+            font-size: 40px;
+         }
+
+         .business-faq-section {
+            padding: 60px 0;
+         }
+      }
+
+      @media (max-width: 575px) {
+
+         .faq-heading {
+            font-size: 32px;
+         }
+
+         .faq-item summary {
+            padding: 18px;
+         }
+
+         .faq-answer {
+            padding: 0 18px 18px;
+         }
+
+         .faq-bottom-cta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+         }
+      }
+   </style>
 </head>
 
 <body>
 
+   <!-- Mouse Cursor -->
    <div class="mouseCursor cursor-outer"></div>
-   <div class="mouseCursor cursor-inner"><span>Drag</span></div>
 
-   <!-- Preloader Start -->
-   
-   <!-- Preloader End -->
-
-   <!-- start: Search Popup -->
-   <div class="search_popup">
-      <div class="search_close">
-         <button type="button" class="search_close_btn">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-               <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-         </button>
-      </div>
-      <div class="container">
-         <div class="row">
-            <div class="col-xxl-12">
-               <div class="tj_search_wrapper">
-                  <div class="search_form">
-                     <form action="#">
-                        <div class="search_input">
-                           <h4 class="title">Business Services</h4>
-                           
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+   <div class="mouseCursor cursor-inner">
+      <span>Drag</span>
    </div>
-   <div class="search-popup-overlay"></div>
-   <!-- end: Search Popup -->
 
-   <!-- start: Hamburger Menu -->
+
+   <!-- =========================================
+        SEARCH POPUP
+   ========================================= -->
+
+   <div class="search_popup">
+
+      <div class="search_close">
+
+         <button type="button" class="search_close_btn" aria-label="Close search">
+
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+               <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+
+               <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+
+            </svg>
+
+         </button>
+
+      </div>
+
+      <div class="container">
+
+         <div class="row">
+
+            <div class="col-12">
+
+               <div class="tj_search_wrapper">
+
+                  <div class="search_form">
+
+                     <form action="#" method="get">
+
+                        <div class="search_input">
+
+                           <h4 class="title">
+                              Business Telephone & Broadband
+                           </h4>
+
+                        </div>
+
+                     </form>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+   <div class="search-popup-overlay"></div>
+
+
+   <!-- =========================================
+        HAMBURGER MENU
+   ========================================= -->
+
    <div class="body-overlay"></div>
+
    <div class="hamburger-area" data-lenis-prevent="">
+
       <div class="hamburger_bg"></div>
+
       <div class="hamburger_wrapper">
+
          <div class="hamburger_top d-flex align-items-center justify-content-between">
+
             <div class="hamburger_logo">
+
                <a href="index.html" class="mobile_logo">
-                  <img src="images/primary-logo.png" alt="Logo">
+
+                  <img src="images/primary-logo.png" alt="D&A Business Logo">
+
                </a>
+
             </div>
+
             <div class="hamburger_close">
-               <button class="hamburger_close_btn hamburgerCloseBtn"><i class="fa-thin fa-times"></i></button>
+
+               <button class="hamburger_close_btn hamburgerCloseBtn" aria-label="Close menu">
+
+                  <i class="fa-thin fa-times"></i>
+
+               </button>
+
             </div>
+
          </div>
+
+
          <div class="hamburger_search">
-            <form method="get" action="#0">
-               <button type="submit"><i class="fal fa-search"></i></button>
-               <input type="search" autocomplete="off" name="s" value="" placeholder="Search here">
+
+            <form method="get" action="#">
+
+               <button type="submit" aria-label="Search">
+                  <i class="fal fa-search"></i>
+               </button>
+
+               <input type="search" autocomplete="off" name="s" placeholder="Search here">
+
             </form>
+
          </div>
+
 
          <div class="hamburger_menu">
+
             <div class="mobile_menu"></div>
+
          </div>
+
 
          <div class="hamburger-infos">
-            <h4 class="hamburger-title">Contact info</h4>
+
+            <h4 class="hamburger-title">
+               Contact Info
+            </h4>
+
             <div class="contact-info">
+
                <div class="contact_item">
-                  <span class="subtitle">Email</span>
-                  <div class="text"><a class="link" href="mailto:info@dabusinesssolutions.com">info@dabusinesssolutions.com</a></div>
-				  <span class="subtitle">Email</span>
-                  <div class="text"><a class="link" href="mailto:contact@dabusinesssolutions.com">contact@dabusinesssolutions.com</a></div>
+
+                  <span class="subtitle">
+                     Email
+                  </span>
+
+                  <div class="text">
+
+                     <a class="link" href="mailto:info@dabusinesssolutions.com">
+
+                        info@dabusinesssolutions.com
+
+                     </a>
+
+                  </div>
+
+                  <span class="subtitle">
+                     Email
+                  </span>
+
+                  <div class="text">
+
+                     <a class="link" href="mailto:contact@dabusinesssolutions.com">
+
+                        contact@dabusinesssolutions.com
+
+                     </a>
+
+                  </div>
+
                </div>
+
+
                <div class="contact_item">
-                  <span class="subtitle">Phone</span>
-                  <div class="text"><a class="link" href="tel:+447359112364">+44 7359 112 364</a></div>
+
+                  <span class="subtitle">
+                     Phone
+                  </span>
+
+                  <div class="text">
+
+                     <a class="link" href="tel:+447359112364">
+
+                        +44 7359 112 364
+
+                     </a>
+
+                  </div>
+
                </div>
-			   <div class="contact_item">
-                  <span class="subtitle">Phone</span>
-                  <div class="text"><a class="link" href="tel:+447900065669">+44 7900 065 669</a></div>
-               </div>
+
+
                <div class="contact_item">
-                  <span class="subtitle">Location</span>
-                  <div class="text">Unit-16, 37 Victoria Rd, Romford RM1 2LH, London, United Kingdom</div>
+
+                  <span class="subtitle">
+                     Phone
+                  </span>
+
+                  <div class="text">
+
+                     <a class="link" href="tel:+447900065669">
+
+                        +44 7900 065 669
+
+                     </a>
+
+                  </div>
+
                </div>
+
+
+               <div class="contact_item">
+
+                  <span class="subtitle">
+                     Location
+                  </span>
+
+                  <div class="text">
+
+                     Unit-16, 37 Victoria Rd,
+                     Romford RM1 2LH,
+                     London, United Kingdom
+
+                  </div>
+
+               </div>
+
             </div>
+
          </div>
+
+
          <div class="hamburger-socials">
-            <h4 class="hamburger-title">Follow us</h4>
+
+            <h4 class="hamburger-title">
+               Follow Us
+            </h4>
+
             <ul>
+
                <li>
-                  <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+
+                  <a href="https://www.facebook.com/dabusiness2019" target="_blank" rel="noopener noreferrer"
+                     aria-label="Facebook">
+
+                     <i class="fa-brands fa-facebook-f"></i>
+
+                  </a>
+
                </li>
+
                <li>
-                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+                     <i class="fa-brands fa-instagram"></i>
+
+                  </a>
+
                </li>
+
                <li>
-                  <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+
+                     <i class="fa-brands fa-linkedin-in"></i>
+
+                  </a>
+
                </li>
-               
+
             </ul>
+
          </div>
+
       </div>
+
    </div>
-   <!-- end: Hamburger Menu -->
 
-   <!-- start: Header Area -->
+
+   <!-- =========================================
+        HEADER
+   ========================================= -->
+
    <header class="tj-header-area header-3 header-absolute">
+
       <div class="header-bottom">
+
          <div class="container-fluid">
+
             <div class="row">
+
                <div class="col-12">
+
                   <div class="header-wrapper">
-                     <!-- logo -->
+
+
                      <div class="site-logo">
+
                         <a class="logo" href="index.html">
-                           <img src="images/secondary-logo.png" alt="logo">
+
+                           <img src="images/secondary-logo.png" alt="D&A Business Logo">
+
                         </a>
+
                      </div>
-                     <!-- main navigation -->
+
+
                      <div class="mainmenu menu-3 d-lg-block d-none" id="main-menu">
+
                         <ul>
+
                            <li>
-                              <a href="index.html">Home</a>
-                              
+                              <a href="index.html">
+                                 Home
+                              </a>
                            </li>
-						   
-						   <li>
-                              <a href="about.html">About Us</a>
-                              
-                           </li>
-						   
-                           <li class="has-dropdown">
-                              <a href="#">Services</a>
-                              <ul class="sub-menu  mega-menu-service">
-                                 <li> <a class="mega-menu-service-single" href="business-utilities.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-optimization"></i>
-                                       </span> <span class="mega-menu-service-title">Business Utilities
-                                          </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-                                 <li> <a class="mega-menu-service-single" href="payment-service-pdq-machine.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-strategic"></i>
-                                       </span> <span class="mega-menu-service-title">Payment Service &
-                                         PDQ Machine</span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-										 
-                                 <li> <a class="mega-menu-service-single" href="business-telephone-and-broadband.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-leadership"></i>
-                                       </span> <span class="mega-menu-service-title">Business Telephone & Broaband
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-                                 <li> <a class="mega-menu-service-single" href="business-water.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-business"></i>
-                                       </span> <span class="mega-menu-service-title">Business Water
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
- 
- <li> <a class="mega-menu-service-single" href="web-development.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-business"></i>
-                                       </span> <span class="mega-menu-service-title">Web Development
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
- 
- 
-										   
-                              </ul>
-                           </li>
-                           
-						  
-                           
-                           <li><a href="switch-renew.html">Switch/Renew</a></li>
-						   
-						   <li><a href="careers.html">Careers</a></li>
-						   
-                           <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                     </div>
 
-                     <div class="header_right_info d-none d-lg-inline-flex">
-
-                        <!-- search btn -->
-                      
-
-                        <!-- menu bar -->
-                        <button class="menu_btn d-none d-xl-inline-flex">
-                           Menu
-                           <span class="cubes">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                           </span>
-                        </button>
-                        <!-- header btn -->
-                        <a href="contact.html" class="tj-primary-btn">
-                           <div class="btn_inner">
-                              <div class="btn_icon">
-                                 <span>
-                                    <i class="tji-arrow-right"></i>
-                                    <i class="tji-arrow-right"></i>
-                                 </span>
-                              </div>
-                              <div class="btn_text">
-                                 <span>Get a quote</span>
-                              </div>
-                           </div>
-                        </a>
-                     </div>
-
-                     <!-- menu bar -->
-                     <button class="menu_btn d-lg-none hamburgerBtn">
-                        Menu
-                        <span class="cubes">
-                           <span></span>
-                           <span></span>
-                           <span></span>
-                           <span></span>
-                        </span>
-                     </button>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </header>
-
-   <header class="tj-header-area header-3 header-duplicate header-sticky">
-      <div class="header-bottom">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-12">
-                  <div class="header-wrapper">
-
-                     <!-- logo -->
-                     <div class="site-logo">
-                        <a class="logo" href="index.html">
-                           <img src="images/primary-logo.png" alt="logo">
-                        </a>
-                     </div>
-
-                     <!-- main navigation -->
-                     <div class="mainmenu d-lg-block d-none">
-                        <ul>
                            <li>
-                              <a href="index.html">Home</a>
-                             
+                              <a href="about.html">
+                                 About Us
+                              </a>
                            </li>
-						   
-						   <li>
-                              <a href="about.html">About Us</a>
-                             
-                           </li>
-						   
+
+
                            <li class="has-dropdown">
-                              <a href="#">Services</a>
-                              <ul class="sub-menu  mega-menu-service">
-                                 <li> <a class="mega-menu-service-single" href="business-utilities.html"> <span class="mega-menu-service-icon">
+
+                              <a href="#">
+                                 Services
+                              </a>
+
+                              <ul class="sub-menu mega-menu-service">
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-utilities.html">
+
+                                       <span class="mega-menu-service-icon">
                                           <i class="tji-optimization"></i>
-                                       </span> <span class="mega-menu-service-title">Business Utilities
-                                          optimization</span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-                                 <li> <a class="mega-menu-service-single" href="payment-service-pdq-machine.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-strategic"></i>
-                                       </span> <span class="mega-menu-service-title">Payment Service & PDQ Machine</span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-									   
-                                 <li> <a class="mega-menu-service-single" href="business-telephone-and-broadband.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-leadership"></i>
-                                       </span> <span class="mega-menu-service-title">Business Telephone & Broadband
-                                         </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
-										 
-                                 <li> <a class="mega-menu-service-single" href="business-water.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-business"></i>
-                                       </span> <span class="mega-menu-service-title">Business Water
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
- 
- <li> <a class="mega-menu-service-single" href="web-development.html"> <span class="mega-menu-service-icon">
-                                          <i class="tji-business"></i>
-                                       </span> <span class="mega-menu-service-title">Web Development
- </span> <span class="mega-menu-service-nav"><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></a></li>
- 
- 
-										  
-                              </ul>
-                           </li>
-                          
-                            <li><a href="switch-renew.html">Switch/Renew</a></li>
-							
-							 <li><a href="careers.html">Careers</a></li>
-                          
-						   
-                           <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                     </div>
+                                       </span>
 
-                     <div class="header_right_info d-none d-lg-inline-flex">
-                        <!-- search btn -->
-                        
+                                       <span class="mega-menu-service-title">
+                                          Business Utilities
+                                       </span>
 
-                        <!-- menu bar -->
-                        <button class="menu_btn d-none d-xl-inline-flex">
-                           Menu
-                           <span class="cubes">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                           </span>
-                        </button>
-                        <!-- header btn -->
-                        <a href="contact.html" class="tj-primary-btn white-btn">
-                           <div class="btn_inner">
-                              <div class="btn_icon">
-                                 <span>
-                                    <i class="tji-arrow-right"></i>
-                                    <i class="tji-arrow-right"></i>
-                                 </span>
-                              </div>
-                              <div class="btn_text">
-                                 <span>Get a quote</span>
-                              </div>
-                           </div>
-                        </a>
-                     </div>
-
-                     <!-- menu bar -->
-                     <button class="menu_btn d-lg-none hamburgerBtn">
-                        Menu
-                        <span class="cubes">
-                           <span></span>
-                           <span></span>
-                           <span></span>
-                           <span></span>
-                        </span>
-                     </button>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </header>
-   <!-- end: Header Area -->
-
-   <main id="primary" class="site-main">
-      <!-- start: Breadcrumb Section -->
-      <section class="tj-page-header" data-bg-image="assets/images/bg/pheader-bg.webp">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="tj-page-header-content text-center">
-                     <h1 class="tj-page-title text-anim">Web Development</h1>
-                     <div class="tj-page-link wow fadeInUp" data-wow-delay="0.1s">
-                        <span>
-                           <a href="index.html">
-                              <span>Home</span>
-                           </a>
-                        </span>
-                        <span>/</span>
-                        <span>
-                           <span>Web Development</span>
-                        </span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- end: Breadcrumb Section -->
-      <!-- start: Service Section -->
-      <section class="tj-service-area section-space">
-         <div class="container">
-            <div class="row rg-50">
-               <div class="col-lg-8">
-                  <div class="tj-post-wrapper">
-                     <div class="tj-post-single-post mb-0">
-                        <div class="tj-post-thumb hover:shine wow fadeInUp" data-wow-delay="0.1s">
-                           <img src="images/web11.jpg" alt="post-image">
-                        </div>
-                        <h3 class="tj-post-title text-anim">
-                          The innovative Website Designing and Development Company.
-                        </h3>
-                        <div class="tj-entry-content">
-                           <p class="wow fadeInUp" data-wow-delay="0.1s">
-                             We have highly experienced and expertise team of web developers and designers with latest advanced web skills who can provide you fully Customized and responsive seo friendly website with Fresh and Innovative designs for each and every project, our web designs are efficient and also affordable price. Our team provides best effective designs and user friendly fully featured in online web designs that are in simple way to navigate, which helps you grow toa new customers and locking existing customers and increase the business.
-                           </p>
-                           <p class="wow fadeInUp" data-wow-delay="0.3s">
-                              
-We are dedicated in not just in giving your website a professional feel but also in driving you and your potential customers together. Our innovative designs are user friendly and easy to navigate through providing a 24/7 web presence for your customers, with the latest prices and information on your business and sales.
-                           </p>
-						   
-						 
-						   
-                          
-                           <
-                           <div class="service-images-wrap">
-                              <div class="row">
-                                 <div class="col-sm-6">
-                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.5s">
-                                       <img src="images/web22.jpg" alt="service-image">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.7s">
-                                       <img src="images/web33.jpg" alt="service-image">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           
-                           <div class="row rg-30 justify-content-center">
-                              <div class="col-md-4 col-sm-6">
-                                 <div class="tj-feature wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="tj-feature-icon">
-                                       <i class="tji-quick"></i>
-                                    </div>
-                                    <h5 class="tj-feature-title">Quick solutions</h5>
-                                    <div class="desc">
-                                       <p>Provide hands-on guidance and support during the execution strategic</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-4 col-sm-6">
-                                 <div class="tj-feature wow fadeInUp" data-wow-delay="0.7s">
-                                    <div class="tj-feature-icon">
-                                       <i class="tji-results"></i>
-                                    </div>
-                                    <h5 class="tj-feature-title">Proven Results</h5>
-                                    <div class="desc">
-                                       <p>Benefit from the expertise of seasoned consultants who offer strategic</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-4 col-sm-6">
-                                 <div class="tj-feature wow fadeInUp" data-wow-delay="0.9s">
-                                    <div class="tj-feature-icon">
-                                       <i class="tji-personalization"></i>
-                                    </div>
-                                    <h5 class="tj-feature-title">Personalization</h5>
-                                    <div class="desc">
-                                       <p>Ensure that strategies are effectively implemented and objectives</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-
-                           
-                           
-                          
-						   
-						   
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4">
-                  <aside class="tj-service-sidebar">
-                     <!-- Service List -->
-                    <div class="service-category">
-                           <ul>
-                              <li><a href="business-utilities.html">Business Utilities<i class="tji-angle-right"></i></a></li>
-                              <li><a href="payment-service-pdq-machine.html">Payment Service & PDQ Machine<i class="tji-angle-right"></i></a>
-                              </li>
-                              <li><a href="business-telephone-and-broadband.html">Business Telephone & Broadband<i class="tji-angle-right"></i></a>
-                              </li>
-                              <li><a href="business-water.html">Business Water<i class="tji-angle-right"></i></a>
-                              </li>
-                              <li><a class="active" href="web-development.html">Web Development<i class="tji-angle-right"></i></a></li>
-                           </ul>
-                        </div>
-                     <!-- cta -->
-                     <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="tj-sidebar-cta" data-bg-image="assets/images/blog/widget-cta.webp">
-                           <div class="content">
-                              <div class="icon">
-                                 <img src="images/widget-cta-icon.png" alt="image">
-                              </div>
-                              <h3>Need help? <br> Feel free contact us</h3>
-                              <p>
-                                 Our mission is to empowers businesses off all size in an businesses.
-                              </p>
-                           </div>
-                           <div class="cta-btn">
-                              <a href="contact.html" class="tj-primary-btn white-btn">
-                                 <div class="btn_inner">
-                                    <div class="btn_icon">
-                                       <span>
+                                       <span class="mega-menu-service-nav">
                                           <i class="tji-arrow-right"></i>
                                           <i class="tji-arrow-right"></i>
                                        </span>
-                                    </div>
-                                    <div class="btn_text"><span>Get in touch</span></div>
-                                 </div>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="payment-service-pdq-machine.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-strategic"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Payment Service &amp; PDQ Machine
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-telephone-and-broadband.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-leadership"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Telephone &amp; Broadband
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-water.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-business"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Water
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="web-development.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-business"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Web Development
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+                              </ul>
+
+                           </li>
+
+
+                           <li>
+                              <a href="switch-renew.html">
+                                 Switch/Renew
                               </a>
-                              <img class="shapes move-anim-2" src="images/carrow.png" alt="shape">
-                           </div>
-                        </div>
+                           </li>
+
+                           <li>
+                              <a href="careers.html">
+                                 Careers
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="contact.html">
+                                 Contact Us
+                              </a>
+                           </li>
+
+                        </ul>
+
                      </div>
-                  </aside>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- end: Service Section -->
-      <!-- start: Cta Section -->
-      <section class="tj-cta-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="cta-wrapper">
-                     <div class="cta-title">
-                        <h2 class="title text-anim">Get consultant now!</h2>
-                     </div>
-                     <div class="cta-button wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="contact.html" class="tj-primary-btn white-btn">
+
+
+                     <div class="header_right_info d-none d-lg-inline-flex">
+
+                        <button class="menu_btn d-none d-xl-inline-flex">
+
+                           Menu
+
+                           <span class="cubes">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                           </span>
+
+                        </button>
+
+
+                        <a href="contact.html" class="tj-primary-btn">
+
                            <div class="btn_inner">
+
                               <div class="btn_icon">
+
                                  <span>
                                     <i class="tji-arrow-right"></i>
                                     <i class="tji-arrow-right"></i>
                                  </span>
+
                               </div>
+
                               <div class="btn_text">
-                                 <span>Lets talk now</span>
+
+                                 <span>
+                                    Get a Quote
+                                 </span>
+
                               </div>
+
                            </div>
+
                         </a>
+
                      </div>
+
+
+                     <button class="menu_btn d-lg-none hamburgerBtn">
+
+                        Menu
+
+                        <span class="cubes">
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                        </span>
+
+                     </button>
+
                   </div>
+
                </div>
+
             </div>
+
          </div>
 
-         <img class="cta-shape-1" src="images/cta-shapes-1.png" alt="Shapes">
-         <img class="cta-shape-2" src="images/cta-shapes-2.png" alt="Shapes">
+      </div>
+
+   </header>
+
+
+   <!-- =========================================
+        STICKY HEADER
+   ========================================= -->
+
+   <header class="tj-header-area header-3 header-duplicate header-sticky">
+
+      <div class="header-bottom">
+
+         <div class="container-fluid">
+
+            <div class="row">
+
+               <div class="col-12">
+
+                  <div class="header-wrapper">
+
+
+                     <div class="site-logo">
+
+                        <a class="logo" href="index.html">
+
+                           <img src="images/primary-logo.png" alt="D&A Business Logo">
+
+                        </a>
+
+                     </div>
+
+
+                     <div class="mainmenu d-lg-block d-none">
+
+                        <ul>
+
+                           <li>
+                              <a href="index.html">
+                                 Home
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="about.html">
+                                 About Us
+                              </a>
+                           </li>
+
+
+                           <li class="has-dropdown">
+
+                              <a href="#">
+                                 Services
+                              </a>
+
+                              <ul class="sub-menu mega-menu-service">
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-utilities.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-optimization"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Utilities
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="payment-service-pdq-machine.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-strategic"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Payment Service &amp; PDQ Machine
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-telephone-and-broadband.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-leadership"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Telephone &amp; Broadband
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="business-water.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-business"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Business Water
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <a class="mega-menu-service-single" href="web-development.html">
+
+                                       <span class="mega-menu-service-icon">
+                                          <i class="tji-business"></i>
+                                       </span>
+
+                                       <span class="mega-menu-service-title">
+                                          Web Development
+                                       </span>
+
+                                       <span class="mega-menu-service-nav">
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+
+                                    </a>
+
+                                 </li>
+
+                              </ul>
+
+                           </li>
+
+
+                           <li>
+                              <a href="switch-renew.html">
+                                 Switch/Renew
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="careers.html">
+                                 Careers
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="contact.html">
+                                 Contact Us
+                              </a>
+                           </li>
+
+                        </ul>
+
+                     </div>
+
+
+                     <div class="header_right_info d-none d-lg-inline-flex">
+
+                        <button class="menu_btn d-none d-xl-inline-flex">
+
+                           Menu
+
+                           <span class="cubes">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                           </span>
+
+                        </button>
+
+
+                        <a href="contact.html" class="tj-primary-btn white-btn">
+
+                           <div class="btn_inner">
+
+                              <div class="btn_icon">
+
+                                 <span>
+                                    <i class="tji-arrow-right"></i>
+                                    <i class="tji-arrow-right"></i>
+                                 </span>
+
+                              </div>
+
+                              <div class="btn_text">
+
+                                 <span>
+                                    Get a Quote
+                                 </span>
+
+                              </div>
+
+                           </div>
+
+                        </a>
+
+                     </div>
+
+
+                     <button class="menu_btn d-lg-none hamburgerBtn">
+
+                        Menu
+
+                        <span class="cubes">
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                        </span>
+
+                     </button>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </header>
+
+
+   <main id="primary" class="site-main">
+
+
+      <!-- =========================================
+           HERO SECTION
+      ========================================= -->
+
+      <section class="tj-hero-section-four">
+
+         <div class="container">
+
+            <div class="row">
+
+               <div class="hero-wrapper-four">
+
+
+                  <!-- HERO CONTENT -->
+
+                  <div class="hero-content-four">
+
+                     <span class="hero-subtitle">
+
+                        <span>D</span>&amp;<span>A</span> Business
+
+                     </span>
+
+
+                     <h1 class="hero-title text-anim">
+
+                        Business telephone
+                        <span>&amp; broadband</span>
+                        solutions for UK businesses
+
+                     </h1>
+
+
+                     <div class="desc wow fadeInUp" data-wow-delay="0.1s">
+
+                        <p>
+
+                           Keep your business connected with reliable
+                           telephone and broadband solutions from
+                           D&amp;A Business — flexible, dependable and
+                           designed around your business needs.
+
+                        </p>
+
+
+                        <ul class="hero-features">
+
+                           <li>
+
+                              <i class="tji-double-check"></i>
+
+                              Reliable Business Connectivity
+
+                           </li>
+
+
+                           <li>
+
+                              <i class="tji-double-check"></i>
+
+                              Flexible Telephone Solutions
+
+                           </li>
+
+
+                           <li>
+
+                              <i class="tji-double-check"></i>
+
+                              Dedicated Customer Support
+
+                           </li>
+
+                        </ul>
+
+                     </div>
+
+
+                     <div class="wow fadeInUp" data-wow-delay="0.3s">
+
+                        <a href="contact.html" class="tj-primary-btn">
+
+                           <div class="btn_inner">
+
+                              <div class="btn_icon">
+
+                                 <span>
+                                    <i class="tji-arrow-right"></i>
+                                    <i class="tji-arrow-right"></i>
+                                 </span>
+
+                              </div>
+
+                              <div class="btn_text">
+
+                                 <span>
+                                    Get a Free Quote
+                                 </span>
+
+                              </div>
+
+                           </div>
+
+                        </a>
+
+                     </div>
+
+                  </div>
+
+
+                  <!-- HERO IMAGE -->
+
+                  <div class="hero-images-box-four">
+
+                     <div class="hero-images wow fadeInUp" data-wow-delay="0.5s">
+
+                        <img src="images/pdqq.png" alt="Business Telephone and Broadband Solutions"
+                           class="w-full rounded-[25px]">
+
+                     </div>
+
+
+                     <!-- CLIENT EXPERIENCE -->
+
+                     <div class="client-experience move-anim">
+
+                        <ul class="images-thumb">
+
+                           <li>
+                              <img src="images/thumb-1.png" alt="Business Client">
+                           </li>
+
+                           <li>
+                              <img src="images/thumb-2.png" alt="Business Client">
+                           </li>
+
+                           <li>
+                              <img src="images/thumb-3.png" alt="Business Client">
+                           </li>
+
+                           <li class="plus">
+
+                              <i class="fa-sharp fa-solid fa-plus"></i>
+
+                           </li>
+
+                        </ul>
+
+
+                        <span class="sub-title">
+
+                           <span>39K+</span>
+
+                           Happy businesses across UK.
+
+                        </span>
+
+                     </div>
+
+
+                     <!-- VIDEO -->
+
+                     <div class="hero-video-btn move-anim">
+
+                        <a class="video-btn video-popup" data-autoplay="true" data-vbtype="video" data-maxwidth="1200px"
+                           href="dabusinessvideo.mp4">
+
+                           <span class="play-btn">
+                              <i class="tji-play"></i>
+                           </span>
+
+                           <span class="video-text">
+                              View More
+                           </span>
+
+                        </a>
+
+                     </div>
+
+                  </div>
+
+
+                  <!-- SHAPE -->
+
+                  <div class="hero-shapes-1 wow fadeInDown" data-wow-delay="0.6s">
+
+                     <img src="images/h5-hero-shape-1.png" alt="Decorative Shape">
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+
+         <div class="hero-shapes-2 wow fadeInLeft" data-wow-delay="1s">
+
+            <img src="images/h5-hero-shape-2.png" alt="Decorative Shape">
+
+         </div>
+
       </section>
-      <!-- end: Cta Section -->
+
+
+      <!-- =========================================
+           SERVICE CONTENT SECTION
+      ========================================= -->
+
+      <section class="tj-service-area section-space">
+
+         <div class="container">
+
+            <div class="row rg-50">
+
+
+               <!-- MAIN CONTENT -->
+
+               <div class="col-lg-8">
+
+                  <div class="tj-post-wrapper">
+
+                     <div class="tj-post-single-post mb-0">
+
+
+                        <div class="tj-post-thumb hover:shine wow fadeInUp" data-wow-delay="0.1s">
+
+                           <img src="images/tj-service-1.webp" alt="Business Telephone and Broadband">
+
+                        </div>
+
+
+                        <h2 class="tj-post-title text-anim">
+
+                           Reliable business telephone and broadband
+                           services keep your business connected.
+
+                        </h2>
+
+
+                        <div class="tj-entry-content">
+
+
+                           <p class="wow fadeInUp" data-wow-delay="0.1s">
+
+                              A reliable telephone and broadband
+                              connection is essential for modern
+                              businesses. From communicating with
+                              customers and suppliers to accessing
+                              cloud applications and managing everyday
+                              operations, your business needs dependable
+                              connectivity.
+
+                           </p>
+
+
+                           <p class="wow fadeInUp" data-wow-delay="0.3s">
+
+                              At D&amp;A Business Solutions, we help
+                              businesses find suitable telephone and
+                              broadband solutions based on their
+                              requirements. We can help you explore
+                              flexible options designed to provide
+                              reliable connectivity while keeping your
+                              business communication simple and
+                              efficient.
+
+                           </p>
+
+
+                           <div class="tj-check-list">
+
+                              <h3 class="text-anim">
+
+                                 Business Telephone &amp; Broadband
+                                 Solutions
+
+                              </h3>
+
+
+                              <p class="wow fadeInUp" data-wow-delay="0.1s">
+
+                                 Whether you are starting a new business,
+                                 moving premises or reviewing your
+                                 existing communication services, we
+                                 can help you understand your options
+                                 and request a quote based on your
+                                 business requirements.
+
+                              </p>
+
+                           </div>
+
+
+                           <!-- CHECK LIST -->
+
+                           <div class="service-check-list mt-8 wow fadeInUp" data-wow-delay="0.3s">
+
+                              <ul>
+
+
+                                 <li>
+
+                                    <i class="tji-double-check"></i>
+
+                                    <span>
+
+                                       Get reliable telephone and
+                                       broadband solutions designed
+                                       around your business needs.
+
+                                    </span>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <i class="tji-double-check"></i>
+
+                                    <span>
+
+                                       Speak with our support team on
+
+                                       <a href="tel:+447359112364">
+                                          +44 7359 112 364
+                                       </a>
+
+                                       or
+
+                                       <a href="tel:+447900065669">
+                                          +44 7900 065 669
+                                       </a>.
+
+                                    </span>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <i class="tji-double-check"></i>
+
+                                    <span>
+
+                                       Alternatively, email us at
+
+                                       <a href="mailto:info@dabusinesssolutions.com">
+
+                                          info@dabusinesssolutions.com
+
+                                       </a>.
+
+                                    </span>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <i class="tji-double-check"></i>
+
+                                    <span>
+
+                                       For updates and offers, follow us
+                                       on our
+
+                                       <a href="https://www.facebook.com/dabusiness2019" target="_blank"
+                                          rel="noopener noreferrer">
+
+                                          Facebook page
+
+                                       </a>.
+
+                                    </span>
+
+                                 </li>
+
+
+                              </ul>
+
+                           </div>
+
+
+                           <!-- SERVICE IMAGES -->
+
+                           <div class="service-images-wrap">
+
+                              <div class="row">
+
+
+                                 <div class="col-sm-6">
+
+                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.5s">
+
+                                       <img src="images/tj-service-3.webp" alt="Business Broadband Service">
+
+                                    </div>
+
+                                 </div>
+
+
+                                 <div class="col-sm-6">
+
+                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.7s">
+
+                                       <img src="images/tj-service-4.webp" alt="Business Telephone Support">
+
+                                    </div>
+
+                                 </div>
+
+
+                              </div>
+
+                           </div>
+
+
+                           <!-- FEATURES -->
+
+                           <div class="row rg-30 justify-content-center">
+
+
+                              <div class="col-md-4 col-sm-6">
+
+                                 <div class="tj-feature wow fadeInUp" data-wow-delay="0.5s">
+
+                                    <div class="tj-feature-icon">
+
+                                       <i class="tji-quick"></i>
+
+                                    </div>
+
+
+                                    <h4 class="tj-feature-title">
+
+                                       Reliable Connectivity
+
+                                    </h4>
+
+
+                                    <div class="desc">
+
+                                       <p>
+
+                                          Stay connected with dependable
+                                          broadband and communication
+                                          solutions for your business.
+
+                                       </p>
+
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+
+                              <div class="col-md-4 col-sm-6">
+
+                                 <div class="tj-feature wow fadeInUp" data-wow-delay="0.7s">
+
+                                    <div class="tj-feature-icon">
+
+                                       <i class="tji-results"></i>
+
+                                    </div>
+
+
+                                    <h4 class="tj-feature-title">
+
+                                       Flexible Solutions
+
+                                    </h4>
+
+
+                                    <div class="desc">
+
+                                       <p>
+
+                                          Explore practical telephone
+                                          and broadband options suited
+                                          to your business requirements.
+
+                                       </p>
+
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+
+                              <div class="col-md-4 col-sm-6">
+
+                                 <div class="tj-feature wow fadeInUp" data-wow-delay="0.9s">
+
+                                    <div class="tj-feature-icon">
+
+                                       <i class="tji-personalization"></i>
+
+                                    </div>
+
+
+                                    <h4 class="tj-feature-title">
+
+                                       Personalised Support
+
+                                    </h4>
+
+
+                                    <div class="desc">
+
+                                       <p>
+
+                                          Get dedicated guidance and
+                                          support throughout your
+                                          business connectivity journey.
+
+                                       </p>
+
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+
+               <!-- =========================================
+                    SIDEBAR
+               ========================================= -->
+
+               <div class="col-lg-4">
+
+                  <aside class="tj-service-sidebar">
+
+
+                     <!-- SERVICE LIST -->
+
+                     <div class="service-category">
+
+                        <ul>
+
+
+                           <li>
+
+                              <a href="business-utilities.html">
+
+                                 Business Utilities
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="payment-service-pdq-machine.html">
+
+                                 Payment Service &amp; PDQ Machine
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a class="active" href="business-telephone-and-broadband.html">
+
+                                 Business Telephone &amp; Broadband
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="business-water.html">
+
+                                 Business Water
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="web-development.html">
+
+                                 Web Development
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                        </ul>
+
+                     </div>
+
+
+                     <!-- SIDEBAR CTA -->
+
+                     <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
+
+                        <div class="tj-sidebar-cta" data-bg-image="images/widget-cta.webp">
+
+
+                           <div class="content">
+
+                              <div class="icon">
+
+                                 <img src="images/widget-cta-icon.png" alt="Business Support">
+
+                              </div>
+
+
+                              <h3>
+
+                                 Need help?
+
+                                 <br>
+
+                                 Feel free to contact us
+
+                              </h3>
+
+
+                              <p>
+
+                                 Our mission is to empower businesses
+                                 of all sizes with practical and
+                                 reliable business solutions.
+
+                              </p>
+
+                           </div>
+
+
+                           <div class="cta-btn">
+
+                              <a href="contact.html" class="tj-primary-btn white-btn">
+
+                                 <div class="btn_inner">
+
+                                    <div class="btn_icon">
+
+                                       <span>
+
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+
+                                       </span>
+
+                                    </div>
+
+
+                                    <div class="btn_text">
+
+                                       <span>
+                                          Get in Touch
+                                       </span>
+
+                                    </div>
+
+                                 </div>
+
+                              </a>
+
+
+                              <img class="shapes move-anim-2" src="images/carrow.png" alt="Arrow">
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </aside>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </section>
+
+
+      <!-- =========================================
+           FAQ SECTION
+      ========================================= -->
+
+      <section class="business-faq-section">
+
+         <div class="container">
+
+            <div class="business-faq-wrapper">
+
+
+               <!-- FAQ LEFT -->
+
+               <div class="business-faq-left">
+
+                  <span class="faq-label">
+
+                     Business Telephone &amp; Broadband
+
+                  </span>
+
+
+                  <h2 class="faq-heading">
+
+                     Everything you need
+
+                     <span>
+                        to know
+                     </span>
+
+                  </h2>
+
+
+                  <p class="faq-description">
+
+                     Get clear answers about our business telephone
+                     and broadband solutions and discover how
+                     D&amp;A Business can help keep your business
+                     connected.
+
+                  </p>
+
+
+                  <p class="faq-description">
+
+                     From reliable broadband connectivity to flexible
+                     business telephone solutions, we help businesses
+                     across the UK find practical communication
+                     services that support their everyday operations.
+
+                  </p>
+
+
+                  <p class="faq-description">
+
+                     Our experienced team is available to answer your
+                     questions, explain your options and help you
+                     choose a suitable telephone and broadband
+                     solution for your business.
+
+                  </p>
+
+
+                  <a href="contact.html" class="faq-button">
+
+                     Talk To Our Team
+
+                     <span>
+
+                        <i class="tji-arrow-right"></i>
+
+                     </span>
+
+                  </a>
+
+               </div>
+
+
+               <!-- FAQ RIGHT -->
+
+               <div class="business-faq-right">
+
+
+                  <!-- FAQ 01 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+
+                           What business telephone and broadband
+                           services do you provide?
+
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+
+                           We provide business telephone and broadband
+                           solutions designed to help businesses stay
+                           connected and communicate effectively with
+                           customers, suppliers and teams.
+
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 02 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+
+                           Can you help me find a suitable broadband
+                           solution for my business?
+
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+
+                           Yes. We can discuss your business
+                           requirements and help you explore suitable
+                           broadband options based on your needs,
+                           location and expected usage.
+
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 03 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+
+                           Are your telephone and broadband solutions
+                           suitable for small businesses?
+
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+
+                           Absolutely. Our solutions can be tailored
+                           to businesses of different sizes, from
+                           small businesses and start-ups to established
+                           companies.
+
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 04 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+
+                           Can you help if my existing contract is
+                           coming to an end?
+
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+
+                           Yes. If your current telephone or broadband
+                           contract is approaching renewal, contact us
+                           and we can discuss your requirements and
+                           available options.
+
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 05 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+
+                           Do you provide support after I switch?
+
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+
+                           Yes. Our team remains available to answer
+                           questions and provide support whenever you
+                           need assistance with your business services.
+
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 06 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+
+                           How can I get a business telephone and
+                           broadband quote?
+
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+
+                           Simply contact our team and tell us about
+                           your business requirements. We will discuss
+                           your needs and help you explore suitable
+                           options.
+
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- BOTTOM CTA -->
+
+                  <div class="faq-bottom-cta">
+
+                     <div>
+
+                        <p class="small-text">
+
+                           Need more information?
+
+                        </p>
+
+
+                        <p class="main-text">
+
+                           We're here to keep your business connected.
+
+                        </p>
+
+                     </div>
+
+
+                     <a href="contact.html">
+
+                        Contact Us
+
+                     </a>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </section>
+
+
    </main>
 
-   <!-- start: Footer Area -->
-   <footer class="tj-footer-area footer-2 fix">
-      <div class="footer-top-area">
-         <div class="container">
-            <div class="row line rg-50">
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                  <div class="footer-widget footer2-col-1 footer-info">
-                     <div class="footer-logo">
-                        <a href="index.html">
-                           <img src="images/primary-logo.png" alt="D&A Business">
-                        </a>
-                     </div>
-                     <p class="desc">
-                        We are a consulting firm specializing in B2B marketing and business management solutions for small to medium-sized businesses across the UK. Over the years, D&A Business has grown to become a leading provider of B2B solutions, serving hundreds of companies across a wide range of industries and services throughout the UK.
-                     </p>
-                     <div class="footer-social">
-                        <h5 class="title">Follow Us:</h5>
-                        <ul>
-                           <li><a href="https://www.facebook.com/dabusiness2019"><i class="fa-brands fa-facebook-f"></i></a></li>
-                           <li><a href="https://www.instagram.com/?next=%2F"><i class="fa-brands fa-instagram"></i></a></li>
-                           <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        </ul>
-                     </div>
+
+   <!-- =========================================
+        CTA SECTION
+   ========================================= -->
+
+   <section class="tj-cta-section relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style="background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-business-blue-color-block-earth-background-picture-image_1025560.jpg');">
+
+      <div class="container">
+
+         <div class="cta-wrapper relative z-10">
+
+            <div class="row align-items-center justify-content-between">
+
+
+               <div class="col-lg-7 col-md-7">
+
+                  <div class="cta-title">
+
+                     <h2 class="title text-anim">
+
+                        Get consultant now!
+
+                     </h2>
+
                   </div>
+
                </div>
-               <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
-                  <div class="footer-widget footer2-col-2 footer-contact-infos">
-                     <div class="footer-title">
-                        <h4 class="title">Our offices</h4>
+
+
+               <div class="col-lg-5 col-md-5">
+
+                  <div class="cta-button wow fadeInUp text-md-end text-center" data-wow-delay="0.1s">
+
+                     <a href="contact.html" class="tj-primary-btn white-btn">
+
+                        <div class="btn_inner">
+
+                           <div class="btn_icon">
+
+                              <span>
+
+                                 <i class="tji-arrow-right"></i>
+                                 <i class="tji-arrow-right"></i>
+
+                              </span>
+
+                           </div>
+
+
+                           <div class="btn_text">
+
+                              <span>
+                                 Let's talk now
+                              </span>
+
+                           </div>
+
+                        </div>
+
+                     </a>
+
+                  </div>
+
+               </div>
+
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+      <img class="cta-shape-1 pointer-events-none absolute left-0 top-0 hidden sm:block" src="images/cta-shapes-1.png"
+         alt="CTA Shape">
+
+
+      <img class="cta-shape-2 pointer-events-none absolute bottom-0 right-0 hidden sm:block"
+         src="images/cta-shapes-2.png" alt="CTA Shape">
+
+   </section>
+
+
+   <!-- =========================================
+        FOOTER
+   ========================================= -->
+
+   <footer class="tj-footer-area footer-2 fix">
+
+
+      <div class="footer-top-area">
+
+         <div class="container">
+
+            <div class="row line rg-50">
+
+
+               <!-- COMPANY -->
+
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+
+                  <div class="footer-widget footer2-col-1 footer-info">
+
+                     <div class="footer-logo">
+
+                        <a href="index.html">
+
+                           <img src="images/primary-logo.png" alt="D&A Business">
+
+                        </a>
+
                      </div>
+
+
+                     <p class="desc">
+
+                        We are a consulting firm specialising in
+                        B2B marketing and business management
+                        solutions for small to medium-sized
+                        businesses across the UK.
+
+                        Over the years, D&amp;A Business has grown
+                        to become a leading provider of B2B solutions,
+                        serving businesses across a wide range of
+                        industries and services throughout the UK.
+
+                     </p>
+
+
+                     <div class="footer-social">
+
+                        <h5 class="title">
+                           Follow Us:
+                        </h5>
+
+
+                        <ul>
+
+                           <li>
+
+                              <a href="https://www.facebook.com/dabusiness2019" target="_blank"
+                                 rel="noopener noreferrer" aria-label="Facebook">
+
+                                 <i class="fa-brands fa-facebook-f"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                                 aria-label="Instagram">
+
+                                 <i class="fa-brands fa-instagram"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                                 aria-label="LinkedIn">
+
+                                 <i class="fa-brands fa-linkedin-in"></i>
+
+                              </a>
+
+                           </li>
+
+                        </ul>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+
+               <!-- OFFICES -->
+
+               <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
+
+                  <div class="footer-widget footer2-col-2 footer-contact-infos">
+
+                     <div class="footer-title">
+
+                        <h4 class="title">
+                           Our Offices
+                        </h4>
+
+                     </div>
+
+
                      <div class="infos-item">
 
-						<h6 class="title">Registered Office</h6>
-						
-						<p>1st Floor, Dover House, 764 Barking Road, London, England - E13 9PJ</p>
-						
-						<h6 class="title">Trading Address</h6>
-						
-                        <p>Unit-16, 37 Victoria Rd, Romford RM1 2LH, London, United Kingdom</p>
-						
-                        <a href="tel:+447359112364">+44 7359 112 364</a>
-						<br>
-						   
-						
-						<h6 class="title">Landline</h6>
-						
-						<a href="tel:+442037268725"> +44 2037 268 725</a>
-						
-						
+                        <h6 class="title">
+                           Registered Office
+                        </h6>
+
+                        <p>
+
+                           1st Floor, Dover House,
+                           764 Barking Road,
+                           London, England - E13 9PJ
+
+                        </p>
+
+
+                        <h6 class="title">
+                           Trading Address
+                        </h6>
+
+                        <p>
+
+                           Unit-16, 37 Victoria Rd,
+                           Romford RM1 2LH,
+                           London, United Kingdom
+
+                        </p>
+
+
+                        <h6 class="title">
+                           Phone
+                        </h6>
+
+                        <a href="tel:+447359112364">
+
+                           +44 7359 112 364
+
+                        </a>
+
+
+                        <h6 class="title">
+                           Landline
+                        </h6>
+
+                        <a href="tel:+442037268725">
+
+                           +44 2037 268 725
+
+                        </a>
+
                      </div>
-                     
+
                   </div>
+
                </div>
+
+
+               <!-- QUICK LINKS -->
+
                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+
                   <div class="footer-widget footer2-col-3 widget_nav_menu">
+
                      <div class="footer-title">
-                        <h4 class="title">Quick Links</h4>
+
+                        <h4 class="title">
+                           Quick Links
+                        </h4>
+
                      </div>
+
+
                      <div class="widget-menu">
+
                         <ul>
-                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about.html">About Us</a></li>
-                           <li><a href="business-utilities.html">Services</a></li>
-                           <li><a href="switch-renew.html">Switch/Renew </a></li>
-                           <li><a href="careers.html">Careers</a></li>
-                           <li><a href="contact.html">Contact Us</a></li>
-                           
+
+                           <li>
+                              <a href="index.html">
+                                 Home
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="about.html">
+                                 About Us
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="business-utilities.html">
+                                 Services
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="switch-renew.html">
+                                 Switch/Renew
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="careers.html">
+                                 Careers
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="contact.html">
+                                 Contact Us
+                              </a>
+                           </li>
+
                         </ul>
+
                      </div>
+
                   </div>
+
                </div>
+
+
+               <!-- SERVICES -->
+
                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+
                   <div class="footer-widget footer2-col-4 widget_nav_menu">
+
                      <div class="footer-title">
-                        <h4 class="title">Our Services</h4>
+
+                        <h4 class="title">
+                           Our Services
+                        </h4>
+
                      </div>
+
+
                      <div class="widget-menu">
+
                         <ul>
-                           <li><a href="business-utilities.html">Business Utilities</a></li>
-                           <li><a href="payment-service-pdq-machine.html">Payment Service & PDQ Machine</a></li>
-                           <li><a href="business-telephone-and-broadband.html">Business Telephone & Broadband</a></li>
-                           <li><a href="business-water.html">Business Water</a></li>
-						    <li><a href="web-development.html">Web Development</a></li>
-                           
+
+                           <li>
+
+                              <a href="business-utilities.html">
+
+                                 Business Utilities
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="payment-service-pdq-machine.html">
+
+                                 Payment Service &amp; PDQ Machine
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="business-telephone-and-broadband.html">
+
+                                 Business Telephone &amp; Broadband
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="business-water.html">
+
+                                 Business Water
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="web-development.html">
+
+                                 Web Development
+
+                              </a>
+
+                           </li>
+
                         </ul>
+
                      </div>
+
                   </div>
+
                </div>
+
             </div>
+
          </div>
+
       </div>
+
+
+      <!-- COPYRIGHT -->
+
       <div class="footer-copyright-area-2">
+
          <div class="container">
+
             <div class="row line">
+
                <div class="col-xl-4"></div>
+
+
                <div class="col-xl-8">
+
                   <div class="copyright-2">
+
                      <div class="copyright-content-area">
+
+
                         <div class="copyright-text">
-                           <p>© 2025 <a href="#" target="_blank"> D&A Business </a> All right reserved.</p>
-						   <p><a href="#" target="_blank"> Disclaimer </a> </p>
-                            
-                           <p>D&A Business is a trading name of D&A Business Solutions Ltd a company registered in England & Wales (CoN-11920067) VAT Registration No: 353841492 . We are  registered under Energy broker Alternative Dispute Resolution (ADR) scheme Reg No- C35DABU01 and Information Commissioner's Office (ICO.  Reference:ZA867666). Our Registered Office Address: 1st Floor, Dover House, 764 Barking Road, London, England, E13 9PJ & Trading Address: Unit-16 Metloc Business Centre, 37 Victoria Road​, Romford, Essex​, London RM1 2LH, GB.</p>
-						   <div class="service-images-wrap">
-                              <div class="row">
-                                 <div class="col-sm-6">
-                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.5s">
-                                       <img src="images/dis1.jpg" alt="service-image">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.7s">
-                                       <img src="images/dis2.jpg" alt="service-image">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+
+                           <p>
+
+                              © 2026
+
+                              <a href="index.html">
+                                 D&amp;A Business
+                              </a>
+
+                              All rights reserved.
+
+                           </p>
+
+
+                           <p>
+
+                              <a href="disclaimer.html">
+                                 Disclaimer
+                              </a>
+
+                           </p>
+
+
+                           <p>
+
+                              D&amp;A Business is a trading name of
+                              D&amp;A Business Solutions Ltd, a company
+                              registered in England &amp; Wales
+                              (Company No. 11920067), VAT Registration
+                              No. 353841492.
+
+                              We are registered under the Energy
+                              Broker Alternative Dispute Resolution
+                              (ADR) scheme, Reg No. C35DABU01, and
+                              with the Information Commissioner's
+                              Office (ICO), Reference: ZA867666.
+
+                              Registered Office:
+                              1st Floor, Dover House,
+                              764 Barking Road,
+                              London, England, E13 9PJ.
+
+                              Trading Address:
+                              Unit-16 Metloc Business Centre,
+                              37 Victoria Road, Romford,
+                              Essex, London RM1 2LH, GB.
+
+                           </p>
+
                         </div>
+
+
                         <div class="copyright-menu">
+
                            <ul>
-                              <li><a href="#">Policy & privacy</a></li>
-                              <li><a href="#">Terms & conditions</a></li>
+
+                              <li>
+
+                                 <a href="privacy-policy.html">
+
+                                    Privacy Policy
+
+                                 </a>
+
+                              </li>
+
+
+                              <li>
+
+                                 <a href="terms-conditions.html">
+
+                                    Terms &amp; Conditions
+
+                                 </a>
+
+                              </li>
+
                            </ul>
+
                         </div>
+
                      </div>
+
                   </div>
+
                </div>
+
             </div>
+
          </div>
+
       </div>
 
-      <!-- start: back to top -->
+
+      <!-- BACK TO TOP -->
+
       <div class="back-to-top-wrapper">
-         <button id="back_to_top" type="button" class="back-to-top-btn style-2">
+
+         <button id="back_to_top" type="button" class="back-to-top-btn style-2" aria-label="Back to top">
+
             <i class="tji-arrow-up"></i>
-            <span>GOTOP</span>
+
+            <span>
+               GOTOP
+            </span>
+
          </button>
+
       </div>
-       <a href="https://ttdsevaonline.net" style="display:none;">Tirumala Angapradakshinam VIP Break SRIVANI 300rs Vaikunta Ekadasi Special Entry Darshan Tickets Online</a>
-<a href="https://epfindia.org" style="display:none;">EPF Withdrawal PF Balance Check Online | UAN Activation Online Status</a>
-<a href="https://apmeebhoomi.com" style="display:none;">AP Meebhoomi Land Records EC Encumbrance ROR 1B Adangal Certified copy CC Search</a>
-<a href="https://arunachalam.org" style="display:none;">Arunachalam Giri Pradakshina Rooms Special Darshan Tickets Online Booking</a>
-<a href="https://jnvstnavodayaresults.com" style="display:none;">JNVST Navodaya Selection List Result 2026 Class 6 Class 9 | JNVST Navodaya Hall Ticket Admit Card download</a>
-<a href="https://navodaya.co.in" style="display:none;">Navodaya Class 6 Selection List District Wise | Navodaya Class 9 Result 2026</a>
-<a href="https://sabarimalaq.co.in" style="display:none;">Sabarimala Virtual Q Darshan Tickets Rooms Book Online Check Availability</a>
-<a href="https://ttdevasthanams.co.in" style="display:none;">TTD Arjitha Seva Angapradakshinam VIP Break SRIVANI Darshan Tickets Online</a>
-      <!-- end: back to top -->
+
    </footer>
-   <!-- end: Footer Area -->
 
-<script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "+44 7350320196", // WhatsApp number
-            call_to_action: "Call Us", // Call to action
-            button_color: "#FF6550", // Color of button
-            position: "left", // Position may be 'right' or 'left'
-        };
-        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68d650e1043cac19512f5955/1j62insf6';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+   <!-- =========================================
+        WHATSAPP BUTTON
+   ========================================= -->
 
-   <!-- JS here -->
+   <script type="text/javascript">
+
+      (function () {
+
+         var options = {
+
+            whatsapp: "+44 7350320196",
+
+            call_to_action: "Call Us",
+
+            button_color: "#FF6550",
+
+            position: "left"
+
+         };
+
+
+         var proto = "https:";
+
+         var host = "getbutton.io";
+
+         var url = proto + "//static." + host;
+
+
+         var s = document.createElement("script");
+
+         s.type = "text/javascript";
+
+         s.async = true;
+
+         s.src = url + "/widget-send-button/js/init.js";
+
+
+         s.onload = function () {
+
+            WhWidgetSendButton.init(
+               host,
+               proto,
+               options
+            );
+
+         };
+
+
+         var x = document.getElementsByTagName("script")[0];
+
+         x.parentNode.insertBefore(s, x);
+
+      })();
+
+   </script>
+
+
+   <!-- =========================================
+        TAWK.TO
+   ========================================= -->
+
+   <script type="text/javascript">
+
+      var Tawk_API = Tawk_API || {};
+
+      var Tawk_LoadStart = new Date();
+
+
+      (function () {
+
+         var s1 = document.createElement("script");
+
+         var s0 = document.getElementsByTagName("script")[0];
+
+
+         s1.async = true;
+
+
+         s1.src =
+            "https://embed.tawk.to/68d650e1043cac19512f5955/1j62insf6";
+
+
+         s1.charset = "UTF-8";
+
+
+         s1.setAttribute(
+            "crossorigin",
+            "*"
+         );
+
+
+         s0.parentNode.insertBefore(
+            s1,
+            s0
+         );
+
+      })();
+
+   </script>
+
+
+   <!-- =========================================
+        JAVASCRIPT
+   ========================================= -->
+
    <script src="js/jquery.min.js"></script>
+
    <script src="js/bootstrap.bundle.min.js"></script>
 
    <script src="js/gsap.min.js"></script>
+
    <script src="js/gsap-scroll-to-plugin.min.js"></script>
+
    <script src="js/gsap-scroll-trigger.min.js"></script>
+
    <script src="js/gsap-split-text.min.js"></script>
+
    <script src="js/smooth-scroll.min.js"></script>
 
    <script src="js/appear.min.js"></script>
+
    <script src="js/wow.min.js"></script>
+
    <script src="js/odometer.min.js"></script>
+
    <script src="js/jquery-knob.js"></script>
+
    <script src="js/swiper.min.js"></script>
+
    <script src="js/nice-select.js"></script>
+
    <script src="js/venobox.min.js"></script>
+
    <script src="js/meanmenu.js"></script>
+
    <script src="js/main.js"></script>
 
+</body>
 
-</body></html>
+</html>

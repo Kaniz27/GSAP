@@ -398,51 +398,115 @@
    <main id="primary" class="site-main">
 
       <!-- start: Hero Section -->
-   <section class="tj-hero-section relative w-full overflow-hidden py-16 md:py-20 lg:min-h-[800px] lg:py-0">
+   <section
+      class="tj-hero-section relative flex min-h-[620px] w-full items-center overflow-hidden bg-[#07111F] lg:h-[760px] lg:min-h-0">
    
-      <!-- Background Image -->
-      <img src="images/hero.png" alt="D&A Business" class="absolute inset-0 z-0 h-full w-full object-cover">
+      <!-- =========================
+           BACKGROUND
+      ========================== -->
+   
+      <img src="images/hero.png" alt="D&A Business" class="absolute inset-0 z-0 h-full w-full object-cover object-center">
    
       <!-- Overlay -->
-      <div class="absolute inset-0 z-[1] bg-black/55"></div>
+      <div class="absolute inset-0 z-[1] bg-black/65"></div>
+   
+      <div class="absolute inset-0 z-[1] bg-gradient-to-r from-[#06101F]/95 via-[#071526]/75 to-[#0075FF]/20">
+      </div>
    
    
-      <!-- Content -->
-      <div class="container relative z-[2]">
+      <!-- Background Glow -->
+      <div
+         class="pointer-events-none absolute -left-32 top-1/2 z-[1] h-[350px] w-[350px] -translate-y-1/2 rounded-full bg-[#0075FF]/15 blur-[100px]">
+      </div>
    
-         <div class="row align-items-center g-5">
+      <div
+         class="pointer-events-none absolute -right-32 bottom-0 z-[1] h-[300px] w-[300px] rounded-full bg-[#00C6FF]/10 blur-[100px]">
+      </div>
+   
+   
+      <!-- =========================
+           MAIN CONTENT
+      ========================== -->
+   
+      <div class="container relative z-[2] h-full">
+   
+         <!--
+            lg:-translate-y-12
+            = পুরো content আরও উপরে উঠবে
+         -->
+   
+         <div class="row g-4 align-items-center h-100 py-6 md:py-8 lg:-translate-y-12 lg:py-0">
    
    
             <!-- =========================
-                 LEFT: TEXT
+                 LEFT CONTENT
             ========================== -->
+   
             <div class="col-lg-6">
    
-               <div class="hero-content">
+               <div class="hero-content max-w-[600px]">
    
-                  <!-- Title -->
-                  <h1 class="hero-title text-anim">
-                     Unlocking Your Business
-                     <span class="active-color">
-                        Potential
+   
+                  <!-- Badge -->
+   
+                  <div
+                     class="mb-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-md">
+   
+                     <span class="h-2 w-2 rounded-full bg-[#35A8FF] shadow-[0_0_12px_#35A8FF]">
                      </span>
+   
+                     <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/90 sm:text-xs">
+                        Business Consulting
+                     </span>
+   
+                  </div>
+   
+   
+                  <!-- Heading -->
+   
+                  <h1
+                     class="hero-title text-anim text-3xl font-bold leading-[1.03] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[60px]">
+   
+                     Unlocking Your Business
+   
+                     <span class="active-color relative inline-block text-[#35A8FF]">
+   
+                        Potential
+   
+                        <span class="absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-[#35A8FF]/50">
+                        </span>
+   
+                     </span>
+   
                   </h1>
    
    
                   <!-- Description -->
-                  <div class="desc wow fadeInUp" data-wow-delay="0.1s">
-                     <p>
+   
+                  <div class="desc wow fadeInUp mt-3 max-w-[520px]" data-wow-delay="0.1s">
+   
+                     <p class="text-sm leading-6 text-white/75 sm:text-base sm:leading-7">
                         Trusted business consulting services tailored to your needs —
                         delivered by our team of seasoned experts.
                      </p>
+   
                   </div>
    
    
-                  <!-- Button -->
-                  <div class="wow fadeInUp" data-wow-delay="0.3s">
-                     <a href="contact.html" class="tj-primary-btn hero-button">
+                  <!-- =========================
+                       BUTTONS
+                       SAME LINE + SAME HEIGHT
+                  ========================== -->
    
-                        <div class="btn_inner">
+                  <div class="wow fadeInUp mt-4 flex flex-row flex-nowrap items-center gap-3" data-wow-delay="0.2s">
+   
+   
+                     <!-- PRIMARY BUTTON -->
+   
+                     <a href="contact.html"
+                        class="tj-primary-btn hero-button !m-0 !inline-flex !h-[48px] !shrink-0 !items-center">
+   
+                        <div class="btn_inner !m-0 !flex !h-full !items-center">
    
                            <div class="btn_icon">
                               <span>
@@ -460,6 +524,41 @@
                         </div>
    
                      </a>
+   
+   
+                     <!-- SECONDARY BUTTON -->
+   
+                     <a href="#scroll-hero"
+                        class="!m-0 inline-flex !h-[48px] shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/25 bg-white/10 px-5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:border-white/40 hover:bg-white/20">
+   
+                        Explore More
+   
+                        <i class="tji-arrow-right text-xs"></i>
+   
+                     </a>
+   
+                  </div>
+   
+   
+                  <!-- Trust Points -->
+   
+                  <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/60 sm:text-sm">
+   
+                     <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-[#35A8FF]"></i>
+                        Expert Consultants
+                     </span>
+   
+                     <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-[#35A8FF]"></i>
+                        Tailored Solutions
+                     </span>
+   
+                     <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-[#35A8FF]"></i>
+                        Proven Results
+                     </span>
+   
                   </div>
    
                </div>
@@ -468,32 +567,72 @@
    
    
             <!-- =========================
-                 RIGHT: VIDEO
+                 RIGHT VIDEO
             ========================== -->
+   
             <div class="col-lg-6">
    
-               <div class="hero-video-wrapper relative w-full overflow-hidden rounded-4 bg-white p-2
-                         border-2 border-[#0075FF]
-                         shadow-[0_20px_55px_rgba(0,117,255,0.20)]
-                         transition-all duration-500
-                         hover:-translate-y-1
-                         hover:shadow-[0_25px_65px_rgba(0,117,255,0.28)]">
+               <div class="hero-video-area relative mx-auto w-full max-w-[570px]">
    
-                  <div class="overflow-hidden rounded-3">
+                  <!-- Glow -->
    
-                     <video class="hero-video block w-full
-                               h-[220px]
-                               sm:h-[260px]
-                               md:h-[320px]
-                               lg:h-[420px]
-                               object-contain
-                               bg-[#f8fbff]" autoplay muted loop playsinline preload="metadata" poster="images/dataa.jpg">
+                  <div class="absolute -inset-2 rounded-[24px] bg-[#0075FF]/20 blur-xl">
+                  </div>
    
-                        <source src="images/dabusinessvideo.mp4" type="video/mp4">
    
-                        Your browser does not support the video tag.
+                  <!-- Video Card -->
    
-                     </video>
+                  <div
+                     class="hero-video-wrapper relative overflow-hidden rounded-[22px] border border-white/20 bg-white/10 p-2 shadow-[0_20px_55px_rgba(0,0,0,0.35)] backdrop-blur-md">
+   
+                     <div class="relative overflow-hidden rounded-[16px] bg-[#07111F]">
+   
+                        <!-- FULL VIDEO -->
+   
+                        <video
+                           class="hero-video block h-[205px] w-full object-contain sm:h-[250px] md:h-[300px] lg:h-[340px] xl:h-[365px]"
+                           autoplay muted loop playsinline preload="metadata" poster="images/dataa.jpg">
+   
+                           <source src="images/dabusinessvideo.mp4" type="video/mp4">
+   
+                           Your browser does not support the video tag.
+   
+                        </video>
+   
+   
+                        <!-- Video Gradient -->
+   
+                        <div
+                           class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/40 to-transparent">
+                        </div>
+   
+   
+                        <!-- Video Badge -->
+   
+                        <div
+                           class="absolute bottom-4 left-4 flex items-center gap-2 rounded-xl border border-white/15 bg-black/40 px-3 py-2 backdrop-blur-md">
+   
+                           <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#0075FF] text-white">
+   
+                              <i class="fa-solid fa-play text-[9px]"></i>
+   
+                           </span>
+   
+                           <div>
+   
+                              <p class="text-[9px] uppercase tracking-wider text-white/50">
+                                 Discover
+                              </p>
+   
+                              <p class="text-xs font-semibold text-white">
+                                 Our Approach
+                              </p>
+   
+                           </div>
+   
+                        </div>
+   
+                     </div>
    
                   </div>
    
@@ -509,12 +648,18 @@
       <!-- =========================
            SCROLL
       ========================== -->
-      <div class="hero_scroll relative z-[2] mt-10 hidden lg:block">
    
-         <a class="down" href="#scroll-hero">
+      <div class="absolute bottom-4 left-1/2 z-[3] hidden -translate-x-1/2 lg:block">
    
-            <span>
-               <i class="tji-arrow-bown"></i>
+         <a href="#scroll-hero"
+            class="group flex flex-col items-center gap-1 text-[10px] uppercase tracking-[0.15em] text-white/60">
+   
+            <span class="flex h-7 w-5 items-start justify-center rounded-full border border-white/25 p-1">
+   
+               <span
+                  class="h-1.5 w-1 rounded-full bg-white/70 transition-transform duration-500 group-hover:translate-y-3">
+               </span>
+   
             </span>
    
             Scroll
