@@ -1093,20 +1093,242 @@
       <!-- end: back to top -->
    </footer>
    
+   <!-- start: WhatsApp Quick Chat Widget -->
+   <div id="tjWaWidget" class="tj-wa-widget">
+      <div id="tjWaPanel" class="tj-wa-panel" hidden>
+         <div class="tj-wa-panel-head">
+            <div class="tj-wa-avatar">D&amp;A</div>
+            <div class="tj-wa-panel-title">
+               <strong>D&amp;A Business</strong>
+               <span><i class="tj-wa-dot"></i>Usually replies instantly</span>
+            </div>
+            <button type="button" id="tjWaClose" class="tj-wa-close" aria-label="Close chat options">&times;</button>
+         </div>
+
+         <!-- Options view -->
+         <div id="tjWaOptions" class="tj-wa-panel-body">
+            <div class="tj-wa-bubble">Hi <span class="tj-wa-wave">👋</span> I'm the D&amp;A Assistant. What can we help you with today?</div>
+            <div class="tj-wa-pills">
+               <button type="button" class="tj-wa-pill" data-service="0">Business Utilities</button>
+               <button type="button" class="tj-wa-pill" data-service="1">Payment Service &amp; PDQ Machine</button>
+               <button type="button" class="tj-wa-pill" data-service="2">Business Telephone &amp; Broadband</button>
+               <button type="button" class="tj-wa-pill" data-service="3">Business Water</button>
+               <button type="button" class="tj-wa-pill" data-service="4">Web Development</button>
+            </div>
+            <div class="tj-wa-divider"></div>
+            <a class="tj-wa-option" data-text="Hi, I'd like to switch or renew my contract." href="#">Switch / Renew Contract</a>
+            <a class="tj-wa-option" data-text="Hi, I'd like to know about career opportunities." href="#">Careers</a>
+            <a class="tj-wa-option" data-text="Hi, I have a general enquiry." href="#">General Enquiry</a>
+         </div>
+
+         <!-- Service detail view -->
+         <div id="tjWaDetail" class="tj-wa-panel-body" hidden>
+            <button type="button" id="tjWaBack" class="tj-wa-back">&larr; Back to options</button>
+            <h4 id="tjWaDetailTitle" class="tj-wa-detail-title"></h4>
+            <p id="tjWaDetailDesc" class="tj-wa-detail-desc"></p>
+            <a id="tjWaDetailGetStarted" class="tj-wa-primary-btn" href="#">Get started</a>
+            <a id="tjWaDetailContact" class="tj-wa-secondary-btn tj-wa-secondary-btn-sms" href="#">Send us a Message</a>
+         </div>
+      </div>
+
+      <div class="tj-wa-fabs">
+         <button type="button" id="tjMsgFab" class="tj-wa-toggle tj-wa-toggle-sms" aria-label="Send us a message">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+         </button>
+         <a href="tel:+447552675976" id="tjWaCall" class="tj-wa-toggle tj-wa-toggle-wa" aria-label="Call us">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16.004 3C9.373 3 4 8.373 4 15c0 2.386.694 4.612 1.898 6.49L4 29l7.72-1.858A11.93 11.93 0 0 0 16.004 27C22.635 27 28 21.63 28 15S22.635 3 16.004 3zm0 21.75c-2.06 0-4.02-.55-5.71-1.58l-.41-.24-4.58 1.1 1.13-4.47-.27-.46A9.7 9.7 0 0 1 6.25 15c0-5.38 4.38-9.75 9.75-9.75S25.75 9.62 25.75 15 21.38 24.75 16.004 24.75zm5.34-7.3c-.29-.15-1.72-.85-1.99-.94-.27-.1-.46-.15-.66.15-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.43s1.05 2.82 1.19 3.02c.15.2 2.06 3.15 5 4.41.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.55-.34z"></path></svg>
+         </a>
+      </div>
+   </div>
+   <style>
+      .tj-wa-widget { position: fixed; left: 24px; bottom: 24px; z-index: 99999; font-family: inherit; display: flex; flex-direction: column-reverse; align-items: flex-start; gap: 14px; }
+      .tj-wa-fabs { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+      .tj-wa-toggle { position: relative; width: 56px; height: 56px; border-radius: 50%; border: none; box-shadow: 0 8px 22px rgba(0,0,0,.22); cursor: pointer; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+      .tj-wa-toggle-wa { background: #25D366; box-shadow: 0 8px 24px rgba(37,211,102,.4); animation: tjWaPulse 2.4s ease-out infinite; }
+      .tj-wa-toggle-wa:hover { background: #1ebe57; }
+      .tj-wa-toggle-sms { width: 48px; height: 48px; background: #0075FF; box-shadow: 0 6px 18px rgba(0,117,255,.35); }
+      .tj-wa-toggle-sms:hover { background: #005fd1; }
+      @keyframes tjWaPulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.45); } 70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+      .tj-wa-panel { width: 330px; max-width: 85vw; background: #fff; border-radius: 18px; box-shadow: 0 14px 44px rgba(0,0,0,.22); overflow: hidden; animation: tjWaPop .2s ease-out; }
+      @keyframes tjWaPop { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      .tj-wa-panel-head { background: linear-gradient(135deg, #0075FF, #0059c7); color: #fff; padding: 16px; display: flex; align-items: center; gap: 12px; }
+      .tj-wa-avatar { flex: none; width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,.18); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .3px; display: flex; align-items: center; justify-content: center; }
+      .tj-wa-panel-title { flex: 1 1 auto; min-width: 0; }
+      .tj-wa-panel-title strong { display: block; font-size: 15px; }
+      .tj-wa-panel-title span { display: flex; align-items: center; gap: 5px; font-size: 12px; opacity: .9; margin-top: 2px; }
+      .tj-wa-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80; box-shadow: 0 0 0 2px rgba(255,255,255,.25); }
+      .tj-wa-close { flex: none; background: rgba(255,255,255,.15); border: none; color: #fff; width: 26px; height: 26px; border-radius: 50%; font-size: 17px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+      .tj-wa-close:hover { background: rgba(255,255,255,.28); }
+      .tj-wa-panel-body { padding: 16px; max-height: 65vh; overflow-y: auto; background: #F7F9FC; }
+      .tj-wa-bubble { background: #fff; border: 1px solid #E7ECF3; border-radius: 14px 14px 14px 4px; padding: 11px 14px; margin: 0 0 12px; font-size: 13px; line-height: 1.5; color: #111827; box-shadow: 0 2px 6px rgba(17,24,39,.04); }
+      .tj-wa-wave { display: inline-block; animation: tjWaWave 1.6s ease-in-out infinite; transform-origin: 70% 70%; }
+      @keyframes tjWaWave { 0%, 100% { transform: rotate(0deg); } 20% { transform: rotate(14deg); } 40% { transform: rotate(-8deg); } 60% { transform: rotate(14deg); } }
+      .tj-wa-pills { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }
+      .tj-wa-pill { display: flex; align-items: center; justify-content: space-between; border: 1px solid #E1E8F0; background: #fff; color: #0F172A; font-size: 13px; font-weight: 600; padding: 11px 14px; border-radius: 12px; cursor: pointer; transition: .2s; text-align: left; }
+      .tj-wa-pill::after { content: '\2192'; color: #0075FF; font-weight: 700; margin-left: 8px; transition: transform .2s; }
+      .tj-wa-pill:hover { border-color: #0075FF; background: #F0F7FF; }
+      .tj-wa-pill:hover::after { transform: translateX(3px); }
+      .tj-wa-divider { height: 1px; background: #E1E8F0; margin: 12px 0; }
+      .tj-wa-option { display: block; padding: 10px 12px; margin-bottom: 8px; border: 1px solid #E1E8F0; background: #fff; border-radius: 10px; font-size: 13px; color: #111827; text-decoration: none; transition: .2s; }
+      .tj-wa-option:last-child { margin-bottom: 0; }
+      .tj-wa-option:hover { background: #0075FF; color: #fff; border-color: #0075FF; }
+      .tj-wa-back { background: none; border: none; color: #0075FF; font-size: 12.5px; font-weight: 600; cursor: pointer; padding: 0; margin-bottom: 12px; }
+      .tj-wa-detail-title { margin: 0 0 8px; font-size: 16px; font-weight: 700; color: #111827; }
+      .tj-wa-detail-desc { margin: 0 0 14px; font-size: 13px; line-height: 1.6; color: #4B5563; }
+      .tj-wa-primary-btn { display: block; text-align: center; background: #0075FF; color: #fff; font-size: 13px; font-weight: 600; padding: 11px 14px; border-radius: 10px; text-decoration: none; margin-bottom: 8px; }
+      .tj-wa-primary-btn:hover { background: #005fd1; }
+      .tj-wa-secondary-btn { display: block; text-align: center; font-size: 13px; font-weight: 600; padding: 11px 14px; border-radius: 10px; text-decoration: none; }
+      .tj-wa-secondary-btn-sms { background: #EAF2FF; color: #0059c7; }
+      .tj-wa-secondary-btn-sms:hover { background: #dcebff; }
+   </style>
    <script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "+44 7350320196", // WhatsApp number
-            call_to_action: "Call Us", // Call to action
-            button_color: "#FF6550", // Color of button
-            position: "left", // Position may be 'right' or 'left'
-        };
-        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
+      (function () {
+         var msgFab = document.getElementById('tjMsgFab');
+         var fabs = document.querySelector('.tj-wa-fabs');
+         var panel = document.getElementById('tjWaPanel');
+         var close = document.getElementById('tjWaClose');
+         var optionsView = document.getElementById('tjWaOptions');
+         var detailView = document.getElementById('tjWaDetail');
+         var backBtn = document.getElementById('tjWaBack');
+         var detailTitle = document.getElementById('tjWaDetailTitle');
+         var detailDesc = document.getElementById('tjWaDetailDesc');
+         var detailGetStarted = document.getElementById('tjWaDetailGetStarted');
+         var detailContact = document.getElementById('tjWaDetailContact');
+         var optionLinks = document.querySelectorAll('.tj-wa-option[data-text]');
+         if (!msgFab || !panel) return;
+
+         var PHONE = '447552675976';
+
+         var services = [
+            {
+               title: 'Business Utilities',
+               desc: 'Business utilities are a crucial part of day-to-day operations. Partnering with a high-rated service provider and choosing the best tariff plan can help businesses reduce expenses and manage finances more effectively.',
+               href: 'business-utilities.html',
+               text: "Hi, I'd like to know more about Business Utilities."
+            },
+            {
+               title: 'Payment Service & PDQ Machine',
+               desc: 'A PDQ machine—also called a card reader, chip and PIN machine, or card terminal—lets your business accept card payments quickly, securely, and conveniently, and improves cash flow.',
+               href: 'payment-service-pdq-machine.html',
+               text: "Hi, I'd like to know more about Payment Services & PDQ Machines."
+            },
+            {
+               title: 'Business Telephone & Broadband',
+               desc: 'We understand our customers and their business needs. That’s why our telecom services are tailored specifically for businesses — we help you find the best broadband and telephone deal.',
+               href: 'business-telephone-and-broadband.html',
+               text: "Hi, I'd like to know more about Business Telephone & Broadband."
+            },
+            {
+               title: 'Business Water',
+               desc: 'Business water was deregulated in England in April 2017, giving businesses the ability to choose their water supplier and compare options to manage costs more effectively.',
+               href: 'business-water.html',
+               text: "Hi, I'd like to know more about Business Water."
+            },
+            {
+               title: 'Web Development',
+               desc: 'Our experienced web developers and designers provide fully customized, responsive, SEO-friendly websites with fresh designs, user-friendly navigation, and effective features.',
+               href: 'web-development.html',
+               text: "Hi, I'd like to know more about Web Development."
+            }
+         ];
+
+         function smsHref(text) {
+            return 'sms:+' + PHONE + '?&body=' + encodeURIComponent(text);
+         }
+
+         Array.prototype.forEach.call(optionLinks, function (a) {
+            a.href = smsHref(a.getAttribute('data-text'));
+         });
+
+         function showOptions() {
+            detailView.hidden = true;
+            optionsView.hidden = false;
+         }
+
+         function showDetail(index) {
+            var s = services[index];
+            if (!s) return;
+            detailTitle.textContent = s.title;
+            detailDesc.textContent = s.desc;
+            detailGetStarted.href = s.href;
+            detailContact.href = smsHref(s.text);
+            optionsView.hidden = true;
+            detailView.hidden = false;
+         }
+
+         Array.prototype.forEach.call(document.querySelectorAll('.tj-wa-pill'), function (pill) {
+            pill.addEventListener('click', function () {
+               showDetail(parseInt(pill.getAttribute('data-service'), 10));
+            });
+         });
+
+         backBtn.addEventListener('click', showOptions);
+
+         msgFab.addEventListener('click', function () {
+            panel.hidden = !panel.hidden;
+         });
+         close.addEventListener('click', function () {
+            panel.hidden = true;
+         });
+         document.addEventListener('click', function (e) {
+            if (!panel.hidden && !panel.contains(e.target) && !fabs.contains(e.target)) {
+               panel.hidden = true;
+            }
+         });
+      })();
+   </script>
+   <!-- end: WhatsApp Quick Chat Widget -->
+
+   <!-- start: Cookie Consent Banner -->
+   <div id="tjCookieBanner" class="tj-cookie-banner" hidden>
+      <div class="tj-cookie-head">
+         <div class="tj-cookie-icon">🍪</div>
+         <strong class="tj-cookie-title">We value your privacy</strong>
+      </div>
+      <p class="tj-cookie-text">We use cookies to improve your experience and analyse site traffic. By continuing to browse, you agree to our use of cookies. <a href="#">Learn more</a></p>
+      <div class="tj-cookie-actions">
+         <button type="button" id="tjCookieDecline" class="tj-cookie-btn tj-cookie-btn-ghost">Decline</button>
+         <button type="button" id="tjCookieAccept" class="tj-cookie-btn tj-cookie-btn-solid">Accept</button>
+      </div>
+   </div>
+   <style>
+      .tj-cookie-banner { position: fixed; right: 24px; bottom: 24px; z-index: 99998; width: 360px; max-width: calc(100vw - 32px); background: #fff; border-radius: 18px; box-shadow: 0 14px 44px rgba(0,0,0,.22); padding: 18px 20px; font-family: inherit; animation: tjCookieUp .25s ease-out; }
+      @keyframes tjCookieUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+      .tj-cookie-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+      .tj-cookie-icon { flex: none; width: 34px; height: 34px; border-radius: 50%; background: #FFF3DC; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+      .tj-cookie-title { font-size: 14px; color: #111827; }
+      .tj-cookie-text { margin: 0 0 14px; font-size: 12.5px; line-height: 1.6; color: #4B5563; }
+      .tj-cookie-text a { color: #0075FF; font-weight: 600; text-decoration: underline; }
+      .tj-cookie-actions { display: flex; justify-content: flex-end; gap: 10px; }
+      .tj-cookie-btn { border: none; border-radius: 10px; padding: 9px 16px; font-size: 12.5px; font-weight: 600; cursor: pointer; transition: .2s; }
+      .tj-cookie-btn-ghost { background: #F1F5F9; color: #374151; }
+      .tj-cookie-btn-ghost:hover { background: #E2E8F0; }
+      .tj-cookie-btn-solid { background: #0075FF; color: #fff; }
+      .tj-cookie-btn-solid:hover { background: #005fd1; }
+      @media (max-width: 480px) { .tj-cookie-banner { right: 16px; bottom: 16px; left: 16px; width: auto; } }
+   </style>
+   <script type="text/javascript">
+      (function () {
+         var banner = document.getElementById('tjCookieBanner');
+         var acceptBtn = document.getElementById('tjCookieAccept');
+         var declineBtn = document.getElementById('tjCookieDecline');
+         if (!banner) return;
+         try {
+            if (!localStorage.getItem('tjCookieConsent')) {
+               banner.hidden = false;
+            }
+         } catch (e) {
+            banner.hidden = false;
+         }
+         function setConsent(value) {
+            try { localStorage.setItem('tjCookieConsent', value); } catch (e) {}
+            banner.hidden = true;
+         }
+         acceptBtn.addEventListener('click', function () { setConsent('accepted'); });
+         declineBtn.addEventListener('click', function () { setConsent('declined'); });
+      })();
+   </script>
+   <!-- end: Cookie Consent Banner -->
 
    <!--Start of Tawk.to Script-->
 <script type="text/javascript">
