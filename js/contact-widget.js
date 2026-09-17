@@ -6,9 +6,9 @@
 
   // Submits straight to the business inbox via FormSubmit.co (no backend
   // needed). The first submission after this goes live triggers a one-time
-  // confirmation email to aislamuk83@gmail.com — click the link in it once
+  // confirmation email to info@dabusinesssolutions.com — click the link in it once
   // to activate delivery for this address.
-  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/aislamuk83@gmail.com';
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@dabusinesssolutions.com';
 
   var fab = document.getElementById('tjQuoteFab');
   var overlay = document.getElementById('tjQuoteOverlay');
