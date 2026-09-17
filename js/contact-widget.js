@@ -22,9 +22,18 @@
 
   if (!fab || !overlay || !form) return;
 
+  var AUTO_OPEN_HASH = '#quote-form';
+
   if (qrImg) {
-    var qrTarget = window.location.href.split('#')[0];
+    var qrTarget = window.location.href.split('#')[0] + AUTO_OPEN_HASH;
     qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=' + encodeURIComponent(qrTarget);
+  }
+
+  if (window.location.hash === AUTO_OPEN_HASH) {
+    openModal();
+    if (window.history.replaceState) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
   }
 
   function openModal() {
