@@ -15,6 +15,7 @@
   var closeBtn = document.getElementById('tjQuoteClose');
   var form = document.getElementById('tjQuoteForm');
   var successView = document.getElementById('tjQuoteSuccess');
+  var backBtn = document.getElementById('tjQuoteBack');
   var qrBox = document.getElementById('tjQuoteQr');
   var qrImg = document.getElementById('tjQuoteQrImg');
   var lastFocused = null;
@@ -52,11 +53,20 @@
     if (e.key === 'Escape') closeModal();
   }
 
+  function backToForm() {
+    successView.classList.remove('is-shown');
+    form.classList.remove('is-hidden');
+    if (qrBox) qrBox.classList.remove('is-hidden');
+    var firstField = form.querySelector('input, select, textarea');
+    if (firstField) firstField.focus();
+  }
+
   fab.addEventListener('click', openModal);
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', function (e) {
     if (e.target === overlay) closeModal();
   });
+  if (backBtn) backBtn.addEventListener('click', backToForm);
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();

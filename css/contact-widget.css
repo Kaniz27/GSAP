@@ -489,6 +489,38 @@
   margin: 0;
 }
 
+.tj-quote-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 22px auto 0;
+  padding: 10px 20px;
+  border: 1.5px solid var(--tj-color-border-2, #ced7e0);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--tj-color-heading-primary, #051229);
+  font-family: var(--tj-ff-heading, 'Libre Franklin', serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tj-quote-back:hover {
+  background: var(--tj-color-theme-primary, #0075ff);
+  border-color: var(--tj-color-theme-primary, #0075ff);
+  color: #fff;
+}
+
+.tj-quote-back i {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.tj-quote-back:hover i {
+  transform: translateX(-3px);
+}
+
 .tj-quote-form.is-hidden {
   display: none;
 }
