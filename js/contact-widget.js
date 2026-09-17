@@ -4,11 +4,11 @@
 (function () {
   'use strict';
 
-  // Paste the URL your form should submit to (e.g. a Formspree/Getform/
-  // your own API endpoint) between the quotes below. Leave empty to keep
-  // the widget in "local only" mode (shows the success screen without
-  // sending the data anywhere).
-  var FORM_ENDPOINT = '';
+  // Submits straight to the business inbox via FormSubmit.co (no backend
+  // needed). The first submission after this goes live triggers a one-time
+  // confirmation email to info@dabusinesssolutions.com — click the link in
+  // it once to activate delivery for this address.
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@dabusinesssolutions.com';
 
   var fab = document.getElementById('tjQuoteFab');
   var overlay = document.getElementById('tjQuoteOverlay');
@@ -86,6 +86,10 @@
     if (!valid) return;
 
     var data = Object.fromEntries(new FormData(form).entries());
+    data._subject = 'New website enquiry from ' + data.name;
+    data._template = 'table';
+    data._captcha = 'false';
+
     var submitBtn = form.querySelector('.tj-quote-submit');
     var restoreLabel = submitBtn.innerHTML;
     submitBtn.disabled = true;
@@ -103,6 +107,9 @@
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
+      }).then(function (res) {
+        if (!res.ok) throw new Error('Request failed');
+        return res.json();
       }).then(finish).catch(function () {
         submitBtn.disabled = false;
         submitBtn.innerHTML = restoreLabel;

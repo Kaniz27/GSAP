@@ -1756,12 +1756,9 @@
 
 
    <!-- start: Floating Quote Widget -->
-   <button type="button" class="tj-quote-fab" id="tjQuoteFab" aria-haspopup="dialog" aria-controls="tjQuoteOverlay">
-      <span class="tj-quote-fab_icon"><i class="fa-solid fa-paper-plane"></i></span>
-      <span class="tj-quote-fab_text">
-         <strong>Get a Quote</strong>
-         <span>We reply within a day</span>
-      </span>
+   <button type="button" class="tj-quote-fab" id="tjQuoteFab" aria-haspopup="dialog" aria-controls="tjQuoteOverlay" aria-label="Fill in the Form">
+      <i class="fa-solid fa-comment-dots"></i>
+      <span class="tj-quote-fab_tip">Fill in the Form</span>
    </button>
 
    <div class="tj-quote-overlay" id="tjQuoteOverlay" role="dialog" aria-modal="true" aria-labelledby="tjQuoteTitle">
@@ -1770,92 +1767,96 @@
             <i class="fa-solid fa-xmark"></i>
          </button>
 
-         <form class="tj-quote-form" id="tjQuoteForm" novalidate>
+         <div class="tj-quote-header">
             <span class="tj-quote-eyebrow"><i class="fa-solid fa-bolt"></i> Quick Enquiry</span>
-            <h2 id="tjQuoteTitle">Tell us about your business</h2>
+            <h2 id="tjQuoteTitle">Fill in the Form</h2>
             <p>Share a few details and our team will follow up with the right solution for you.</p>
+         </div>
 
-            <div class="tj-quote-field">
-               <label for="quoteName">Customer name <span class="req">*</span></label>
-               <input type="text" id="quoteName" name="name" autocomplete="name">
-               <div class="tj-quote-error">Please enter a name.</div>
-            </div>
-
-            <div class="tj-quote-field">
-               <label for="quoteBusinessType">Type of business <span class="req">*</span></label>
-               <select id="quoteBusinessType" name="businessType">
-                  <option value="" disabled selected>Select business type</option>
-                  <option value="Restaurant">Restaurant</option>
-                  <option value="Supermarket">Supermarket</option>
-                  <option value="Hotel">Hotel</option>
-                  <option value="Repair Shop">Repair shop</option>
-                  <option value="Pharmacy">Pharmacy</option>
-                  <option value="Other">Other</option>
-               </select>
-               <div class="tj-quote-error">Please select a business type.</div>
-            </div>
-
-            <div class="tj-quote-field">
-               <label for="quoteAddress">Address <span class="req">*</span></label>
-               <input type="text" id="quoteAddress" name="address" autocomplete="street-address">
-               <div class="tj-quote-error">Please enter an address.</div>
-            </div>
-
-            <div class="tj-quote-field">
-               <label for="quoteEmail">Email <span class="req">*</span></label>
-               <input type="email" id="quoteEmail" name="email" autocomplete="email">
-               <div class="tj-quote-error">Please enter a valid email.</div>
-            </div>
-
-            <div class="tj-quote-field">
-               <label for="quotePhone">Phone number <span class="req">*</span></label>
-               <input type="tel" id="quotePhone" name="phone" autocomplete="tel">
-               <div class="tj-quote-error">Please enter a phone number.</div>
-            </div>
-
-            <div class="tj-quote-field" id="tjQuoteProductField">
-               <label>Product <span class="req">*</span></label>
-               <div class="tj-quote-radio-group">
-                  <div class="tj-quote-radio">
-                     <input type="radio" id="tjQp1" name="quoteProduct" value="Utility">
-                     <label for="tjQp1">Utility</label>
-                  </div>
-                  <div class="tj-quote-radio">
-                     <input type="radio" id="tjQp2" name="quoteProduct" value="Payment Solution">
-                     <label for="tjQp2">Payment solution</label>
-                  </div>
-                  <div class="tj-quote-radio">
-                     <input type="radio" id="tjQp3" name="quoteProduct" value="Website Development">
-                     <label for="tjQp3">Website development</label>
-                  </div>
-                  <div class="tj-quote-radio">
-                     <input type="radio" id="tjQp4" name="quoteProduct" value="MCA">
-                     <label for="tjQp4">MCA</label>
-                  </div>
-                  <div class="tj-quote-radio">
-                     <input type="radio" id="tjQp5" name="quoteProduct" value="Other">
-                     <label for="tjQp5">Other</label>
-                  </div>
+         <div class="tj-quote-body">
+            <form class="tj-quote-form" id="tjQuoteForm" novalidate>
+               <div class="tj-quote-field">
+                  <label for="quoteName">Customer name <span class="req">*</span></label>
+                  <input type="text" id="quoteName" name="name" autocomplete="name">
+                  <div class="tj-quote-error">Please enter a name.</div>
                </div>
-               <div class="tj-quote-error">Please choose a product.</div>
+
+               <div class="tj-quote-field">
+                  <label for="quoteBusinessType">Type of business <span class="req">*</span></label>
+                  <select id="quoteBusinessType" name="businessType">
+                     <option value="" disabled selected>Select business type</option>
+                     <option value="Restaurant">Restaurant</option>
+                     <option value="Supermarket">Supermarket</option>
+                     <option value="Hotel">Hotel</option>
+                     <option value="Repair Shop">Repair shop</option>
+                     <option value="Pharmacy">Pharmacy</option>
+                     <option value="Other">Other</option>
+                  </select>
+                  <div class="tj-quote-error">Please select a business type.</div>
+               </div>
+
+               <div class="tj-quote-field">
+                  <label for="quoteAddress">Address <span class="req">*</span></label>
+                  <input type="text" id="quoteAddress" name="address" autocomplete="street-address">
+                  <div class="tj-quote-error">Please enter an address.</div>
+               </div>
+
+               <div class="tj-quote-field">
+                  <label for="quoteEmail">Email <span class="req">*</span></label>
+                  <input type="email" id="quoteEmail" name="email" autocomplete="email">
+                  <div class="tj-quote-error">Please enter a valid email.</div>
+               </div>
+
+               <div class="tj-quote-field">
+                  <label for="quotePhone">Phone number <span class="req">*</span></label>
+                  <input type="tel" id="quotePhone" name="phone" autocomplete="tel">
+                  <div class="tj-quote-error">Please enter a phone number.</div>
+               </div>
+
+               <div class="tj-quote-field" id="tjQuoteProductField">
+                  <label>Product <span class="req">*</span></label>
+                  <div class="tj-quote-radio-group">
+                     <div class="tj-quote-radio">
+                        <input type="radio" id="tjQp1" name="quoteProduct" value="Utility">
+                        <label for="tjQp1">Utility</label>
+                     </div>
+                     <div class="tj-quote-radio">
+                        <input type="radio" id="tjQp2" name="quoteProduct" value="Payment Solution">
+                        <label for="tjQp2">Payment solution</label>
+                     </div>
+                     <div class="tj-quote-radio">
+                        <input type="radio" id="tjQp3" name="quoteProduct" value="Website Development">
+                        <label for="tjQp3">Website development</label>
+                     </div>
+                     <div class="tj-quote-radio">
+                        <input type="radio" id="tjQp4" name="quoteProduct" value="MCA">
+                        <label for="tjQp4">MCA</label>
+                     </div>
+                     <div class="tj-quote-radio">
+                        <input type="radio" id="tjQp5" name="quoteProduct" value="Other">
+                        <label for="tjQp5">Other</label>
+                     </div>
+                  </div>
+                  <div class="tj-quote-error">Please choose a product.</div>
+               </div>
+
+               <div class="tj-quote-field">
+                  <label for="quoteNote">Comment / note</label>
+                  <textarea id="quoteNote" name="note" placeholder="Anything else we should know"></textarea>
+               </div>
+
+               <button type="submit" class="tj-quote-submit">
+                  <span>Send enquiry</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+               </button>
+               <p class="tj-quote-hint">We'll never share your details with anyone else.</p>
+            </form>
+
+            <div class="tj-quote-success" id="tjQuoteSuccess">
+               <div class="tj-quote-success-icon"><i class="fa-solid fa-check"></i></div>
+               <h2>Thanks — we've got it.</h2>
+               <p>Someone from our team will reach out shortly.</p>
             </div>
-
-            <div class="tj-quote-field">
-               <label for="quoteNote">Comment / note</label>
-               <textarea id="quoteNote" name="note" placeholder="Anything else we should know"></textarea>
-            </div>
-
-            <button type="submit" class="tj-quote-submit">
-               <span>Send enquiry</span>
-               <i class="fa-solid fa-arrow-right"></i>
-            </button>
-            <p class="tj-quote-hint">We'll never share your details with anyone else.</p>
-         </form>
-
-         <div class="tj-quote-success" id="tjQuoteSuccess">
-            <div class="tj-quote-success-icon"><i class="fa-solid fa-check"></i></div>
-            <h2>Thanks — we've got it.</h2>
-            <p>Someone from our team will reach out shortly.</p>
          </div>
       </div>
    </div>

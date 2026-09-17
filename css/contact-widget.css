@@ -8,80 +8,80 @@
   left: 28px;
   bottom: 28px;
   z-index: 99990;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  height: 58px;
-  padding: 0 24px 0 0;
+  width: 64px;
+  height: 64px;
   border: none;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--tj-color-theme-primary, #0075ff), #0057c7);
-  box-shadow: 0 10px 30px rgba(0, 117, 255, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #2f8bff, var(--tj-color-theme-primary, #0075ff) 55%, #0057c7);
+  box-shadow: 0 12px 26px rgba(0, 87, 199, 0.45);
   cursor: pointer;
-  font-family: var(--tj-ff-heading, 'Libre Franklin', serif);
-  animation: tjFabIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.4s both;
+  font-size: 24px;
+  color: #fff;
+  animation: tjFabIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s both, tjFabFloat 3.2s ease-in-out 1s infinite;
 }
 
 .tj-quote-fab::before {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 999px;
+  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(0, 117, 255, 0.45);
   animation: tjFabPulse 2.6s ease-out infinite;
   pointer-events: none;
 }
 
+.tj-quote-fab i {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
 .tj-quote-fab:hover {
-  box-shadow: 0 14px 36px rgba(0, 117, 255, 0.45);
+  box-shadow: 0 16px 32px rgba(0, 87, 199, 0.55);
+  animation-play-state: paused;
+}
+
+.tj-quote-fab:hover i {
+  transform: scale(1.1) rotate(-8deg);
 }
 
 .tj-quote-fab:active {
   transform: translateY(1px);
 }
 
-.tj-quote-fab_icon {
-  flex: none;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #fff;
-  color: var(--tj-color-theme-primary, #0075ff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  position: relative;
-}
-
-.tj-quote-fab_icon i {
-  position: relative;
-  transition: transform 0.35s ease;
-}
-
-.tj-quote-fab:hover .tj-quote-fab_icon i {
-  transform: rotate(-14deg) scale(1.08);
-}
-
-.tj-quote-fab_text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-  text-align: left;
-}
-
-.tj-quote-fab_text strong {
+.tj-quote-fab_tip {
+  position: absolute;
+  left: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+  white-space: nowrap;
+  background: var(--tj-color-theme-dark, #051229);
   color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  font-family: var(--tj-ff-heading, 'Libre Franklin', serif);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.tj-quote-fab_text span {
-  color: rgba(255, 255, 255, 0.78);
-  font-family: var(--tj-ff-body, 'Lato', sans-serif);
-  font-size: 11.5px;
-  font-weight: 400;
+.tj-quote-fab_tip::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-right-color: var(--tj-color-theme-dark, #051229);
+}
+
+.tj-quote-fab:hover .tj-quote-fab_tip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 @keyframes tjFabIn {
@@ -89,9 +89,14 @@
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+@keyframes tjFabFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 @keyframes tjFabPulse {
   0% { box-shadow: 0 0 0 0 rgba(0, 117, 255, 0.45); }
-  70% { box-shadow: 0 0 0 16px rgba(0, 117, 255, 0); }
+  70% { box-shadow: 0 0 0 18px rgba(0, 117, 255, 0); }
   100% { box-shadow: 0 0 0 0 rgba(0, 117, 255, 0); }
 }
 
@@ -99,13 +104,11 @@
   .tj-quote-fab {
     left: 16px;
     bottom: 16px;
-    height: 52px;
-    padding: 0;
-    width: 52px;
-    justify-content: center;
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
   }
-  .tj-quote-fab_icon { width: 52px; height: 52px; font-size: 18px; }
-  .tj-quote-fab_text { display: none; }
+  .tj-quote-fab_tip { display: none; }
 }
 
 /* ---------------------------------------------------------------------- */
@@ -144,7 +147,6 @@
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 30px 80px rgba(5, 18, 41, 0.35);
-  padding: 44px 40px 36px;
   transform: translateY(28px) scale(0.96);
   opacity: 0;
   transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.32s ease;
@@ -155,6 +157,30 @@
   opacity: 1;
 }
 
+.tj-quote-header {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  padding: 38px 40px 30px;
+  background: linear-gradient(135deg, #2f8bff 0%, var(--tj-color-theme-primary, #0075ff) 55%, var(--tj-color-theme-dark, #051229) 130%);
+}
+
+.tj-quote-header::before,
+.tj-quote-header::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.tj-quote-header::before { width: 180px; height: 180px; top: -90px; right: -50px; }
+.tj-quote-header::after { width: 110px; height: 110px; bottom: -60px; right: 60px; background: rgba(255, 255, 255, 0.08); }
+
+.tj-quote-body {
+  padding: 30px 40px 36px;
+}
+
 .tj-quote-close {
   position: absolute;
   top: 18px;
@@ -162,54 +188,62 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid var(--tj-color-border-2, #ced7e0);
-  background: #fff;
-  color: var(--tj-color-text-body, #364052);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
+  z-index: 1;
 }
 
 .tj-quote-close:hover {
-  background: var(--tj-color-theme-primary, #0075ff);
-  border-color: var(--tj-color-theme-primary, #0075ff);
-  color: #fff;
+  background: #fff;
+  border-color: #fff;
+  color: var(--tj-color-theme-primary, #0075ff);
   transform: rotate(90deg);
 }
 
 .tj-quote-eyebrow {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--tj-color-theme-primary, #0075ff);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
   font-family: var(--tj-ff-body, 'Lato', sans-serif);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
 }
 
 .tj-quote-eyebrow i { font-size: 10px; }
 
-.tj-quote-modal h2 {
+.tj-quote-header h2 {
+  position: relative;
   font-family: var(--tj-ff-heading, 'Libre Franklin', serif);
   font-size: 26px;
   font-weight: 700;
-  color: var(--tj-color-heading-primary, #051229);
+  color: #fff;
   margin: 0 0 8px;
   letter-spacing: -0.01em;
 }
 
-.tj-quote-modal > p {
+.tj-quote-header p {
+  position: relative;
   font-family: var(--tj-ff-body, 'Lato', sans-serif);
-  color: var(--tj-color-text-body-2, #7e8590);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 14.5px;
   line-height: 1.6;
-  margin: 0 0 28px;
+  margin: 0;
+  max-width: 92%;
 }
 
 .tj-quote-form {
@@ -380,7 +414,7 @@
 .tj-quote-success {
   display: none;
   text-align: center;
-  padding: 20px 6px 4px;
+  padding: 30px 6px 4px;
 }
 
 .tj-quote-success.is-shown {
@@ -389,12 +423,13 @@
 }
 
 .tj-quote-success-icon {
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
   margin: 0 auto 18px;
   border-radius: 50%;
-  background: rgba(0, 117, 255, 0.1);
-  color: var(--tj-color-theme-primary, #0075ff);
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.35);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,6 +455,8 @@
 }
 
 @media (max-width: 575px) {
-  .tj-quote-modal { padding: 34px 22px 26px; border-radius: 16px; }
-  .tj-quote-modal h2 { font-size: 21px; }
+  .tj-quote-modal { border-radius: 16px; }
+  .tj-quote-header { padding: 30px 24px 24px; border-radius: 16px 16px 0 0; }
+  .tj-quote-body { padding: 24px 24px 30px; }
+  .tj-quote-header h2 { font-size: 21px; }
 }
