@@ -6,18 +6,25 @@
 
   // Submits straight to the business inbox via FormSubmit.co (no backend
   // needed). The first submission after this goes live triggers a one-time
-  // confirmation email to info@dabusinesssolutions.com — click the link in
-  // it once to activate delivery for this address.
-  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@dabusinesssolutions.com';
+  // confirmation email to aislamuk83@gmail.com — click the link in it once
+  // to activate delivery for this address.
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/aislamuk83@gmail.com';
 
   var fab = document.getElementById('tjQuoteFab');
   var overlay = document.getElementById('tjQuoteOverlay');
   var closeBtn = document.getElementById('tjQuoteClose');
   var form = document.getElementById('tjQuoteForm');
   var successView = document.getElementById('tjQuoteSuccess');
+  var qrBox = document.getElementById('tjQuoteQr');
+  var qrImg = document.getElementById('tjQuoteQrImg');
   var lastFocused = null;
 
   if (!fab || !overlay || !form) return;
+
+  if (qrImg) {
+    var qrTarget = window.location.href.split('#')[0];
+    qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=' + encodeURIComponent(qrTarget);
+  }
 
   function openModal() {
     lastFocused = document.activeElement;
@@ -99,6 +106,7 @@
       submitBtn.disabled = false;
       submitBtn.innerHTML = restoreLabel;
       form.classList.add('is-hidden');
+      if (qrBox) qrBox.classList.add('is-hidden');
       successView.classList.add('is-shown');
     };
 
