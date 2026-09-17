@@ -1380,7 +1380,8 @@
                   if (!res.ok) throw new Error('Request failed');
                   return res.json();
                })
-               .then(function () {
+               .then(function (body) {
+                  if (body && body.success === 'false') throw new Error(body.message || 'Not delivered');
                   form.reset();
                   showPopup();
                })

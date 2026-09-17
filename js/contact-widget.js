@@ -36,6 +36,24 @@
     }
   }
 
+  // Keep the button clear of the cookie consent banner (same corner,
+  // higher z-index) instead of a fixed offset that breaks if the
+  // banner's text/height ever changes.
+  var cookieBanner = document.getElementById('tjCookieBanner');
+  if (cookieBanner) {
+    var adjustForCookieBanner = function () {
+      if (!cookieBanner.hidden) {
+        var rect = cookieBanner.getBoundingClientRect();
+        fab.style.bottom = (window.innerHeight - rect.top + 14) + 'px';
+      } else {
+        fab.style.bottom = '';
+      }
+    };
+    adjustForCookieBanner();
+    new MutationObserver(adjustForCookieBanner).observe(cookieBanner, { attributes: true, attributeFilter: ['hidden'] });
+    window.addEventListener('resize', adjustForCookieBanner);
+  }
+
   function openModal() {
     lastFocused = document.activeElement;
     overlay.classList.add('is-open');
@@ -137,7 +155,14 @@
       }).then(function (res) {
         if (!res.ok) throw new Error('Request failed');
         return res.json();
-      }).then(finish).catch(function () {
+      }).then(function (body) {
+        // FormSubmit replies with HTTP 200 even when the destination inbox
+        // hasn't clicked its one-time activation link yet, so the HTTP
+        // status alone isn't enough to tell a real send from a silently
+        // undelivered one.
+        if (body && body.success === 'false') throw new Error(body.message || 'Not delivered');
+        finish();
+      }).catch(function () {
         submitBtn.disabled = false;
         submitBtn.innerHTML = restoreLabel;
         window.alert('Something went wrong sending your request. Please try again or call us directly.');
