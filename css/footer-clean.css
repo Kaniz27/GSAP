@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Footer refinements: tidy contact list, compact legal/badges row
+   Builds on the theme's existing footer-2 / copyright-2 components in
+   css/main.css rather than replacing them.
+   ========================================================================== */
+
+/* The theme default (80px/100px) leaves a lot of dead navy space below the
+   nav columns before the copyright bar; tighten it up. */
+.footer-top-area {
+  padding-top: 56px;
+  padding-bottom: 48px;
+}
+
+/* Slim accent bar so the footer reads as a deliberate block, not just a
+   dark void under the last section. */
+.tj-footer-area.footer-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--tj-color-theme-primary), transparent 75%);
+  z-index: 2;
+}
+
+/* "Get in Touch" list: icon + label/value, and stop long numbers
+   (e.g. "+44 7552 675976") wrapping mid-number in the narrow column. */
+.footer-widget.footer-contact-infos .infos-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-widget.footer-contact-infos .infos-item span {
+  display: block;
+}
+
+.footer-widget.footer-contact-infos .infos-item a {
+  white-space: nowrap;
+}
+
+.tj-info-ic {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: rgba(247, 247, 247, 0.08);
+  color: var(--tj-color-theme-primary);
+  font-size: 13px;
+}
+
+.tj-info-ic-whatsapp {
+  color: #25d366;
+}
+
+/* Small arrow icons on the Quick Links / Our Services lists */
+.footer-widget.widget_nav_menu .widget-menu ul li a i {
+  font-size: 10px;
+  color: var(--tj-color-theme-primary);
+}
+
+/* Compliance badges (ICO, Energy Ombudsman) sit beside the copyright line
+   instead of stretching across their own full-width row. */
+.tj-footer-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tj-footer-badges img {
+  height: 26px;
+  width: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Small-print company/legal line, separated from the copyright bar */
+.tj-footer-legal {
+  margin: 16px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--tj-color-border-1);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--tj-color-common-black-2);
+  max-width: 900px;
+}
+
+@media (max-width: 767px) {
+  .tj-footer-badges {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .tj-footer-legal {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-widget.footer-contact-infos {
+    max-width: 100%;
+  }
+}
