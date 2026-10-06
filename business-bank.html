@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description"
-      content="Payment services, PDQ machines, EPOS systems and secure card payment solutions for UK businesses.">
 
-   <title>Payment Service and PDQ Machine - D&A Business</title>
+   <meta name="description"
+      content="D&A Business helps UK businesses find the right business bank account and banking solutions, with flexible options and dedicated support.">
+
+   <meta name="robots" content="index, follow">
+
+   <title>Business Bank - D&A Business</title>
 
    <link rel="apple-touch-icon" href="images/fav.png">
    <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
 
-   <!-- =====================================================
-        CSS
-   ====================================================== -->
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="css/font-awesome-pro.min.css">
    <link rel="stylesheet" href="css/animate.css">
@@ -29,468 +29,250 @@
 <link rel="stylesheet" href="css/contact-widget.css">
    <link rel="stylesheet" href="css/footer-clean.css">
 
-   <!-- =====================================================
-        FAQ CUSTOM CSS
-   ====================================================== -->
    <style>
-      /* =====================================================
-         PAYMENT FAQ SECTION
-      ====================================================== */
+      /* =========================================
+         HERO FEATURES
+      ========================================= */
 
-      .payment-faq-section {
-         width: 100%;
-         padding: 100px 0;
-         background: #f6f8fb;
+      .hero-features {
+         list-style: none;
+         padding: 0;
+         margin: 25px 0;
       }
 
-      .payment-faq-heading {
-         max-width: 750px;
-         margin: 0 auto 55px;
-         text-align: center;
-      }
-
-      .payment-faq-subtitle {
-         display: inline-block;
+      .hero-features li {
+         display: flex;
+         align-items: center;
+         gap: 10px;
          margin-bottom: 12px;
-         color: #0d6efd;
-         font-size: 14px;
-         font-weight: 700;
-         letter-spacing: 2px;
-         text-transform: uppercase;
-      }
-
-      .payment-faq-heading h2 {
-         margin: 0;
-         color: #111827;
-         font-size: 48px;
-         line-height: 1.2;
-         font-weight: 700;
-      }
-
-      .payment-faq-heading h2 span {
-         color: #0d6efd;
-      }
-
-      .payment-faq-heading p {
-         max-width: 700px;
-         margin: 20px auto 0;
-         color: #6b7280;
-         font-size: 16px;
-         line-height: 1.8;
-      }
-
-      /* =====================================================
-         FAQ GRID
-      ====================================================== */
-
-      .payment-faq-grid {
-         display: grid;
-         grid-template-columns: 0.85fr 1.15fr;
-         gap: 45px;
-         align-items: stretch;
-      }
-
-      /* =====================================================
-         QUESTION BOX
-      ====================================================== */
-
-      .payment-faq-question-box {
-         width: 100%;
-         padding: 14px;
-         background: #ffffff;
-         border: 1px solid #e5e7eb;
-         border-radius: 18px;
-         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-      }
-
-      .payment-faq-question {
-         width: 100%;
-         min-height: 70px;
-
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-
-         gap: 20px;
-         padding: 18px 20px;
-
-         border: 0;
-         border-radius: 12px;
-
-         background: transparent;
-         color: #111827;
-
-         font-size: 15px;
          font-weight: 600;
-
-         text-align: left;
-         cursor: pointer;
-
-         transition: all 0.3s ease;
       }
 
-      .payment-faq-question+.payment-faq-question {
-         margin-top: 5px;
+      .hero-features li i {
+         color: #0075ff;
       }
 
-      .payment-faq-question:hover {
-         background: #f1f5f9;
+      /* =========================================
+         FAQ SECTION
+      ========================================= */
+
+      .business-faq-section {
+         background: #e1e8f0;
+         padding: 80px 0;
       }
 
-      .payment-faq-question.active {
-         background: #111827;
-         color: #ffffff;
-      }
-
-      .payment-faq-question-text {
-         flex: 1;
-         line-height: 1.5;
-      }
-
-      .payment-faq-icon {
-         width: 38px;
-         height: 38px;
-         min-width: 38px;
-
+      .business-faq-wrapper {
          display: flex;
-         align-items: center;
-         justify-content: center;
+         gap: 60px;
+         align-items: flex-start;
+      }
 
-         border-radius: 50%;
+      .business-faq-left,
+      .business-faq-right {
+         width: 50%;
+      }
 
-         background: #f1f5f9;
+      .faq-label {
+         display: inline-block;
+         padding: 8px 16px;
+         border-radius: 50px;
+         background: rgba(0, 117, 255, 0.1);
+         color: #0075ff;
+         font-size: 12px;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      .faq-heading {
+         margin-top: 20px;
+         font-size: 48px;
+         line-height: 1.15;
+         font-weight: 700;
          color: #111827;
-
-         transition: all 0.3s ease;
       }
 
-      .payment-faq-question.active .payment-faq-icon {
-         background: rgba(255, 255, 255, 0.1);
-         color: #ffffff;
-      }
-
-      .payment-faq-question.active .payment-faq-icon i {
-         transform: rotate(90deg);
-      }
-
-      .payment-faq-icon i {
-         transition: transform 0.3s ease;
-      }
-
-      /* =====================================================
-         ANSWER BOX
-      ====================================================== */
-
-      .payment-faq-answer-box {
-         width: 100%;
-         min-height: 100%;
-
-         display: flex;
-         align-items: center;
-
-         padding: 55px;
-
-         background: #111827;
-         border-radius: 18px;
-
-         box-shadow: 0 15px 40px rgba(17, 24, 39, 0.12);
-      }
-
-      .payment-faq-answer {
-         display: none;
-         width: 100%;
-
-         animation: faqFadeIn 0.35s ease;
-      }
-
-      .payment-faq-answer.active {
+      .faq-heading span {
          display: block;
+         color: #0075ff;
       }
 
-      @keyframes faqFadeIn {
-         from {
-            opacity: 0;
-            transform: translateY(10px);
-         }
-
-         to {
-            opacity: 1;
-            transform: translateY(0);
-         }
-      }
-
-      .payment-faq-number {
-         width: 52px;
-         height: 52px;
-
-         display: inline-flex;
-         align-items: center;
-         justify-content: center;
-
-         margin-bottom: 25px;
-
-         border-radius: 50%;
-
-         background: #0d6efd;
-         color: #ffffff;
-
-         font-size: 16px;
-         font-weight: 700;
-      }
-
-      .payment-faq-answer h3 {
-         margin: 0 0 22px;
-
-         color: #ffffff;
-
-         font-size: 32px;
-         line-height: 1.25;
-         font-weight: 700;
-      }
-
-      .payment-faq-answer p {
-         margin: 0;
-
-         color: #aeb6c2;
-
-         font-size: 16px;
+      .faq-description {
+         max-width: 520px;
+         margin-top: 20px;
+         color: #606a78;
          line-height: 1.8;
       }
 
-      .payment-faq-answer p+p {
-         margin-top: 18px;
-      }
-
-      /* =====================================================
-         FAQ BUTTON
-      ====================================================== */
-
-      .payment-faq-button {
+      .faq-button {
          display: inline-flex;
          align-items: center;
          gap: 12px;
-
-         margin-top: 28px;
-         padding: 13px 22px;
-
-         background: #ffffff;
-         color: #111827;
-
-         border-radius: 6px;
-
-         font-size: 14px;
-         font-weight: 600;
-
+         margin-top: 25px;
+         padding: 14px 24px;
+         border-radius: 50px;
+         background: #0075ff;
+         color: #fff;
          text-decoration: none;
-
+         font-weight: 600;
          transition: all 0.3s ease;
       }
 
-      .payment-faq-button:hover {
-         background: #0d6efd;
-         color: #ffffff;
+      .faq-button:hover {
+         color: #fff;
+         background: #0069e8;
+         transform: translateY(-2px);
       }
 
-      .payment-faq-button i {
-         transition: transform 0.3s ease;
+      .faq-button span {
+         width: 28px;
+         height: 28px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         background: rgba(255, 255, 255, 0.2);
       }
 
-      .payment-faq-button:hover i {
-         transform: translateX(4px);
-      }
-
-      /* =====================================================
-         CTA SECTION
-      ====================================================== */
-
-      .payment-cta-section {
-         position: relative;
-         width: 100%;
-         margin: 100px 0;
-         padding: 60px 0;
-
+      .faq-item {
+         margin-bottom: 15px;
+         background: #fff;
+         border-radius: 16px;
          overflow: hidden;
-
-         background-image: url("images/cta-bg.jpg");
-         background-position: center;
-         background-size: cover;
-         background-repeat: no-repeat;
       }
 
-      .payment-cta-overlay {
-         position: absolute;
-         inset: 0;
-         background: rgba(0, 0, 0, 0.25);
-      }
-
-      .payment-cta-content {
-         position: relative;
-         z-index: 2;
-
+      .faq-item summary {
          display: flex;
          align-items: center;
          justify-content: space-between;
-
-         gap: 30px;
+         gap: 20px;
+         padding: 20px 24px;
+         cursor: pointer;
+         list-style: none;
+         font-weight: 600;
+         color: #111827;
       }
 
-      .payment-cta-content h2 {
-         margin: 0;
-         color: #ffffff;
+      .faq-item summary::-webkit-details-marker {
+         display: none;
+      }
 
-         font-size: 42px;
-         line-height: 1.2;
+      .faq-icon {
+         width: 36px;
+         height: 36px;
+         min-width: 36px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         background: rgba(0, 117, 255, 0.1);
+         color: #0075ff;
+         transition: transform 0.3s ease;
+      }
+
+      .faq-item[open] .faq-icon {
+         transform: rotate(45deg);
+      }
+
+      .faq-answer {
+         padding: 0 24px 22px;
+      }
+
+      .faq-answer p {
+         margin: 0;
+         padding-top: 16px;
+         border-top: 1px solid #e1e8f0;
+         color: #606a78;
+         line-height: 1.8;
+      }
+
+      .faq-bottom-cta {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-top: 30px;
+         padding: 25px 30px;
+         border-radius: 16px;
+         background: #0075ff;
+      }
+
+      .faq-bottom-cta p {
+         margin: 0;
+         color: #fff;
+      }
+
+      .faq-bottom-cta .small-text {
+         font-size: 12px;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         opacity: 0.7;
+      }
+
+      .faq-bottom-cta .main-text {
+         margin-top: 5px;
+         font-weight: 700;
+      }
+
+      .faq-bottom-cta a {
+         padding: 12px 22px;
+         border-radius: 50px;
+         background: #fff;
+         color: #0075ff;
+         text-decoration: none;
          font-weight: 600;
       }
 
-      .payment-cta-button {
-         flex-shrink: 0;
-      }
-
-      /* =====================================================
+      /* =========================================
          RESPONSIVE
-      ====================================================== */
+      ========================================= */
 
       @media (max-width: 991px) {
 
-         .payment-faq-section {
-            padding: 80px 0;
+         .business-faq-wrapper {
+            flex-direction: column;
+            gap: 40px;
          }
 
-         .payment-faq-heading {
-            margin-bottom: 40px;
+         .business-faq-left,
+         .business-faq-right {
+            width: 100%;
          }
 
-         .payment-faq-heading h2 {
+         .faq-heading {
             font-size: 40px;
          }
 
-         .payment-faq-grid {
-            grid-template-columns: 1fr;
-            gap: 30px;
-         }
-
-         .payment-faq-answer-box {
-            min-height: 400px;
-            padding: 45px;
-         }
-
-         .payment-cta-section {
-            margin: 80px 0;
-         }
-
-         .payment-cta-content {
-            flex-direction: column;
-            text-align: center;
-         }
-
-         .payment-cta-content h2 {
-            font-size: 36px;
+         .business-faq-section {
+            padding: 60px 0;
          }
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: 575px) {
 
-         .payment-faq-section {
-            padding: 65px 0;
-         }
-
-         .payment-faq-heading {
-            margin-bottom: 30px;
-         }
-
-         .payment-faq-subtitle {
-            font-size: 12px;
-         }
-
-         .payment-faq-heading h2 {
+         .faq-heading {
             font-size: 32px;
          }
 
-         .payment-faq-heading p {
-            font-size: 14px;
-            line-height: 1.7;
+         .faq-item summary {
+            padding: 18px;
          }
 
-         .payment-faq-question-box {
-            padding: 8px;
-            border-radius: 14px;
+         .faq-answer {
+            padding: 0 18px 18px;
          }
 
-         .payment-faq-question {
-            min-height: 65px;
-            padding: 16px 14px;
-            font-size: 14px;
-         }
-
-         .payment-faq-icon {
-            width: 34px;
-            height: 34px;
-            min-width: 34px;
-         }
-
-         .payment-faq-answer-box {
-            min-height: 400px;
-            padding: 35px 25px;
-            border-radius: 14px;
-         }
-
-         .payment-faq-answer h3 {
-            font-size: 25px;
-         }
-
-         .payment-faq-answer p {
-            font-size: 14px;
-            line-height: 1.75;
-         }
-
-         .payment-cta-section {
-            margin: 65px 0;
-            padding: 50px 0;
-         }
-
-         .payment-cta-content h2 {
-            font-size: 30px;
-         }
-      }
-
-      @media (max-width: 480px) {
-
-         .payment-faq-heading h2 {
-            font-size: 28px;
-         }
-
-         .payment-faq-question {
-            gap: 10px;
-            padding: 14px 12px;
-         }
-
-         .payment-faq-question-text {
-            font-size: 13px;
-         }
-
-         .payment-faq-answer-box {
-            padding: 30px 20px;
-         }
-
-         .payment-faq-answer h3 {
-            font-size: 22px;
-         }
-
-         .payment-cta-content h2 {
-            font-size: 26px;
+         .faq-bottom-cta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
          }
       }
    </style>
 </head>
 
-
 <body>
 
-   <!-- =====================================================
-        MOUSE CURSOR
-   ====================================================== -->
-
+   <!-- Mouse Cursor -->
    <div class="mouseCursor cursor-outer"></div>
 
    <div class="mouseCursor cursor-inner">
@@ -498,25 +280,23 @@
    </div>
 
 
-   <!-- =====================================================
+   <!-- =========================================
         SEARCH POPUP
-   ====================================================== -->
+   ========================================= -->
 
    <div class="search_popup">
 
       <div class="search_close">
 
-         <button type="button" class="search_close_btn">
+         <button type="button" class="search_close_btn" aria-label="Close search">
 
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round">
-               </path>
+                  stroke-linejoin="round"></path>
 
                <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round">
-               </path>
+                  stroke-linejoin="round"></path>
 
             </svg>
 
@@ -524,23 +304,22 @@
 
       </div>
 
-
       <div class="container">
 
          <div class="row">
 
-            <div class="col-xxl-12">
+            <div class="col-12">
 
                <div class="tj_search_wrapper">
 
                   <div class="search_form">
 
-                     <form action="#">
+                     <form action="#" method="get">
 
                         <div class="search_input">
 
                            <h4 class="title">
-                              Business Services
+                              Business Telephone & Broadband
                            </h4>
 
                         </div>
@@ -559,16 +338,14 @@
 
    </div>
 
-
    <div class="search-popup-overlay"></div>
 
 
-   <!-- =====================================================
+   <!-- =========================================
         HAMBURGER MENU
-   ====================================================== -->
+   ========================================= -->
 
    <div class="body-overlay"></div>
-
 
    <div class="hamburger-area" data-lenis-prevent="">
 
@@ -588,10 +365,9 @@
 
             </div>
 
-
             <div class="hamburger_close">
 
-               <button class="hamburger_close_btn hamburgerCloseBtn">
+               <button class="hamburger_close_btn hamburgerCloseBtn" aria-label="Close menu">
 
                   <i class="fa-thin fa-times"></i>
 
@@ -604,13 +380,13 @@
 
          <div class="hamburger_search">
 
-            <form method="get" action="#0">
+            <form method="get" action="#">
 
-               <button type="submit">
+               <button type="submit" aria-label="Search">
                   <i class="fal fa-search"></i>
                </button>
 
-               <input type="search" autocomplete="off" name="s" value="" placeholder="Search here">
+               <input type="search" autocomplete="off" name="s" placeholder="Search here">
 
             </form>
 
@@ -627,9 +403,8 @@
          <div class="hamburger-infos">
 
             <h4 class="hamburger-title">
-               Contact info
+               Contact Info
             </h4>
-
 
             <div class="contact-info">
 
@@ -642,7 +417,9 @@
                   <div class="text">
 
                      <a class="link" href="mailto:contactus@dabusinesssolutions.com">
+
                         contactus@dabusinesssolutions.com
+
                      </a>
 
                   </div>
@@ -659,7 +436,9 @@
                   <div class="text">
 
                      <a class="link" href="https://wa.me/447359112364" target="_blank" rel="noopener">
+
                         +44 7359 112 364
+
                      </a>
 
                   </div>
@@ -691,27 +470,40 @@
          <div class="hamburger-socials">
 
             <h4 class="hamburger-title">
-               Follow us
+               Follow Us
             </h4>
 
             <ul>
 
                <li>
-                  <a href="https://www.facebook.com/dabusiness2019" target="_blank" rel="noopener">
+
+                  <a href="https://www.facebook.com/dabusiness2019" target="_blank" rel="noopener noreferrer"
+                     aria-label="Facebook">
+
                      <i class="fa-brands fa-facebook-f"></i>
+
                   </a>
+
                </li>
 
                <li>
-                  <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
                      <i class="fa-brands fa-instagram"></i>
+
                   </a>
+
                </li>
 
                <li>
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+
                      <i class="fa-brands fa-linkedin-in"></i>
+
                   </a>
+
                </li>
 
             </ul>
@@ -723,9 +515,9 @@
    </div>
 
 
-   <!-- =====================================================
+   <!-- =========================================
         HEADER
-   ====================================================== -->
+   ========================================= -->
 
    <header class="tj-header-area header-3 header-absolute">
 
@@ -739,18 +531,17 @@
 
                   <div class="header-wrapper">
 
+
                      <div class="site-logo">
 
                         <a class="logo" href="index.html">
 
-                           <img src="images/secondary-logo.png" alt="D&A Business">
+                           <img src="images/secondary-logo.png" alt="D&A Business Logo">
 
                         </a>
 
                      </div>
 
-
-                     <!-- MAIN MENU -->
 
                      <div class="mainmenu menu-3 d-lg-block d-none" id="main-menu">
 
@@ -808,7 +599,7 @@
                                        </span>
 
                                        <span class="mega-menu-service-title">
-                                          Payment Service & PDQ Machine
+                                          Payment Service &amp; PDQ Machine
                                        </span>
 
                                        <span class="mega-menu-service-nav">
@@ -830,7 +621,7 @@
                                        </span>
 
                                        <span class="mega-menu-service-title">
-                                          Business Telephone & Broadband
+                                          Business Telephone &amp; Broadband
                                        </span>
 
                                        <span class="mega-menu-service-nav">
@@ -966,7 +757,7 @@
                               <div class="btn_text">
 
                                  <span>
-                                    Get a quote
+                                    Get a Quote
                                  </span>
 
                               </div>
@@ -1004,9 +795,9 @@
    </header>
 
 
-   <!-- =====================================================
+   <!-- =========================================
         STICKY HEADER
-   ====================================================== -->
+   ========================================= -->
 
    <header class="tj-header-area header-3 header-duplicate header-sticky">
 
@@ -1020,11 +811,12 @@
 
                   <div class="header-wrapper">
 
+
                      <div class="site-logo">
 
                         <a class="logo" href="index.html">
 
-                           <img src="images/primary-logo.png" alt="D&A Business">
+                           <img src="images/primary-logo.png" alt="D&A Business Logo">
 
                         </a>
 
@@ -1057,6 +849,7 @@
                               <ul class="sub-menu mega-menu-service">
 
                                  <li>
+
                                     <a class="mega-menu-service-single" href="business-utilities.html">
 
                                        <span class="mega-menu-service-icon">
@@ -1073,10 +866,12 @@
                                        </span>
 
                                     </a>
+
                                  </li>
 
 
                                  <li>
+
                                     <a class="mega-menu-service-single" href="payment-service-pdq-machine.html">
 
                                        <span class="mega-menu-service-icon">
@@ -1084,7 +879,7 @@
                                        </span>
 
                                        <span class="mega-menu-service-title">
-                                          Payment Service & PDQ Machine
+                                          Payment Service &amp; PDQ Machine
                                        </span>
 
                                        <span class="mega-menu-service-nav">
@@ -1093,10 +888,12 @@
                                        </span>
 
                                     </a>
+
                                  </li>
 
 
                                  <li>
+
                                     <a class="mega-menu-service-single" href="business-telephone-and-broadband.html">
 
                                        <span class="mega-menu-service-icon">
@@ -1104,7 +901,7 @@
                                        </span>
 
                                        <span class="mega-menu-service-title">
-                                          Business Telephone & Broadband
+                                          Business Telephone &amp; Broadband
                                        </span>
 
                                        <span class="mega-menu-service-nav">
@@ -1113,10 +910,12 @@
                                        </span>
 
                                     </a>
+
                                  </li>
 
 
                                  <li>
+
                                     <a class="mega-menu-service-single" href="business-bank.html">
 
                                        <span class="mega-menu-service-icon">
@@ -1133,8 +932,10 @@
                                        </span>
 
                                     </a>
+
                                  </li>
                                  <li>
+
                                     <a class="mega-menu-service-single" href="business-insurance.html">
 
                                        <span class="mega-menu-service-icon">
@@ -1151,10 +952,12 @@
                                        </span>
 
                                     </a>
+
                                  </li>
 
 
                                  <li>
+
                                     <a class="mega-menu-service-single" href="web-development.html">
 
                                        <span class="mega-menu-service-icon">
@@ -1171,6 +974,7 @@
                                        </span>
 
                                     </a>
+
                                  </li>
 
                               </ul>
@@ -1233,7 +1037,7 @@
                               <div class="btn_text">
 
                                  <span>
-                                    Get a quote
+                                    Get a Quote
                                  </span>
 
                               </div>
@@ -1271,16 +1075,12 @@
    </header>
 
 
-   <!-- =====================================================
-        MAIN
-   ====================================================== -->
-
    <main id="primary" class="site-main">
 
 
-      <!-- =====================================================
-           HERO
-      ====================================================== -->
+      <!-- =========================================
+           HERO SECTION
+      ========================================= -->
 
       <section class="tj-hero-section-four">
 
@@ -1290,56 +1090,45 @@
 
                <div class="hero-wrapper-four">
 
+
+                  <!-- HERO CONTENT -->
+
                   <div class="hero-content-four">
 
                      <span class="hero-subtitle">
 
-                        <span>D</span>&<span>A</span> Business
+                        <span>D</span>&amp;<span>A</span> Business
 
                      </span>
 
 
                      <h1 class="hero-title text-anim">
-
-                        Card payment
-
-                        <span>
-                           solutions for
-                        </span>
-
-                        UK businesses
-
+                        Business banking
+                        <span>&amp; finance</span>
+                        solutions for UK businesses
                      </h1>
 
 
                      <div class="desc wow fadeInUp" data-wow-delay="0.1s">
 
                         <p>
-                           Accept payments easily with DA Business —
-                           secure, simple, and designed for business growth.
+                        The right business bank account makes it easier to manage cash flow, payments and growth. At D&amp;A Business Solutions, we help you compare business banking options and find the account that suits your business.
                         </p>
 
 
-                        <ul>
-
+                        <ul class="hero-features">
                            <li>
-                              <b>
-                                 Low Transaction Fees
-                              </b>
+                              <i class="tji-double-check"></i>
+                              Business Current Accounts
                            </li>
-
                            <li>
-                              <b>
-                                 Same-Day Settlement
-                              </b>
+                              <i class="tji-double-check"></i>
+                              Flexible Banking Solutions
                            </li>
-
                            <li>
-                              <b>
-                                 24/7 Customer Support
-                              </b>
+                              <i class="tji-double-check"></i>
+                              Dedicated Customer Support
                            </li>
-
                         </ul>
 
                      </div>
@@ -1363,7 +1152,7 @@
                               <div class="btn_text">
 
                                  <span>
-                                    Get consultation
+                                    Get a Free Quote
                                  </span>
 
                               </div>
@@ -1377,33 +1166,40 @@
                   </div>
 
 
+                  <!-- HERO IMAGE -->
+
                   <div class="hero-images-box-four">
 
                      <div class="hero-images wow fadeInUp" data-wow-delay="0.5s">
 
-                        <img src="images/pdqq.png" alt="PDQ Payment Machine">
+                        <img src="images/pdqq.png" alt="Business Bank Solutions"
+                           class="w-full rounded-[25px]">
 
                      </div>
 
+
+                     <!-- CLIENT EXPERIENCE -->
 
                      <div class="client-experience move-anim">
 
                         <ul class="images-thumb">
 
                            <li>
-                              <img src="images/thumb-1.png" alt="Happy client">
+                              <img src="images/thumb-1.png" alt="Business Client">
                            </li>
 
                            <li>
-                              <img src="images/thumb-2.png" alt="Happy client">
+                              <img src="images/thumb-2.png" alt="Business Client">
                            </li>
 
                            <li>
-                              <img src="images/thumb-3.png" alt="Happy client">
+                              <img src="images/thumb-3.png" alt="Business Client">
                            </li>
 
                            <li class="plus">
+
                               <i class="fa-sharp fa-solid fa-plus"></i>
+
                            </li>
 
                         </ul>
@@ -1411,16 +1207,16 @@
 
                         <span class="sub-title">
 
-                           <span>
-                              39K+
-                           </span>
+                           <span>39K+</span>
 
-                           Happy clients all over UK.
+                           Happy businesses across UK.
 
                         </span>
 
                      </div>
 
+
+                     <!-- VIDEO -->
 
                      <div class="hero-video-btn move-anim">
 
@@ -1432,7 +1228,7 @@
                            </span>
 
                            <span class="video-text">
-                              View more
+                              View More
                            </span>
 
                         </a>
@@ -1442,9 +1238,11 @@
                   </div>
 
 
+                  <!-- SHAPE -->
+
                   <div class="hero-shapes-1 wow fadeInDown" data-wow-delay="0.6s">
 
-                     <img src="images/h5-hero-shape-1.png" alt="Decorative shapes">
+                     <img src="images/h5-hero-shape-1.png" alt="Decorative Shape">
 
                   </div>
 
@@ -1457,16 +1255,16 @@
 
          <div class="hero-shapes-2 wow fadeInLeft" data-wow-delay="1s">
 
-            <img src="images/h5-hero-shape-2.png" alt="Decorative shapes">
+            <img src="images/h5-hero-shape-2.png" alt="Decorative Shape">
 
          </div>
 
       </section>
 
 
-      <!-- =====================================================
-           SERVICE CONTENT
-      ====================================================== -->
+      <!-- =========================================
+           SERVICE CONTENT SECTION
+      ========================================= -->
 
       <section class="tj-service-area section-space">
 
@@ -1482,222 +1280,140 @@
                   <div class="tj-post-wrapper">
 
                      <div class="tj-post-single-post mb-0">
+
+
                         <div class="tj-post-thumb hover:shine wow fadeInUp" data-wow-delay="0.1s">
-                        
-                           <img src="images/online-payment.jpg" alt="Business Telephone and Broadband">
-                        
+
+                           <img src="images/bank2.jpg" alt="Business Bank">
+
                         </div>
 
-                        <h3 class="tj-post-title text-anim">
 
-                           It’s a common alternative name for a card machine.
-
-                        </h3>
+                        <h2 class="tj-post-title text-anim">
+                           The right business bank account helps your business grow.
+                        </h2>
 
 
                         <div class="tj-entry-content">
 
 
                            <p class="wow fadeInUp" data-wow-delay="0.1s">
-
-                              There are lots of different names for them,
-                              but they all allow you to take card payments.
-                              With a PDQ machine, you’ll be able to offer
-                              your customers an alternative way to pay,
-                              plus reduce cash handling within your business.
-                              You’ll also benefit from driving in customer
-                              footfall and more impulse purchases.
-
+                           Keeping business and personal finances separate is essential for every company. Whether you are a sole trader, a start-up or an established limited company, a dedicated business bank account makes it simpler to track income, pay suppliers and stay on top of your accounts.
                            </p>
 
 
-                           <p class="wow fadeInUp" data-wow-delay="0.1s">
-
-                              A merchant account is a business bank account
-                              which is used to acquire payments from your
-                              clients’ debit and credit cards. The charges
-                              are taken from your client’s account and sent
-                              directly to your merchant account, where the
-                              funds are held until they are settled into
-                              your nominated bank account.
-
+                           <p class="wow fadeInUp" data-wow-delay="0.3s">
+                           At D&amp;A Business Solutions, we help you understand your banking needs and connect with suitable providers. We can help you explore business current accounts, card payment options and finance solutions designed around your requirements and budget.
                            </p>
 
-
-                           <p>
-                              Merchant accounts will:
-                           </p>
-
-
-                           <ul>
-
-                              <li>
-                                 Support you and your customers with the
-                                 best security & data protection.
-                              </li>
-
-                              <li>
-                                 Guarantee debit and credit card transactions
-                                 are processed safely and securely.
-                              </li>
-
-                              <li>
-                                 Protect you against chargebacks.
-                              </li>
-
-                              <li>
-                                 Pre-check customer’s accounts for sufficient
-                                 funds before payment authorisation.
-                              </li>
-
-                           </ul>
-
-
-                           <p class="wow fadeInUp" data-wow-delay="0.1s">
-
-                              At Total Processing we can provision an online
-                              merchant account, sometimes referred to as a
-                              MiD or merchant ID, for your business.
-                              D&A Business have built up strong partnerships
-                              with a number of merchant ISOs and service
-                              providers, and can help to find the best
-                              merchant account and service for your needs.
-
-                           </p>
-
-
-                           <!-- HOW DO THEY WORK -->
 
                            <div class="tj-check-list">
 
-                              <h4 class="text-anim">
-                                 How do they Work?
-                              </h4>
+                              <h3 class="text-anim">
+                                 Business Banking Solutions
+                              </h3>
+
+
+                              <p class="wow fadeInUp" data-wow-delay="0.1s">
+                                 Whether you are starting a new business, switching banks or reviewing your existing banking arrangements, we can help you understand your options and find the account that fits your business.
+                              </p>
+
+                           </div>
+
+
+                           <!-- CHECK LIST -->
+
+                           <div class="service-check-list mt-8 wow fadeInUp" data-wow-delay="0.3s">
 
                               <ul>
 
-                                 <li>
-                                    An EPOS is a modern day till system,
-                                    making it easy to process transactions
-                                    and collect data on each payment.
-                                 </li>
 
                                  <li>
-                                    It gives you complete visibility and
-                                    control of your business, your inventory
-                                    and your staff.
+
+                                    <i class="tji-double-check"></i>
+
+                                    <span>
+
+                                       Get reliable banking solutions designed around your business needs.
+
+                                    </span>
+
                                  </li>
 
+
                                  <li>
-                                    You can log into this remotely, so
-                                    you’ll always be able to see how your
-                                    business is performing, wherever in
-                                    the world you are.
+
+                                    <i class="tji-double-check"></i>
+
+                                    <span>
+
+                                       Speak with our support team on WhatsApp
+                                       <a href="https://wa.me/447359112364" target="_blank" rel="noopener">
+                                          +44 7359 112 364
+                                       </a>.
+
+                                    </span>
+
                                  </li>
+
+
+                                 <li>
+
+                                    <i class="tji-double-check"></i>
+
+                                    <span>
+
+                                       Alternatively, email us at
+
+                                       <a href="mailto:contactus@dabusinesssolutions.com">
+
+                                          contactus@dabusinesssolutions.com
+
+                                       </a>.
+
+                                    </span>
+
+                                 </li>
+
+
+                                 <li>
+
+                                    <i class="tji-double-check"></i>
+
+                                    <span>
+
+                                       For updates and offers, follow us
+                                       on our
+
+                                       <a href="https://www.facebook.com/dabusiness2019" target="_blank"
+                                          rel="noopener noreferrer">
+
+                                          Facebook page
+
+                                       </a>.
+
+                                    </span>
+
+                                 </li>
+
 
                               </ul>
 
                            </div>
 
 
-                           <!-- EPOS -->
-
-                           <div class="tj-check-list">
-
-                              <h4 class="text-anim">
-                                 What is an EPOS system?
-                              </h4>
-
-                              <ul>
-
-                                 <li>
-                                    This is called an electronic point of
-                                    sale system (EPOS). It makes it easier
-                                    to take payments and manage your business
-                                    day-to-day, including sales reporting,
-                                    stock control, accounting and staff
-                                    management.
-                                 </li>
-
-                                 <li>
-                                    The system uses up-to-the-minute
-                                    technology and can be customised to
-                                    your business’ needs. It can work
-                                    independently, or be integrated with
-                                    your current devices.
-                                 </li>
-
-                                 <li>
-                                    Their reliability and efficiency makes
-                                    them a popular choice with businesses
-                                    all over the world.
-                                 </li>
-
-                              </ul>
-
-                           </div>
-
-
-                           <!-- PAYMENT OPTIONS -->
-
-                           <div class="tj-check-list">
-
-                              <h4 class="text-anim">
-                                 Choose the best way to accept payments
-                                 for your business.
-                              </h4>
-
-                           </div>
-
-
-                           <div class="service-check-list mt-4 wow fadeInUp" data-wow-delay="0.3s">
-
-                              <ul>
-
-                                 <li>
-                                    <i class="tji-double-check"></i>
-                                    <span>
-                                       Card Machines
-                                    </span>
-                                 </li>
-
-                                 <li>
-                                    <i class="tji-double-check"></i>
-                                    <span>
-                                       Online Payments
-                                    </span>
-                                 </li>
-
-                                 <li>
-                                    <i class="tji-double-check"></i>
-                                    <span>
-                                       EPOS System
-                                    </span>
-                                 </li>
-
-                                 <li>
-                                    <i class="tji-double-check"></i>
-                                    <span>
-                                       Secured Payments
-                                    </span>
-                                 </li>
-
-                              </ul>
-
-                           </div>
-
-
-                           <!-- IMAGES -->
+                           <!-- SERVICE IMAGES -->
 
                            <div class="service-images-wrap">
 
                               <div class="row">
 
+
                                  <div class="col-sm-6">
 
                                     <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.5s">
 
-                                       <img src="images/pdq1.jpg" alt="PDQ Machine">
+                                       <img src="images/bank1.jpg" alt="Business Bank">
 
                                     </div>
 
@@ -1708,11 +1424,12 @@
 
                                     <div class="image-wrap hover:shine wow fadeInUp" data-wow-delay="0.7s">
 
-                                       <img src="images/pdq2.jpg" alt="Payment Service">
+                                       <img src="images/bank3.jpg" alt="Business Bank Support">
 
                                     </div>
 
                                  </div>
+
 
                               </div>
 
@@ -1729,19 +1446,21 @@
                                  <div class="tj-feature wow fadeInUp" data-wow-delay="0.5s">
 
                                     <div class="tj-feature-icon">
+
                                        <i class="tji-quick"></i>
+
                                     </div>
 
-                                    <h5 class="tj-feature-title">
-                                       Quick solutions
-                                    </h5>
+
+                                    <h4 class="tj-feature-title">
+                                       Easy Account Opening
+                                    </h4>
+
 
                                     <div class="desc">
 
                                        <p>
-                                          Provide hands-on guidance and
-                                          support during the execution
-                                          of your payment strategy.
+                                          Get support opening a business bank account quickly and with less paperwork.
                                        </p>
 
                                     </div>
@@ -1756,19 +1475,21 @@
                                  <div class="tj-feature wow fadeInUp" data-wow-delay="0.7s">
 
                                     <div class="tj-feature-icon">
+
                                        <i class="tji-results"></i>
+
                                     </div>
 
-                                    <h5 class="tj-feature-title">
-                                       Proven Results
-                                    </h5>
+
+                                    <h4 class="tj-feature-title">
+                                       Flexible Options
+                                    </h4>
+
 
                                     <div class="desc">
 
                                        <p>
-                                          Benefit from the expertise of
-                                          experienced payment consultants
-                                          and service providers.
+                                          Compare business accounts, card services and finance options suited to your business.
                                        </p>
 
                                     </div>
@@ -1783,19 +1504,21 @@
                                  <div class="tj-feature wow fadeInUp" data-wow-delay="0.9s">
 
                                     <div class="tj-feature-icon">
+
                                        <i class="tji-personalization"></i>
+
                                     </div>
 
-                                    <h5 class="tj-feature-title">
-                                       Personalization
-                                    </h5>
+
+                                    <h4 class="tj-feature-title">
+                                       Personalised Support
+                                    </h4>
+
 
                                     <div class="desc">
 
                                        <p>
-                                          Choose payment solutions that
-                                          are tailored to your business
-                                          needs.
+                                          Get dedicated guidance and support throughout your business banking journey.
                                        </p>
 
                                     </div>
@@ -1803,6 +1526,7 @@
                                  </div>
 
                               </div>
+
 
                            </div>
 
@@ -1815,70 +1539,99 @@
                </div>
 
 
-               <!-- SIDEBAR -->
+               <!-- =========================================
+                    SIDEBAR
+               ========================================= -->
 
                <div class="col-lg-4">
 
                   <aside class="tj-service-sidebar">
 
 
-                     <!-- RELATED SERVICES -->
+                     <!-- SERVICE LIST -->
 
-                     <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
+                     <div class="service-category">
 
-                        <h5 class="tj-sidebar-widget-title">
-                           Related service
-                        </h5>
+                        <ul>
 
 
-                        <div class="service-category">
+                           <li>
 
-                           <ul>
+                              <a href="business-utilities.html">
 
-                              <li>
-                                 <a href="business-utilities.html">
-                                    Business Utilities
-                                    <i class="tji-angle-right"></i>
-                                 </a>
-                              </li>
+                                 Business Utilities
 
-                              <li>
-                                 <a class="active" href="payment-service-pdq-machine.html">
-                                    Payment Service & PDQ Machine
-                                    <i class="tji-angle-right"></i>
-                                 </a>
-                              </li>
+                                 <i class="tji-angle-right"></i>
 
-                              <li>
-                                 <a href="business-telephone-and-broadband.html">
-                                    Business Telephone & Broadband
-                                    <i class="tji-angle-right"></i>
-                                 </a>
-                              </li>
+                              </a>
 
-                              <li>
-                                 <a href="business-bank.html">
-                                    Business Bank
-                                    <i class="tji-angle-right"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="business-insurance.html">
-                                    Business Insurance
-                                    <i class="tji-angle-right"></i>
-                                 </a>
-                              </li>
+                           </li>
 
-                              <li>
-                                 <a href="web-development.html">
-                                    IT Management
-                                    <i class="tji-angle-right"></i>
-                                 </a>
-                              </li>
 
-                           </ul>
+                           <li>
 
-                        </div>
+                              <a href="payment-service-pdq-machine.html">
+
+                                 Payment Service &amp; PDQ Machine
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="business-telephone-and-broadband.html">
+
+                                 Business Telephone &amp; Broadband
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a class="active" href="business-bank.html">
+
+                                 Business Bank
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+                           <li>
+
+                              <a href="business-insurance.html">
+
+                                 Business Insurance
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                           <li>
+
+                              <a href="web-development.html">
+
+                                 IT Management
+
+                                 <i class="tji-angle-right"></i>
+
+                              </a>
+
+                           </li>
+
+
+                        </ul>
 
                      </div>
 
@@ -1887,13 +1640,14 @@
 
                      <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
 
-                        <div class="tj-sidebar-cta">
+                        <div class="tj-sidebar-cta" data-bg-image="images/widget-cta.webp">
+
 
                            <div class="content">
 
                               <div class="icon">
 
-                                 <img src="images/widget-cta-icon.png" alt="Contact">
+                                 <img src="images/widget-cta-icon.png" alt="Business Support">
 
                               </div>
 
@@ -1904,15 +1658,16 @@
 
                                  <br>
 
-                                 Feel free contact us
+                                 Feel free to contact us
 
                               </h3>
 
 
                               <p>
 
-                                 Our mission is to empower businesses of
-                                 all sizes with reliable business solutions.
+                                 Our mission is to empower businesses
+                                 of all sizes with practical and
+                                 reliable business solutions.
 
                               </p>
 
@@ -1928,16 +1683,19 @@
                                     <div class="btn_icon">
 
                                        <span>
+
                                           <i class="tji-arrow-right"></i>
                                           <i class="tji-arrow-right"></i>
+
                                        </span>
 
                                     </div>
 
+
                                     <div class="btn_text">
 
                                        <span>
-                                          Get in touch
+                                          Get in Touch
                                        </span>
 
                                     </div>
@@ -1966,33 +1724,33 @@
       </section>
 
 
-      <!-- =====================================================
-           PAYMENT SERVICES
-      ====================================================== -->
+      <!-- =========================================
+           BUSINESS BANKING SERVICES
+      ========================================= -->
 
       <section class="service-offering-section section-space">
          <div class="container">
-            <h2 class="tj-section-title text-anim mb-6">Payment Services</h2>
+            <h2 class="tj-section-title text-anim mb-6">Business Banking Services</h2>
             <div class="row rg-30">
                <div class="col-sm-6 col-xl-4">
                   <article class="service-offering-card">
-                     <div class="service-offering-image"><img src="images/pdq1.jpg" alt="Card payment machine" loading="lazy"></div>
-                     <h3>Card Machines</h3>
-                     <p>Accept in-person card payments with a machine selected for your business needs.</p>
+                     <div class="service-offering-image"><img src="images/bank1.jpg" alt="Business current accounts" loading="lazy"></div>
+                     <h3>Business Current Accounts</h3>
+                     <p>Compare account options to manage day-to-day business income, payments and expenses.</p>
                   </article>
                </div>
                <div class="col-sm-6 col-xl-4">
                   <article class="service-offering-card">
-                     <div class="service-offering-image"><img src="images/online-payment.jpg" alt="Online payment services" loading="lazy"></div>
-                     <h3>Online Payments</h3>
-                     <p>Give customers a secure way to pay for your products and services online.</p>
+                     <div class="service-offering-image"><img src="images/bank2.jpg" alt="Flexible business banking" loading="lazy"></div>
+                     <h3>Flexible Banking Options</h3>
+                     <p>Explore banking choices suited to your business structure, activity and budget.</p>
                   </article>
                </div>
                <div class="col-sm-6 col-xl-4">
                   <article class="service-offering-card">
-                     <div class="service-offering-image"><img src="images/pdq2.jpg" alt="EPOS system" loading="lazy"></div>
-                     <h3>EPOS Systems</h3>
-                     <p>Explore point-of-sale tools for processing transactions and managing daily operations.</p>
+                     <div class="service-offering-image"><img src="images/bank3.jpg" alt="Business payment and finance options" loading="lazy"></div>
+                     <h3>Payments &amp; Finance</h3>
+                     <p>Find suitable card payment and finance options alongside your business banking.</p>
                   </article>
                </div>
             </div>
@@ -2000,379 +1758,283 @@
       </section>
 
 
-      <!-- =====================================================
+      <!-- =========================================
            FAQ SECTION
-      ====================================================== -->
+      ========================================= -->
 
-      <section class="payment-faq-section">
+      <section class="business-faq-section">
 
          <div class="container">
 
-
-            <!-- FAQ HEADING -->
-
-            <div class="payment-faq-heading">
-
-               <span class="payment-faq-subtitle">
-                  Payment Services
-               </span>
+            <div class="business-faq-wrapper">
 
 
-               <h2>
+               <!-- FAQ LEFT -->
 
-                  Everything you need
+               <div class="business-faq-left">
 
-                  <span>
-                     to know
+                  <span class="faq-label">
+                     Business Banking Solutions
                   </span>
 
-               </h2>
+
+                  <h2 class="faq-heading">
+
+                     Everything you need
+
+                     <span>
+                        to know
+                     </span>
+
+                  </h2>
 
 
-               <p>
-
-                  Find answers to common questions about our payment
-                  services, PDQ machines and business payment solutions.
-
-               </p>
-
-            </div>
+                  <p class="faq-description">
+                     Our experienced team is available to answer your questions, explain your available options and help you choose the most suitable business bank account for your organisation.
+                  </p>
 
 
-            <!-- FAQ GRID -->
-
-            <div class="payment-faq-grid">
-
-
-               <!-- =================================================
-                    QUESTIONS
-               ================================================== -->
-
-               <div class="payment-faq-questions">
-
-                  <div class="payment-faq-question-box">
+                  <p class="faq-description">
+                     From opening a new account to switching providers and accessing business finance, we help businesses across the UK find practical banking solutions tailored to their needs.
+                  </p>
 
 
-                     <!-- QUESTION 01 -->
-
-                     <button type="button" class="payment-faq-question active" data-faq="1" aria-expanded="true">
-
-                        <span class="payment-faq-question-text">
-                           What payment services do you provide?
-                        </span>
-
-                        <span class="payment-faq-icon">
-
-                           <i class="fa-solid fa-arrow-right"></i>
-
-                        </span>
-
-                     </button>
+                  <p class="faq-description">
+                     Whether you are a sole trader, a start-up or a growing limited company, we are here to make business banking simple.
+                  </p>
 
 
-                     <!-- QUESTION 02 -->
+                  <a href="contact.html" class="faq-button">
 
-                     <button type="button" class="payment-faq-question" data-faq="2" aria-expanded="false">
+                     Talk To Our Team
 
-                        <span class="payment-faq-question-text">
-                           What is a PDQ machine?
-                        </span>
+                     <span>
 
-                        <span class="payment-faq-icon">
+                        <i class="tji-arrow-right"></i>
 
-                           <i class="fa-solid fa-arrow-right"></i>
+                     </span>
 
-                        </span>
-
-                     </button>
-
-
-                     <!-- QUESTION 03 -->
-
-                     <button type="button" class="payment-faq-question" data-faq="3" aria-expanded="false">
-
-                        <span class="payment-faq-question-text">
-                           Can you help reduce my payment processing costs?
-                        </span>
-
-                        <span class="payment-faq-icon">
-
-                           <i class="fa-solid fa-arrow-right"></i>
-
-                        </span>
-
-                     </button>
-
-
-                     <!-- QUESTION 04 -->
-
-                     <button type="button" class="payment-faq-question" data-faq="4" aria-expanded="false">
-
-                        <span class="payment-faq-question-text">
-                           Are PDQ machines suitable for small businesses?
-                        </span>
-
-                        <span class="payment-faq-icon">
-
-                           <i class="fa-solid fa-arrow-right"></i>
-
-                        </span>
-
-                     </button>
-
-
-                     <!-- QUESTION 05 -->
-
-                     <button type="button" class="payment-faq-question" data-faq="5" aria-expanded="false">
-
-                        <span class="payment-faq-question-text">
-                           Can I accept contactless and mobile payments?
-                        </span>
-
-                        <span class="payment-faq-icon">
-
-                           <i class="fa-solid fa-arrow-right"></i>
-
-                        </span>
-
-                     </button>
-
-
-                     <!-- QUESTION 06 -->
-
-                     <button type="button" class="payment-faq-question" data-faq="6" aria-expanded="false">
-
-                        <span class="payment-faq-question-text">
-                           How can I get a payment service quote?
-                        </span>
-
-                        <span class="payment-faq-icon">
-
-                           <i class="fa-solid fa-arrow-right"></i>
-
-                        </span>
-
-                     </button>
-
-                  </div>
+                  </a>
 
                </div>
 
 
-               <!-- =================================================
-                    ANSWERS
-               ================================================== -->
+               <!-- FAQ RIGHT -->
 
-               <div class="payment-faq-answers">
-
-                  <div class="payment-faq-answer-box">
+               <div class="business-faq-right">
 
 
-                     <!-- ANSWER 01 -->
+                  <!-- FAQ 01 -->
 
-                     <div class="payment-faq-answer active" data-answer="1">
+                  <details class="faq-item">
 
-                        <span class="payment-faq-number">
-                           01
+                     <summary>
+
+                        <span>
+                           What business banking services do you provide?
                         </span>
 
 
-                        <h3>
-                           What payment services do you provide?
-                        </h3>
+                        <span class="faq-icon">
 
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
 
                         <p>
+                           We help businesses find and open suitable business bank accounts, and explore related services such as card payments, online banking and business finance options.
+                        </p>
 
-                           We provide a range of payment solutions
-                           including card machines, online payments,
-                           EPOS systems and secure payment services
-                           designed for UK businesses.
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 02 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+                           Can you help me open a business bank account?
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+                           Yes. We can discuss your business requirements and guide you through the process of opening a business bank account that suits your needs.
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 03 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+                           Are your banking solutions suitable for small businesses?
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+                           Absolutely. Our solutions can be tailored to businesses of all sizes, from sole traders and start-ups to large established companies.
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 04 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+                           Can you help me switch my business bank account?
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+                           Yes. If you are unhappy with your current bank or want better terms, contact us and we can discuss your requirements and available options.
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 05 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+                           Do you provide support after my account is opened?
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+                           Yes. Our team remains available to answer questions and provide support whenever you need assistance with your business banking.
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- FAQ 06 -->
+
+                  <details class="faq-item">
+
+                     <summary>
+
+                        <span>
+                           How do I get started?
+                        </span>
+
+
+                        <span class="faq-icon">
+
+                           <i class="fa-solid fa-plus"></i>
+
+                        </span>
+
+                     </summary>
+
+
+                     <div class="faq-answer">
+
+                        <p>
+                           Simply contact our team and tell us about your business. We will discuss your needs and help you explore suitable banking options.
+                        </p>
+
+                     </div>
+
+                  </details>
+
+
+                  <!-- BOTTOM CTA -->
+
+                  <div class="faq-bottom-cta">
+
+                     <div>
+
+                        <p class="small-text">
+
+                           Need more information?
 
                         </p>
 
 
-                        <p>
-
-                           Our team can help you find a payment solution
-                           that matches your business type, transaction
-                           volume and customer requirements.
-
+                        <p class="main-text">
+                           We're here to keep your business finances on track.
                         </p>
 
                      </div>
 
 
-                     <!-- ANSWER 02 -->
+                     <a href="contact.html">
 
-                     <div class="payment-faq-answer" data-answer="2">
+                        Contact Us
 
-                        <span class="payment-faq-number">
-                           02
-                        </span>
-
-
-                        <h3>
-                           What is a PDQ machine?
-                        </h3>
-
-
-                        <p>
-
-                           A PDQ machine is a card payment terminal
-                           that allows your customers to pay using
-                           debit cards, credit cards and supported
-                           contactless payment methods.
-
-                        </p>
-
-
-                        <p>
-
-                           Modern card machines make it easier for
-                           businesses to accept payments quickly,
-                           securely and conveniently.
-
-                        </p>
-
-                     </div>
-
-
-                     <!-- ANSWER 03 -->
-
-                     <div class="payment-faq-answer" data-answer="3">
-
-                        <span class="payment-faq-number">
-                           03
-                        </span>
-
-
-                        <h3>
-                           Can you help reduce my payment processing costs?
-                        </h3>
-
-
-                        <p>
-
-                           Yes. We can review your current requirements
-                           and help identify suitable payment solutions
-                           and competitive processing options for your
-                           business.
-
-                        </p>
-
-
-                        <p>
-
-                           Our goal is to help you choose a payment
-                           solution that provides value while meeting
-                           your business needs.
-
-                        </p>
-
-                     </div>
-
-
-                     <!-- ANSWER 04 -->
-
-                     <div class="payment-faq-answer" data-answer="4">
-
-                        <span class="payment-faq-number">
-                           04
-                        </span>
-
-
-                        <h3>
-                           Are PDQ machines suitable for small businesses?
-                        </h3>
-
-
-                        <p>
-
-                           Absolutely. Payment solutions can be selected
-                           based on the size, type and individual
-                           requirements of your business.
-
-                        </p>
-
-
-                        <p>
-
-                           Whether you operate a small shop, restaurant,
-                           office or service business, we can help you
-                           explore suitable options.
-
-                        </p>
-
-                     </div>
-
-
-                     <!-- ANSWER 05 -->
-
-                     <div class="payment-faq-answer" data-answer="5">
-
-                        <span class="payment-faq-number">
-                           05
-                        </span>
-
-
-                        <h3>
-                           Can I accept contactless and mobile payments?
-                        </h3>
-
-
-                        <p>
-
-                           Many modern payment terminals support
-                           contactless and mobile payment methods,
-                           helping businesses provide customers with
-                           convenient ways to pay.
-
-                        </p>
-
-
-                        <p>
-
-                           Available payment methods can vary depending
-                           on the selected terminal and payment provider.
-
-                        </p>
-
-                     </div>
-
-
-                     <!-- ANSWER 06 -->
-
-                     <div class="payment-faq-answer" data-answer="6">
-
-                        <span class="payment-faq-number">
-                           06
-                        </span>
-
-
-                        <h3>
-                           How can I get a payment service quote?
-                        </h3>
-
-
-                        <p>
-
-                           Simply contact our team and tell us about
-                           your business requirements. We will help you
-                           explore suitable payment options.
-
-                        </p>
-
-
-                        <a href="contact.html" class="payment-faq-button">
-
-                           Get A Quote
-
-                           <i class="tji-arrow-right"></i>
-
-                        </a>
-
-                     </div>
+                     </a>
 
                   </div>
 
@@ -2385,17 +2047,95 @@
       </section>
 
 
-      <!-- =====================================================
-           CTA SECTION
-      ====================================================== -->
-
-   
    </main>
 
 
-   <!-- =====================================================
+   <!-- =========================================
+        CTA SECTION
+   ========================================= -->
+
+   <section class="tj-cta-section relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style="background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-business-blue-color-block-earth-background-picture-image_1025560.jpg');">
+
+      <div class="container">
+
+         <div class="cta-wrapper relative z-10">
+
+            <div class="row align-items-center justify-content-between">
+
+
+               <div class="col-lg-7 col-md-7">
+
+                  <div class="cta-title">
+
+                     <h2 class="title text-anim">
+
+                        Get consultant now!
+
+                     </h2>
+
+                  </div>
+
+               </div>
+
+
+               <div class="col-lg-5 col-md-5">
+
+                  <div class="cta-button wow fadeInUp text-md-end text-center" data-wow-delay="0.1s">
+
+                     <a href="contact.html" class="tj-primary-btn white-btn">
+
+                        <div class="btn_inner">
+
+                           <div class="btn_icon">
+
+                              <span>
+
+                                 <i class="tji-arrow-right"></i>
+                                 <i class="tji-arrow-right"></i>
+
+                              </span>
+
+                           </div>
+
+
+                           <div class="btn_text">
+
+                              <span>
+                                 Let's talk now
+                              </span>
+
+                           </div>
+
+                        </div>
+
+                     </a>
+
+                  </div>
+
+               </div>
+
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+      <img class="cta-shape-1 pointer-events-none absolute left-0 top-0 hidden sm:block" src="images/cta-shapes-1.png"
+         alt="CTA Shape">
+
+
+      <img class="cta-shape-2 pointer-events-none absolute bottom-0 right-0 hidden sm:block"
+         src="images/cta-shapes-2.png" alt="CTA Shape">
+
+   </section>
+
+
+   <!-- =========================================
         FOOTER
-   ====================================================== -->
+   ========================================= -->
 
    <footer class="tj-footer-area footer-2 fix">
       <div class="footer-top-area">
@@ -2527,9 +2267,9 @@
 
 
 
-   <!-- =====================================================
+   <!-- =========================================
         WHATSAPP BUTTON
-   ====================================================== -->
+   ========================================= -->
 
    <!-- start: WhatsApp Quick Chat Widget -->
    <div id="tjWaWidget" class="tj-wa-widget">
@@ -2895,9 +2635,9 @@
    </div>
    <!-- end: Floating Quote Widget -->
 
-   <!-- =====================================================
+   <!-- =========================================
         JAVASCRIPT
-   ====================================================== -->
+   ========================================= -->
 
    <script src="js/jquery.min.js"></script>
 
@@ -2931,95 +2671,6 @@
 
    <script src="js/main.js"></script>
    <script src="js/contact-widget.js"></script>
-
-
-   <!-- =====================================================
-        FAQ JAVASCRIPT
-   ====================================================== -->
-
-   <script>
-
-      document.addEventListener("DOMContentLoaded", function () {
-
-         const questions =
-            document.querySelectorAll(
-               ".payment-faq-question"
-            );
-
-
-         const answers =
-            document.querySelectorAll(
-               ".payment-faq-answer"
-            );
-
-
-         questions.forEach(function (question) {
-
-            question.addEventListener("click", function () {
-
-               const faqNumber =
-                  this.getAttribute("data-faq");
-
-
-               /* Remove active state */
-
-               questions.forEach(function (item) {
-
-                  item.classList.remove("active");
-
-                  item.setAttribute(
-                     "aria-expanded",
-                     "false"
-                  );
-
-               });
-
-
-               /* Hide answers */
-
-               answers.forEach(function (answer) {
-
-                  answer.classList.remove("active");
-
-               });
-
-
-               /* Activate clicked question */
-
-               this.classList.add("active");
-
-               this.setAttribute(
-                  "aria-expanded",
-                  "true"
-               );
-
-
-               /* Find selected answer */
-
-               const selectedAnswer =
-                  document.querySelector(
-                     '.payment-faq-answer[data-answer="' +
-                     faqNumber +
-                     '"]'
-                  );
-
-
-               /* Show selected answer */
-
-               if (selectedAnswer) {
-
-                  selectedAnswer.classList.add("active");
-
-               }
-
-            });
-
-         });
-
-      });
-
-   </script>
-
 
 </body>
 

@@ -12212,6 +12212,39 @@ blockquote cite::before {
           animation: wobble-horizontal-hover 1s ease-in-out 1;
 }
 
+.service-offering-card {
+  height: 100%;
+  padding: 16px;
+  border: 1px solid #dce4ed;
+  background: #f1f5f9;
+}
+.service-offering-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+.service-offering-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-offering-card h3 {
+  min-height: 2.4em;
+  margin-bottom: 12px;
+  font-size: 21px;
+  line-height: 1.2;
+}
+.service-offering-card p {
+  margin-bottom: 0;
+}
+@media (max-width: 575px) {
+  .service-offering-card h3 {
+    min-height: 0;
+  }
+}
+
 .service-category ul {
   margin: 0;
   padding: 0;
