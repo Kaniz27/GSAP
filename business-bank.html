@@ -314,111 +314,6 @@
          object-fit: contain;
       }
 
-      .bank-features-section {
-         padding: 72px 0;
-         background: #fff;
-      }
-
-      .bank-features-grid {
-         display: grid;
-         grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-         gap: 56px;
-         align-items: center;
-      }
-
-      .bank-features-title {
-         margin: 0 0 28px;
-         color: #111827;
-         font-size: 42px;
-         font-weight: 700;
-      }
-
-      .bank-features-intro {
-         max-width: 700px;
-         margin: 0 0 28px;
-         color: #111827;
-         font-size: 24px;
-         font-weight: 700;
-         line-height: 1.35;
-      }
-
-      .bank-features-list {
-         margin: 0;
-         padding-left: 24px;
-         color: #465366;
-         font-size: 17px;
-         line-height: 1.8;
-      }
-
-      .bank-features-list li {
-         padding-left: 4px;
-         margin-bottom: 8px;
-      }
-
-      .bank-features-image {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         min-height: 320px;
-         border-right: 2px solid #d1d5db;
-         border-bottom: 2px solid #d1d5db;
-      }
-
-      .bank-features-image img {
-         display: block;
-         width: 100%;
-         max-height: 360px;
-         object-fit: contain;
-      }
-
-      .cash-advance-section {
-         padding: 76px 0;
-         background: #f1f6f9;
-      }
-
-      .cash-advance-grid {
-         display: grid;
-         grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-         gap: 56px;
-         align-items: center;
-      }
-
-      .cash-advance-copy h2 {
-         margin: 0 0 22px;
-         color: #111827;
-         font-size: 42px;
-         font-weight: 700;
-      }
-
-      .cash-advance-copy h3 {
-         max-width: 700px;
-         margin: 0 0 28px;
-         color: #111827;
-         font-size: 21px;
-         font-weight: 700;
-         line-height: 1.45;
-      }
-
-      .cash-advance-copy p {
-         margin: 0 0 18px;
-         color: #465366;
-         font-size: 16px;
-         line-height: 1.8;
-      }
-
-      .cash-advance-image {
-         overflow: hidden;
-         border-radius: 8px;
-         background: #fff;
-      }
-
-      .cash-advance-image img {
-         display: block;
-         width: 100%;
-         aspect-ratio: 4 / 3;
-         object-fit: cover;
-      }
-
       .bank-partner-section {
          padding: 80px 0;
          background: #fff;
@@ -449,16 +344,6 @@
             gap: 36px;
          }
 
-         .bank-features-grid {
-            grid-template-columns: 1fr;
-            gap: 32px;
-         }
-
-         .cash-advance-grid {
-            grid-template-columns: 1fr;
-            gap: 32px;
-         }
-
          .faq-heading {
             font-size: 40px;
          }
@@ -486,30 +371,6 @@
             min-height: 250px;
          }
 
-         .bank-features-section {
-            padding: 54px 0;
-         }
-
-         .bank-features-title {
-            font-size: 34px;
-         }
-
-         .bank-features-intro {
-            font-size: 21px;
-         }
-
-         .bank-features-image {
-            min-height: 240px;
-         }
-
-         .cash-advance-section {
-            padding: 54px 0;
-         }
-
-         .cash-advance-copy h2 {
-            font-size: 34px;
-         }
-
          .faq-item summary {
             padding: 18px;
          }
@@ -523,6 +384,58 @@
             align-items: flex-start;
             gap: 20px;
          }
+      }
+
+      .bank-account-section--alt {
+         background: #fff;
+      }
+
+      .bank-account-note {
+         margin: 18px 0 0;
+         color: #6b7280;
+         font-size: 13px;
+         font-style: italic;
+      }
+
+      .bank-account-image {
+         border-radius: 20px;
+         box-shadow: 0 24px 50px rgba(15, 35, 75, 0.1);
+      }
+
+      .bank-account-image img {
+         transition: transform 0.6s ease;
+      }
+
+      .bank-account-image:hover img {
+         transform: scale(1.05);
+      }
+
+      @media (min-width: 992px) {
+         .bank-account-grid--reverse .bank-account-copy {
+            order: 2;
+         }
+      }
+
+      .hero-content-four .hero-subtitle.hero-logo-badge {
+         padding: 4px 12px;
+         border-radius: 12px;
+         background: #fff;
+         box-shadow: 0 10px 30px rgba(15, 35, 75, 0.08);
+         margin-bottom: 24px;
+      }
+
+      .hero-content-four .hero-subtitle.hero-logo-badge img {
+         display: block;
+         height: 60px;
+         width: auto;
+      }
+
+      .tj-hero-section-four .hero-images-box-four .hero-images img.hero-bank-img {
+         aspect-ratio: 3 / 2;
+         object-fit: cover;
+         object-position: center;
+         border-radius: 25px;
+         box-shadow: 0 30px 60px rgba(15, 35, 75, 0.18);
       }
    </style>
 </head>
@@ -1352,10 +1265,8 @@
 
                   <div class="hero-content-four">
 
-                     <span class="hero-subtitle">
-
-                        <span>D</span>&amp;<span>A</span> Business
-
+                     <span class="hero-subtitle hero-logo-badge">
+                        <img src="images/secondary-logo.png" alt="D&amp;A Business">
                      </span>
 
 
@@ -1412,8 +1323,8 @@
 
                      <div class="hero-images wow fadeInUp" data-wow-delay="0.5s">
 
-                        <img src="images/bank2.jpg" alt="Business Bank Solutions"
-                           class="w-full rounded-[25px]">
+                        <img src="images/bank3.jpg" alt="Business owner taking a contactless payment from a smiling customer"
+                           class="w-full rounded-[25px] hero-bank-img">
 
                      </div>
 
@@ -1492,11 +1403,11 @@
 
       <section class="service-offering-section section-space">
          <div class="container">
-            <h2 class="service-offering-title">Business Banking Services</h2>
+            <h2 class="service-offering-title text-anim">Business Banking Services</h2>
             <div class="row rg-30">
                <div class="col-sm-6 col-xl-4">
-                  <article class="service-offering-card">
-                     <div class="service-offering-image">
+                  <article class="service-offering-card wow fadeInUp" data-wow-delay="0.1s">
+                     <div class="service-offering-image hover:shine">
                         <img src="images/bank1.jpg" alt="Using an ATM for everyday business banking" loading="lazy">
                      </div>
                      <h3>Business Current Accounts</h3>
@@ -1504,8 +1415,8 @@
                   </article>
                </div>
                <div class="col-sm-6 col-xl-4">
-                  <article class="service-offering-card">
-                     <div class="service-offering-image">
+                  <article class="service-offering-card wow fadeInUp" data-wow-delay="0.3s">
+                     <div class="service-offering-image hover:shine">
                         <img src="images/paymentt.jpg" alt="Making a secure online payment by card" loading="lazy">
                      </div>
                      <h3>Online Banking</h3>
@@ -1513,8 +1424,8 @@
                   </article>
                </div>
                <div class="col-sm-6 col-xl-4">
-                  <article class="service-offering-card">
-                     <div class="service-offering-image">
+                  <article class="service-offering-card wow fadeInUp" data-wow-delay="0.5s">
+                     <div class="service-offering-image hover:shine">
                         <img src="images/pdq.jpg" alt="Customer making a contactless payment at a card terminal" loading="lazy">
                      </div>
                      <h3>Payment Support</h3>
@@ -1525,73 +1436,132 @@
          </div>
       </section>
 
-
-      <section class="bank-features-section">
-         <div class="container">
-            <div class="bank-features-grid">
-               <div>
-                  <h2 class="bank-features-title">Features</h2>
-                  <h3 class="bank-features-intro">A business bank account helps you manage everyday finances with confidence</h3>
-                  <ol class="bank-features-list">
-                     <li>Simple online application and quick onboarding</li>
-                     <li>Compare account options and features to suit your business</li>
-                     <li>Manage payments and account activity through online or mobile banking</li>
-                     <li>Review transfers, costs and statements in one place</li>
-                  </ol>
-               </div>
-               <figure class="bank-features-image">
-                  <img src="images/pdqq.png" alt="Modern payment terminal for business transactions" loading="lazy">
-               </figure>
-            </div>
-         </div>
-      </section>
-
-
-      <section class="cash-advance-section">
-         <div class="container">
-            <div class="cash-advance-grid">
-               <div class="cash-advance-copy">
-                  <h2>Merchant Cash Advance</h2>
-                  <h3>A business cash advance may provide eligible businesses with funding to support their next stage of growth</h3>
-                  <p>Depending on the provider and your business, a cash advance may be based on future card sales. Repayments are typically collected as an agreed percentage of eligible card takings, so the amount repaid can vary with sales.</p>
-                  <p>Unlike a traditional fixed monthly loan payment, repayments may be lower when card sales are quieter and higher when sales increase. Terms, fees and eligibility vary by provider, so review the offer carefully before applying.</p>
-                  <a href="contact.html" class="tj-primary-btn">
-                     <span class="btn_inner">
-                        <span class="btn_icon"><i class="tji-arrow-right" aria-hidden="true"></i></span>
-                        <span class="btn_text"><span>Discuss funding options</span></span>
-                     </span>
-                  </a>
-               </div>
-               <figure class="cash-advance-image">
-                  <img src="images/dataa.jpg" alt="Financial chart showing changing business data over time" loading="lazy">
-               </figure>
-            </div>
-         </div>
-      </section>
-
-
       <section class="bank-partner-section">
          <div class="container">
             <div class="bank-account-grid">
                <div class="bank-account-copy">
-                  <span class="bank-account-kicker">Business banking</span>
-                  <h2 class="bank-account-title">We are partnering with a number of banks</h2>
-                  <p class="bank-account-lead">Our partnerships give businesses more choice when exploring a business bank account</p>
-                  <p class="bank-account-lead">We can help you compare available account options, understand the application process and find a provider that suits your business needs</p>
-                  <ul class="bank-account-benefits">
+                  <span class="bank-account-kicker wow fadeInUp" data-wow-delay="0.1s">Business banking</span>
+                  <h2 class="bank-account-title text-anim">We are partnering with a number of banks</h2>
+                  <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.1s">Our partnerships give businesses more choice when exploring a business bank account</p>
+                  <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.2s">We can help you compare available account options, understand the application process and find a provider that suits your business needs</p>
+                  <ul class="bank-account-benefits wow fadeInUp" data-wow-delay="0.3s">
                      <li><i class="tji-double-check" aria-hidden="true"></i>Options for different business types</li>
                      <li><i class="tji-double-check" aria-hidden="true"></i>Online and app banking options</li>
                      <li><i class="tji-double-check" aria-hidden="true"></i>Guidance with applying or switching</li>
                   </ul>
-                  <a href="contact.html" class="tj-primary-btn">
+                  <div class="wow fadeInUp" data-wow-delay="0.4s">
+                     <a href="contact.html" class="tj-primary-btn">
+                        <span class="btn_inner">
+                           <span class="btn_icon"><i class="tji-arrow-right" aria-hidden="true"></i></span>
+                           <span class="btn_text"><span>Explore Your Options</span></span>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+               <figure class="bank-account-image hover:shine wow fadeInUp" data-wow-delay="0.3s">
+                  <img src="images/business-meeting-office-with-presentation_9975-22656.avif" alt="Business team discussing banking and financial options" loading="lazy">
+               </figure>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- TIDE -->
+      <section class="bank-account-section" id="tide">
+         <div class="container">
+            <div class="bank-account-grid">
+               <div class="bank-account-copy">
+                  <span class="bank-account-kicker wow fadeInUp" data-wow-delay="0.1s">Business banking</span>
+                  <h2 class="bank-account-title text-anim">TIDE BANK</h2>
+                  <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.1s">Get &pound;50 cashback when you open a free Tide business current account*</p>
+                  <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.2s">Open a free business current account in minutes and get everything you need to run a better business</p>
+                  <ol class="bank-account-steps wow fadeInUp" data-wow-delay="0.3s">
+                     <li>Apply online for a free Tide business current account</li>
+                     <li>Spend &pound;100 in the first 30 days of opening your account</li>
+                     <li>Receive your &pound;50 cashback reward*</li>
+                  </ol>
+                  <ul class="bank-account-benefits wow fadeInUp" data-wow-delay="0.4s">
+                     <li><i class="tji-double-check" aria-hidden="true"></i>Free business current account</li>
+                     <li><i class="tji-double-check" aria-hidden="true"></i>Manage everything in the app</li>
+                  </ul>
+                  <div class="wow fadeInUp" data-wow-delay="0.5s">
+                     <a href="https://www.tide.co/partners-50cashback/?ref=D&amp;ABUS=ai" class="tj-primary-btn" target="_blank" rel="noopener sponsored">
+                        <span class="btn_inner">
+                           <span class="btn_icon"><i class="tji-arrow-right" aria-hidden="true"></i></span>
+                           <span class="btn_text"><span>Apply Online</span></span>
+                        </span>
+                     </a>
+                  </div>
+                  <p class="bank-account-note">*T&amp;Cs apply. Tide Business Current Accounts are provided through Tide&rsquo;s partner, ClearBank.</p>
+               </div>
+               <figure class="bank-account-image hover:shine wow fadeInUp" data-wow-delay="0.3s">
+                  <img src="images/pdq2.jpg" alt="Paying by card on a card terminal" loading="lazy">
+               </figure>
+            </div>
+         </div>
+      </section>
+
+
+      <section class="bank-account-section bank-account-section--alt" id="anna">
+         <div class="container">
+            <div class="bank-account-grid bank-account-grid--reverse">
+               <div class="bank-account-copy">
+                  <span class="bank-account-kicker wow fadeInUp" data-wow-delay="0.1s">Business banking</span>
+                  <h2 class="bank-account-title text-anim">ANNA BANK</h2>
+                  <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.1s">We can help you explore ANNA's business account and apply online</p>
+                  <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.2s">Get started in minutes. ANNA offers a free plan with no monthly fee, as well as optional paid plans</p>
+                  <ol class="bank-account-steps wow fadeInUp" data-wow-delay="0.3s">
+                     <li>Verify your email and phone number</li>
+                     <li>Answer a few questions about your business</li>
+                     <li>Download the ANNA app to complete setup</li>
+                     <li>Complete your account setup in less than 10 minutes</li>
+                  </ol>
+                  <ul class="bank-account-benefits wow fadeInUp" data-wow-delay="0.4s">
+                     <li><i class="tji-double-check" aria-hidden="true"></i>24/7 customer support</li>
+                     <li><i class="tji-double-check" aria-hidden="true"></i>Online signup in minutes</li>
+                  </ul>
+                  <a href="https://go.anna.money/p-dabusinesssolutions/?public_id=2f5610d9-9817-40a2-b8b2-6982a55e4653&amp;landing_version=%2Fp-dabusinesssolutions%2F" class="tj-primary-btn" target="_blank" rel="noopener sponsored">
                      <span class="btn_inner">
                         <span class="btn_icon"><i class="tji-arrow-right" aria-hidden="true"></i></span>
-                        <span class="btn_text"><span>Explore Your Options</span></span>
+                        <span class="btn_text"><span>Apply Online</span></span>
                      </span>
                   </a>
                </div>
-               <figure class="bank-account-image">
-                  <img src="images/business-meeting-office-with-presentation_9975-22656.avif" alt="Business team discussing banking and financial options" loading="lazy">
+               <figure class="bank-account-image hover:shine wow fadeInUp" data-wow-delay="0.3s">
+                  <img src="images/online-payment.jpg" alt="Illustration of online business payments on a mobile phone" loading="lazy">
+               </figure>
+            </div>
+         </div>
+      </section>
+
+
+
+      <section class="bank-account-section" id="zempler">
+         <div class="container">
+            <div class="bank-account-grid">
+               <div class="bank-account-copy">
+                  <span class="bank-account-kicker wow fadeInUp" data-wow-delay="0.1s">Business banking</span>
+                  <h2 class="bank-account-title text-anim">ZEMPLER BANK</h2>
+                  <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.1s">Apply for a Zempler Bank business account online in minutes</p>
+                  <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.2s">The Business Go account has no monthly fee. Once approved, you can bank in-app or online</p>
+                  <ol class="bank-account-steps wow fadeInUp" data-wow-delay="0.3s">
+                     <li>Share your business details in the online application</li>
+                     <li>Complete any checks requested by Zempler Bank</li>
+                     <li>Once approved, start using your account in-app or online</li>
+                  </ol>
+                  <ul class="bank-account-benefits wow fadeInUp" data-wow-delay="0.4s">
+                     <li><i class="tji-double-check" aria-hidden="true"></i>Eligible deposits protected up to £120,000 by FSCS</li>
+                     <li><i class="tji-double-check" aria-hidden="true"></i>UK telephone customer support</li>
+                  </ul>
+                  <a href="https://www.zemplerbank.com/landing/business/go/ncf/?PC=BAS055" class="tj-primary-btn" target="_blank" rel="noopener sponsored">
+                     <span class="btn_inner">
+                        <span class="btn_icon"><i class="tji-arrow-right" aria-hidden="true"></i></span>
+                        <span class="btn_text"><span>Apply Online</span></span>
+                     </span>
+                  </a>
+               </div>
+               <figure class="bank-account-image hover:shine wow fadeInUp" data-wow-delay="0.3s">
+                  <img src="images/pdq.jpg" alt="Customer making a contactless payment at a card terminal" loading="lazy">
                </figure>
             </div>
          </div>
@@ -1932,38 +1902,6 @@
       </section>
 
 
-      <section class="bank-account-section">
-         <div class="container">
-            <div class="bank-account-grid">
-               <div class="bank-account-copy">
-                  <span class="bank-account-kicker">Business banking</span>
-                  <h2 class="bank-account-title">ZEMPLER BANK</h2>
-                  <p class="bank-account-lead">Apply for a Zempler Bank business account online in minutes</p>
-                  <p class="bank-account-lead">The Business Go account has no monthly fee. Once approved, you can bank in-app or online</p>
-                  <ol class="bank-account-steps">
-                     <li>Share your business details in the online application</li>
-                     <li>Complete any checks requested by Zempler Bank</li>
-                     <li>Once approved, start using your account in-app or online</li>
-                  </ol>
-                  <ul class="bank-account-benefits">
-                     <li><i class="tji-double-check" aria-hidden="true"></i>Eligible deposits protected up to £120,000 by FSCS</li>
-                     <li><i class="tji-double-check" aria-hidden="true"></i>UK telephone customer support</li>
-                  </ul>
-                  <a href="https://application.zemplerbank.com/forms/businessapplication/?PC=BAS004" class="tj-primary-btn" target="_blank" rel="noopener noreferrer">
-                     <span class="btn_inner">
-                        <span class="btn_icon"><i class="tji-arrow-right" aria-hidden="true"></i></span>
-                        <span class="btn_text"><span>Apply Online</span></span>
-                     </span>
-                  </a>
-               </div>
-               <figure class="bank-account-image">
-                  <img src="images/pdq.jpg" alt="Customer making a contactless payment at a card terminal" loading="lazy">
-               </figure>
-            </div>
-         </div>
-      </section>
-
-
       <!-- =========================================
            FAQ SECTION
       ========================================= -->
@@ -1979,12 +1917,12 @@
 
                <div class="business-faq-left">
 
-                  <span class="faq-label">
+                  <span class="faq-label wow fadeInUp" data-wow-delay="0.1s">
                      Business Banking Solutions
                   </span>
 
 
-                  <h2 class="faq-heading">
+                  <h2 class="faq-heading wow fadeInUp" data-wow-delay="0.2s">
 
                      Everything you need
 
@@ -1995,12 +1933,12 @@
                   </h2>
 
 
-                  <p class="faq-description">
+                  <p class="faq-description wow fadeInUp" data-wow-delay="0.3s">
                      We help UK businesses compare account options, open or switch accounts, and explore practical banking solutions.
                   </p>
 
 
-                  <a href="contact.html" class="faq-button">
+                  <a href="contact.html" class="faq-button wow fadeInUp" data-wow-delay="0.4s">
 
                      Talk To Our Team
 
@@ -2022,7 +1960,7 @@
 
                   <!-- FAQ 01 -->
 
-                  <details class="faq-item">
+                  <details class="faq-item wow fadeInUp" data-wow-delay="0.1s">
 
                      <summary>
 
@@ -2053,7 +1991,7 @@
 
                   <!-- FAQ 02 -->
 
-                  <details class="faq-item">
+                  <details class="faq-item wow fadeInUp" data-wow-delay="0.2s">
 
                      <summary>
 
@@ -2084,7 +2022,7 @@
 
                   <!-- FAQ 03 -->
 
-                  <details class="faq-item">
+                  <details class="faq-item wow fadeInUp" data-wow-delay="0.3s">
 
                      <summary>
 
@@ -2115,7 +2053,7 @@
 
                   <!-- FAQ 04 -->
 
-                  <details class="faq-item">
+                  <details class="faq-item wow fadeInUp" data-wow-delay="0.4s">
 
                      <summary>
 
@@ -2152,38 +2090,6 @@
 
       </section>
 
-
-      <section class="bank-account-section">
-         <div class="container">
-            <div class="bank-account-grid">
-               <div class="bank-account-copy">
-                  <span class="bank-account-kicker">Business banking</span>
-                  <h2 class="bank-account-title">ANNA BANK</h2>
-                  <p class="bank-account-lead">We can help you explore ANNA's business account and apply online</p>
-                  <p class="bank-account-lead">Get started in minutes. ANNA offers a free plan with no monthly fee, as well as optional paid plans</p>
-                  <ol class="bank-account-steps">
-                     <li>Verify your email and phone number</li>
-                     <li>Answer a few questions about your business</li>
-                     <li>Download the ANNA app to complete setup</li>
-                     <li>Complete your account setup in less than 10 minutes</li>
-                  </ol>
-                  <ul class="bank-account-benefits">
-                     <li><i class="tji-double-check" aria-hidden="true"></i>24/7 customer support</li>
-                     <li><i class="tji-double-check" aria-hidden="true"></i>Online signup in minutes</li>
-                  </ul>
-                  <a href="https://welcome.anna.money/" class="tj-primary-btn" target="_blank" rel="noopener noreferrer">
-                     <span class="btn_inner">
-                        <span class="btn_icon"><i class="tji-arrow-right" aria-hidden="true"></i></span>
-                        <span class="btn_text"><span>Apply Online</span></span>
-                     </span>
-                  </a>
-               </div>
-               <figure class="bank-account-image">
-                  <img src="images/online-payment.jpg" alt="Illustration of online business payments on a mobile phone" loading="lazy">
-               </figure>
-            </div>
-         </div>
-      </section>
 
 
    </main>
