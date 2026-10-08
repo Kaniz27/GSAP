@@ -247,6 +247,16 @@
          text-transform: uppercase;
       }
 
+      .bank-account-logo {
+         display: block;
+         width: 150px;
+         height: 64px;
+         margin-bottom: 18px;
+         object-fit: cover;
+         border-radius: 12px;
+         box-shadow: 0 8px 24px rgba(15, 35, 75, 0.08);
+      }
+
       .bank-account-title {
          margin: 0 0 18px;
          color: #111827;
@@ -1541,27 +1551,6 @@
                </figure>
             </div>
          </div>
-
-         <div class="bank-logo-marquee" aria-label="Our banking partners">
-            <div class="bank-logo-track">
-               <div class="bank-logo-group">
-                  <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt="ANNA"></div>
-                  <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt="Tide"></div>
-                  <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt="Zempler Bank"></div>
-                  <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt="ANNA"></div>
-                  <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt="Tide"></div>
-                  <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt="Zempler Bank"></div>
-               </div>
-               <div class="bank-logo-group" aria-hidden="true">
-                  <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt=""></div>
-                  <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt=""></div>
-                  <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt=""></div>
-                  <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt=""></div>
-                  <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt=""></div>
-                  <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt=""></div>
-               </div>
-            </div>
-         </div>
       </section>
 
 
@@ -1570,7 +1559,7 @@
          <div class="container">
             <div class="bank-account-grid">
                <div class="bank-account-copy">
-                  <span class="bank-account-kicker wow fadeInUp" data-wow-delay="0.1s">Business banking</span>
+                  <img class="bank-account-logo wow fadeInUp" data-wow-delay="0.1s" src="images/banklogo2.jpeg" alt="Tide logo">
                   <h2 class="bank-account-title text-anim">TIDE BANK</h2>
                   <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.1s">Get &pound;50 cashback when you open a free Tide business current account*</p>
                   <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.2s">Open a free business current account in minutes and get everything you need to run a better business</p>
@@ -1605,7 +1594,7 @@
          <div class="container">
             <div class="bank-account-grid bank-account-grid--reverse">
                <div class="bank-account-copy">
-                  <span class="bank-account-kicker wow fadeInUp" data-wow-delay="0.1s">Business banking</span>
+                  <img class="bank-account-logo wow fadeInUp" data-wow-delay="0.1s" src="images/banklogo1.jpeg" alt="ANNA logo">
                   <h2 class="bank-account-title text-anim">ANNA BANK</h2>
                   <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.1s">We can help you explore ANNA's business account and apply online</p>
                   <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.2s">Get started in minutes. ANNA offers a free plan with no monthly fee, as well as optional paid plans</p>
@@ -1639,7 +1628,7 @@
          <div class="container">
             <div class="bank-account-grid">
                <div class="bank-account-copy">
-                  <span class="bank-account-kicker wow fadeInUp" data-wow-delay="0.1s">Business banking</span>
+                  <img class="bank-account-logo wow fadeInUp" data-wow-delay="0.1s" src="images/banklogo3.jpeg" alt="Zempler Bank logo">
                   <h2 class="bank-account-title text-anim">ZEMPLER BANK</h2>
                   <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.1s">Apply for a Zempler Bank business account online in minutes</p>
                   <p class="bank-account-lead wow fadeInUp" data-wow-delay="0.2s">The Business Go account has no monthly fee. Once approved, you can bank in-app or online</p>
@@ -1998,6 +1987,28 @@
 
          </div>
 
+         <div class="container">
+            <div class="bank-logo-marquee" aria-label="Our banking partners">
+               <div class="bank-logo-track">
+                  <div class="bank-logo-group">
+                     <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt="ANNA"></div>
+                     <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt="Tide"></div>
+                     <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt="Zempler Bank"></div>
+                     <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt="ANNA"></div>
+                     <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt="Tide"></div>
+                     <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt="Zempler Bank"></div>
+                  </div>
+                  <div class="bank-logo-group" aria-hidden="true">
+                     <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt=""></div>
+                     <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt=""></div>
+                     <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt=""></div>
+                     <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt=""></div>
+                     <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt=""></div>
+                     <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt=""></div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
 
 
@@ -2245,7 +2256,7 @@
                      <div class="infos-item">
                         <i class="tji-phone tj-info-ic" aria-hidden="true"></i>
                         <div class="tj-info-body">
-                           <span>Phone</span>
+                           <span>Landline</span>
                            <a href="tel:+442037268725">+44 2037 268725</a>
                         </div>
                      </div>

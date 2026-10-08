@@ -107,3 +107,7 @@
     max-width: 100%;
   }
 }
+
+.footer-email span {
+   display: block;
+}
