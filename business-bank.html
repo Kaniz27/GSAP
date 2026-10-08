@@ -416,6 +416,84 @@
          }
       }
 
+      /* Bank partner logo marquee */
+      .bank-logo-marquee {
+         position: relative;
+         overflow: hidden;
+         margin-top: 60px;
+         padding: 10px 0;
+         -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+         mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+      }
+
+      .bank-logo-track {
+         display: flex;
+         width: max-content;
+         animation: bankLogoScroll 22s linear infinite;
+      }
+
+      .bank-logo-marquee:hover .bank-logo-track {
+         animation-play-state: paused;
+      }
+
+      .bank-logo-group {
+         display: flex;
+         flex-shrink: 0;
+         gap: 40px;
+         padding-right: 40px;
+      }
+
+      .bank-logo-item {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 240px;
+         height: 100px;
+         border-radius: 16px;
+         overflow: hidden;
+         background: #fff;
+         box-shadow: 0 10px 30px rgba(15, 35, 75, 0.08);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .bank-logo-item:hover {
+         transform: translateY(-4px);
+         box-shadow: 0 16px 36px rgba(15, 35, 75, 0.14);
+      }
+
+      .bank-logo-item img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      @keyframes bankLogoScroll {
+         from { transform: translateX(0); }
+         to { transform: translateX(-50%); }
+      }
+
+      @media (max-width: 575px) {
+         .bank-logo-marquee {
+            margin-top: 40px;
+         }
+
+         .bank-logo-group {
+            gap: 20px;
+            padding-right: 20px;
+         }
+
+         .bank-logo-item {
+            width: 168px;
+            height: 70px;
+         }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+         .bank-logo-track {
+            animation: none;
+         }
+      }
+
       .hero-content-four .hero-subtitle.hero-logo-badge {
          padding: 4px 12px;
          border-radius: 12px;
@@ -1463,6 +1541,27 @@
                </figure>
             </div>
          </div>
+
+         <div class="bank-logo-marquee" aria-label="Our banking partners">
+            <div class="bank-logo-track">
+               <div class="bank-logo-group">
+                  <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt="ANNA"></div>
+                  <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt="Tide"></div>
+                  <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt="Zempler Bank"></div>
+                  <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt="ANNA"></div>
+                  <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt="Tide"></div>
+                  <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt="Zempler Bank"></div>
+               </div>
+               <div class="bank-logo-group" aria-hidden="true">
+                  <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt=""></div>
+                  <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt=""></div>
+                  <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt=""></div>
+                  <div class="bank-logo-item"><img src="images/banklogo1.jpeg" alt=""></div>
+                  <div class="bank-logo-item"><img src="images/banklogo2.jpeg" alt=""></div>
+                  <div class="bank-logo-item"><img src="images/banklogo3.jpeg" alt=""></div>
+               </div>
+            </div>
+         </div>
       </section>
 
 
@@ -2141,6 +2240,13 @@
                         <div class="tj-info-body">
                            <span>WhatsApp</span>
                            <a href="https://wa.me/447359112364" target="_blank" rel="noopener">+44 7359 112364</a>
+                        </div>
+                     </div>
+                     <div class="infos-item">
+                        <i class="tji-phone tj-info-ic" aria-hidden="true"></i>
+                        <div class="tj-info-body">
+                           <span>Phone</span>
+                           <a href="tel:+442037268725">+44 2037 268725</a>
                         </div>
                      </div>
                   </div>
