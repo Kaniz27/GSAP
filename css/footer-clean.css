@@ -111,3 +111,19 @@
 .footer-email span {
    display: block;
 }
+
+/* Service-page hero: D&A logo badge in place of the text subtitle */
+.hero-content-four .hero-subtitle.hero-logo-badge {
+   display: inline-block;
+   padding: 4px 12px;
+   border-radius: 12px;
+   background: #fff;
+   box-shadow: 0 10px 30px rgba(15, 35, 75, 0.08);
+   margin-bottom: 24px;
+}
+
+.hero-content-four .hero-subtitle.hero-logo-badge img {
+   display: block;
+   height: 60px;
+   width: auto;
+}
