@@ -879,6 +879,8 @@
 	if ($(".odometer").length > 0) {
 		$(".odometer").each(function () {
 			var $this = $(this);
+			// HTML holds the real value as a no-JS/SEO fallback; reset so it animates up on appear
+			$this.html(0);
 			$this.appear(
 				function () {
 					var countNumber = $this.attr("data-count");

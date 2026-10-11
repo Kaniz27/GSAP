@@ -1,0 +1,6 @@
+# Redirect /index.html to / so Google indexes only one version of the home page
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+   RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+</IfModule>
