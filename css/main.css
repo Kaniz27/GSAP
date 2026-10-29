@@ -12290,6 +12290,20 @@ blockquote cite::before {
     font-size: 22px;
   }
 }
+.service-images-wrap--cover .image-wrap img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.service-images-wrap--equal .image-wrap {
+  height: 100%;
+  background: #fff;
+}
+.service-images-wrap--equal .image-wrap img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
 @media (max-width: 575px) {
   .service-offering-card h3 {
     min-height: 0;
